@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel Boilerplate'),
+    'name' => env('APP_NAME', 'Kalimati Market'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,14 +80,14 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ne',
 
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
     |--------------------------------------------------------------------------
     |
-    | The fallback locale determines the locale to use when the current one
+    | The fallback locale determines the locale to use whne the current one
     | is not available. You may change the value to correspond to any of
     | the language folders that are provided through your application.
     |

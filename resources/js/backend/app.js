@@ -7,4 +7,4 @@ window.Swal = require('sweetalert2');
 require('@coreui/coreui');
 
 // Boilerplate
-require('../plugins');
+require('../frontend/theme/plugins');
