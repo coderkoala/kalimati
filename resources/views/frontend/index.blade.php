@@ -112,7 +112,7 @@
 							</tr>
 							</thead>
 							<tbody>
-							@foreach( App\Models\commodityPriceDaily::getPrice( date('Y-m-d') ) as $index => $value )
+							@foreach( App\Models\commodityPriceDaily::getPriceOptimized() as $index => $value )
 							<tr>
 								<td>{{ $value->commodityname }}</td>
 								<td>{{ $value->commodityunit }}</td>

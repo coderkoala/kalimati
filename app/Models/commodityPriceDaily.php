@@ -24,6 +24,15 @@ class commodityPriceDaily extends Model
 		'createdby',
 	);
 
+	// @usage App\Models\commodityPriceDaily::getDateMax()
+	private static function getDateMax() {
+		$date = DB::select( DB::raw( 'SELECT max( `entrydate` ) as `today` FROM `tbl_dlypriceentry`;' ) );
+		if ( ! empty(  $date[0] ) && isset(  $date[0]->today ) ) {
+			return $date[0]->today;
+		} else {
+			return date('Y-m-d', time() );
+		}
+	}
 
 	// @usage App\Models\commodityPriceDaily::get_instance()
 	public static function get_instance() {
@@ -42,9 +51,9 @@ class commodityPriceDaily extends Model
 
 	// @usage App\Models\commodityPriceDaily::getPrice( date('Y-m-d', time() ));
 	public static function getPrice( $date = null ) {
-		if ( is_null( $date ) ) {
-			$date = date('Y-m-d', time() );
-		}
+		$date = self::getDateMax();
+		$date = '2020-12-21';
+		dd( $date );
 		$queryLang = __( app()->getLocale() );
 		$commodityColumn = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityengname`' : '`commoditynepname`';
 		$queryLang = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityuniten`' : '`commodityunitnp`';
@@ -75,6 +84,39 @@ class commodityPriceDaily extends Model
 		`pricetype` = 'R'
 		order by
 		`commodityid`
+		EOD;
+
+		return collect( DB::select( DB::raw( $query ) ) );
+	}
+
+
+	// @usage App\Models\getPriceOptimized::getPriceOptimized();
+	public static function getPriceOptimized() {
+		$queryLang = __( app()->getLocale() );
+		$commodityColumn = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityengname`' : '`commoditynepname`';
+		$queryLang = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityuniten`' : '`commodityunitnp`';
+		$query= <<<EOD
+		SELECT
+		`commodity`.{$commodityColumn} AS `commodityname`,
+		`commodity`.{$queryLang} AS `commodityunit`,
+		`pricelist`.`minprice`,
+		`pricelist`.`maxprice`,
+		`pricelist`.`avgprice` FROM
+		( SELECT *
+		  FROM
+		  `tbl_dlypriceentry` AS `pivot`
+		  WHERE
+		  (`entrydate`) IN
+		  ( SELECT
+		  	max( `entrydate` ) as `today`
+			FROM
+			`tbl_dlypriceentry`
+		  )
+		) AS `pricelist`
+		INNER JOIN
+		`tbl_commoditylist` AS `commodity`
+		ON
+		`commodity`.`commodityid` = `pricelist`.`commodityid`;
 		EOD;
 
 		return collect( DB::select( DB::raw( $query ) ) );
