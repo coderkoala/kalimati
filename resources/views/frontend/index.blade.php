@@ -139,12 +139,10 @@
 				<div class="all-title">
 					<div class="sec-title">
 						<h3>
-							<span>{{__('Our team')}}</span>
+							<span></span>
 						</h3>
 					</div>
-					<p>
-				{{ __('Our team is comprised of community and national leaders with expertise in a wide range of areas, including training, advocacy, education, finance, law, fund development, and business management. It is responsible for taking care of the strategic and financial health of the organization on an ongoing basis.')}}
-				</p>
+					<p></p>
 				</div>
 			</div>
 		</div>
