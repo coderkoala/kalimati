@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\NepaliDate\conversion;
 use App\Http\Controllers\Controller;
 use App\Models\commodityMaster as translator;
+use App\Models\commodityPriceDaily as maxDate;
 
 /**
  * Class HomeController.
@@ -16,10 +17,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y') . ' A.D.';
+		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y', strtotime( maxDate::getDateMax() ) ) . ' A.D.';
 		if ( is_null( $date ) ) {
 			$nepaliDate = new conversion();
-			$date = explode('-', date( 'Y-m-d', time() ) );
+			$date = explode('-', date( 'Y-m-d', strtotime( maxDate::getDateMax() ) ) );
 			$nepali = $nepaliDate->get_nepali_date( $date[0], $date[1], $date[2]);
 			$date = 'वि.सं. ' . $nepali['M'] . ' ' . translator::digits( $nepali['d'] ) . ', ' .  translator::digits( $nepali['y'] ) ;
 		}
