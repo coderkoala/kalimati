@@ -25,12 +25,12 @@ class commodityPriceDaily extends Model
 	);
 
 	// @usage App\Models\commodityPriceDaily::getDateMax()
-	private static function getDateMax() {
+	public static function getDateMax() {
 		$date = DB::select( DB::raw( 'SELECT max( `entrydate` ) as `today` FROM `tbl_dlypriceentry`;' ) );
 		if ( ! empty(  $date[0] ) && isset(  $date[0]->today ) ) {
 			return $date[0]->today;
 		} else {
-			return date('Y-m-d', time() );
+			return $date;
 		}
 	}
 
@@ -52,8 +52,6 @@ class commodityPriceDaily extends Model
 	// @usage App\Models\commodityPriceDaily::getPrice( date('Y-m-d', time() ));
 	public static function getPrice( $date = null ) {
 		$date = self::getDateMax();
-		$date = '2020-12-21';
-		dd( $date );
 		$queryLang = __( app()->getLocale() );
 		$commodityColumn = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityengname`' : '`commoditynepname`';
 		$queryLang = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityuniten`' : '`commodityunitnp`';
