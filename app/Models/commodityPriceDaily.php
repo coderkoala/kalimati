@@ -118,7 +118,6 @@ class commodityPriceDaily extends Model
 		ON
 		`commodity`.`commodityid` = `pricelist`.`commodityid`;
 		EOD;
-
 		return collect( DB::select( DB::raw( $query ) ) );
 	}
 }

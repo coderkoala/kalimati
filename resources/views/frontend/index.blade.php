@@ -16,7 +16,7 @@
 							<div class="slide-content">
 								{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}
 								<h4>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h4>
-								<a href="#" class="btn btn-theme btn-active">{{__('check prices')}}</a>
+								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
 								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
 							</div>
 						</div>
@@ -31,10 +31,10 @@
 				<div class="slide-table">
 					<div class="slide-table-cell">
 						<div class="container">
-						<div class="slide-content">
+							<div class="slide-content">
 								{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}
 								<h4>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h4>
-								<a href="#" class="btn btn-theme btn-active">{{__('check prices')}}</a>
+								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
 								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
 							</div>
 						</div>
@@ -49,10 +49,10 @@
 				<div class="slide-table">
 					<div class="slide-table-cell">
 						<div class="container">
-						<div class="slide-content">
+							<div class="slide-content">
 								{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}
 								<h4>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h4>
-								<a href="#" class="btn btn-theme btn-active">{{__('check prices')}}</a>
+								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
 								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
 							</div>
 						</div>
@@ -96,11 +96,11 @@
 				<a href="#" class="btn btn-theme btn-active">{{__('read more')}}</a>
 				<a href="#contact" class="btn btn-theme">{{__('Contact us')}}</a>
 			</div>
-			<div class="col-md-6" style="flex: 1;">
+			<div id="commodityPricesDailyTable" class="col-md-6" style="flex: 1;">
 				<div class="row" style="margin:0">
 					<div class="col-sm-12">
 						<div class="features-inner even" style="background-color:#1abc9c;">
-							<h5 style="padding-top:0">{{__('Daily prices')}}</h5>
+							<h5 style="padding-top:0">{{__('Daily prices')}} - {{$date }}</h5>
 							<table id="commodityDailyPrice" class="display" style="width:100%">
 							<thead>
 							<tr>
@@ -139,11 +139,11 @@
 				<div class="all-title">
 					<div class="sec-title">
 						<h3>
-							<span>{{__('Our board members')}}</span>
+							<span>{{__('Our team')}}</span>
 						</h3>
 					</div>
 					<p>
-				{{ __('Our Board of Directors is comprised of community and national leaders with expertise in a wide range of areas, including training, advocacy, education, finance, law, fund development, and business management. It is responsible for taking care of the strategic and financial health of the organization on an ongoing basis.')}}
+				{{ __('Our team is comprised of community and national leaders with expertise in a wide range of areas, including training, advocacy, education, finance, law, fund development, and business management. It is responsible for taking care of the strategic and financial health of the organization on an ongoing basis.')}}
 				</p>
 				</div>
 			</div>
