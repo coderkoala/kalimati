@@ -123,7 +123,7 @@
 									</li>
 									<li>
 										<span>
-											{{ __('toll free') }}
+											{{ __('notice board') }}
 										</span>
 										<a href="tel:+1618070766666" _target="blank"><p>+{{ __('16180 707 66666') }}</p></a>
 									</li>
