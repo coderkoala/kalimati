@@ -222,7 +222,7 @@ class conversion {
 		$date['y'] = $year;
 		$date['m'] = $month;
 		$date['M'] = $this->month_name[$month-1];
-		$date['d'] = $dayss;
+		$date['d'] = $dayss + 1;
 		$date['l'] = $dayname;
 		return $date;
 	}

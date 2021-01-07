@@ -15,8 +15,7 @@ class HomeController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
-    {
+    public function index() {
 		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y', strtotime( maxDate::getDateMax() ) ) . ' A.D.';
 		if ( is_null( $date ) ) {
 			$nepaliDate = new conversion();
