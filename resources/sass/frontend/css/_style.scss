@@ -454,7 +454,7 @@ a {
     text-align: right;
 }
 .bottom-head{
-    background-color:#fff;
+    background-color:#1abc9c;
 }
 .bottom-head-2 {
     padding: 20px 0;
@@ -3533,4 +3533,14 @@ a {
 ---------------------------------------*/
 .map {
     height: 400px;
+}
+
+.mobile-menu .has-sub.current .menu-link, .mobile-menu a:hover, .slide-content h3 {
+    color: white !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #2e2e2e;
+    text-decoration: none;
+    background-color: #1abc9c;
 }

@@ -80,14 +80,27 @@
 
 		<div id="preloader"></div>
 
-		<!-- ====== header ====== -->
-		<header class="header">
-			<div class="theme-mobile-menu d-lg-none">
+		<header class="web__navbar">
+			<div class="ui container d-none d-lg-block">
+				<div class="navbar__top"><a class="navbar-brand" href="/"><img src="images/gov_insignia.svg" alt="MOAD" class="ui small image"></a>
+					<div class="site__meta">
+						<span>{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}</span>
+						<h1>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h1>
+					</div>
+
+					<div class="navbar__right">
+						<div style="display: flex; height: 73px; align-items: center;"><img src="img/logo.png" alt="Nepal Flag" class="ui image flag"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="theme-mobile-menu d-lg-none top-head">
 				<div class="mobile-logo">
 					<a href="#">
-						<img src="img/logo.png" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}">
+						<img src="img/logo.png" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}"> {{ __('Kalimati Market Development Board') }}
 					</a>
 				</div>
+
 				<div class="menu-toggle hamburger-menu">
 					<div class="top-bun"></div>
 					<div class="meat"></div>
@@ -99,47 +112,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="top-head d-none d-lg-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="logo logo-header">
-								<h1>
-									<a href="#">
-										<img src="img/logo.png" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}">
-									</a>
-								</h1>
-							</div>
-						</div>
-						<div class="col-md-9">
-							<div class="head-detail">
-								<ul class="clearfix">
 
-									<li>
-										<span>
-											{{ __('office timing') }}
-										</span>
-										<p>{{__('Monday - Friday')}} | {{ __('10 AM - 6:30 PM') }}</p>
-									</li>
-									<li>
-										<span>
-											{{ __('notice board') }}
-										</span>
-										<a href="tel:+1618070766666" _target="blank"><p>+{{ __('16180 707 66666') }}</p></a>
-									</li>
-									@if ( in_array( Route::currentRouteName() , array('frontend.index'), true ) )
-									@guest
-									<li>
-										<a href="{{ route('frontend.auth.login') }}" class="btn btn-theme">{{ __('Login') }}</a>
-									</li>
-									@endguest
-									@endif
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="bottom-head d-none d-lg-block">
 				<div class="container clearfix">
 					<div class="theme-menu">

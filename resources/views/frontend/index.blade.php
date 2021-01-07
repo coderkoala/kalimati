@@ -14,8 +14,6 @@
 					<div class="slide-table-cell">
 						<div class="container">
 							<div class="slide-content">
-								{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}
-								<h4>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h4>
 								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
 								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
 							</div>
@@ -32,8 +30,6 @@
 					<div class="slide-table-cell">
 						<div class="container">
 							<div class="slide-content">
-								{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}
-								<h4>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h4>
 								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
 								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
 							</div>
@@ -50,8 +46,6 @@
 					<div class="slide-table-cell">
 						<div class="container">
 							<div class="slide-content">
-								{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}
-								<h4>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h4>
 								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
 								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
 							</div>

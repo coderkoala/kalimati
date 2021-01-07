@@ -1,0 +1,145 @@
+   .dashboard__header {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	background-color:#fff;
+	box-shadow:0 0 11px rgba(0,0,0,0.13);
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:99;
+	flex-shrink:0
+   }
+   .header__menu {
+	padding:0 30px;
+	margin-left:auto;
+	list-style:none;
+	display:flex;
+	flex-direction:row;
+	align-items:flex-end
+   }
+   .header__menu .nav__link {
+	cursor:pointer;
+	font-size:20px;
+	line-height:1;
+	padding:4px;
+	display:inline-block;
+	vertical-align:top
+   }
+   .header__menu .nav__link .badge__holder {
+	position:relative
+   }
+   .header__menu .ui.dropdown.nav__link>.dropdown.icon {
+	margin-left:0.5em
+   }
+   .header__menu .nav__item {
+	padding:0 0.5em
+   }
+   .header__menu .nav__item .ui.avatar.image {
+	margin-left:1rem;
+	height:28px;
+	width:28px
+   }
+   .header__menu .basic-nav-menu {
+	width:150px
+   }
+   .navbar__logo {
+	width:200px;
+	padding:0.5rem 1rem
+   }
+   .alt-link:hover {
+	box-shadow:none
+   }
+   @keyframes slideIn {
+	0% {
+	 transform:translateX(50px);
+	 opacity:0
+	}
+	100% {
+	 transform:translateX(0);
+	 opacity:1
+	}
+   }
+   .image__row {
+	display:flex;
+	flex-wrap:wrap;
+	margin-right:-15px;
+	margin-left:-15px
+   }
+   .image__row .col-md-4 {
+	-ms-flex:0 0 33.333333%;
+	flex:0 0 33.333333%;
+	max-width:33.333333%;
+	position:relative;
+	width:100%;
+	padding-right:15px;
+	padding-left:15px
+   }
+   .img-fluid {
+	max-width:100%;
+	height:auto;
+	vertical-align:top
+   }
+   .web__topbar {
+	padding:3px 0;
+	background-color:#e7e7e7
+   }
+   .topbar__frame {
+	display:flex;
+	flex-direction:row;
+	align-items:center
+   }
+   .has__dropdown .ui.dropdown {
+	display:flex;
+	flex-wrap:nowrap
+   }
+   .has__dropdown .ui.upward.dropdown>.menu {
+	background-color:#fff;
+	top:0 !important;
+	bottom:auto
+   }
+   .web__navbar {
+	font-family:"Montserrat",sans-serif
+   }
+   .web__navbar .ui.dropdown .menu>.item {
+	font-weight:600
+   }
+   .web__navbar .flag {
+	width:60px
+   }
+   .web__navbar .navbar-brand {
+	width:100px;
+	display:inline-block;
+	padding-top:0.3125rem;
+	padding-bottom:0.3125rem;
+	margin-right:1rem;
+	font-size:1.25rem;
+	line-height:inherit;
+	white-space:nowrap
+   }
+   .web__navbar .navbar__top {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	padding:5px 0
+   }
+   .web__navbar .site__meta h1,
+   .web__navbar .site__meta h1 span {
+	margin:0;
+	font-size:20px;
+	line-height:1.4;
+	font-weight:600
+   }
+   .web__navbar .site__meta span {
+	display:block;
+	font-size:14px;
+	line-height:1.4;
+	font-weight:600
+   }
+   .web__navbar .navbar__right {
+	margin-left:auto
+   }
+   .menu-link {
+	   color:white;
+   }
