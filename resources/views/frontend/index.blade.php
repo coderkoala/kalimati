@@ -116,7 +116,7 @@
 								<td>{{ $value->commodityunit }}</td>
 								<td>{{ 'ne' === __( app()->getLocale() ) ? 'रू' : 'Rs' }}. {{ App\Models\commodityMaster::digits( $value->minprice ) }}</td>
 								<td>{{ 'ne' === __( app()->getLocale() ) ? 'रू' : 'Rs' }}. {{ App\Models\commodityMaster::digits( $value->maxprice ) }}</td>
-								<td> {{ App\Models\commodityMaster::digits( $value->avgprice, true ) }}</td>
+								<td> {{ App\Models\commodityMaster::digits( ( $value->minprice +  $value->maxprice ) / 2 , true ) }}</td>
 							</tr>
 							@endforeach
 							</tbody>
