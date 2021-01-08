@@ -306,7 +306,7 @@ $main_window.on('scroll', function () {
 				}
 				window.currentInt = 0;
 				window.Kalimati_table = dt.dataTable( {
-					"pageLength": 5,
+					"pageLength": 10,
 					"bFilter": false,
 					"paging": true,
 					language: {
@@ -318,12 +318,12 @@ $main_window.on('scroll', function () {
 					responsive: true
 				});
 
-				window.intervalPriceList = setInterval(function(){
-					try {
-						window.Kalimati_table._fnPageChange(++window.currentInt);
-						window.Kalimati_table._fnDraw();
-					} catch(e) {}
-				}, 5000 );
+				// window.intervalPriceList = setInterval(function(){
+				// 	try {
+				// 		window.Kalimati_table._fnPageChange(++window.currentInt);
+				// 		window.Kalimati_table._fnDraw();
+				// 	} catch(e) {}
+				// }, 5000 );
 			}
 		});
 	})(jQuery.noConflict()));

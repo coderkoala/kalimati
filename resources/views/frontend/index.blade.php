@@ -57,17 +57,11 @@
 	</div>
 </section>
 
-<!-- ====== grow your busniess ====== -->
-<section class="grow-business sp-100">
+<section class="grow-business" style="margin-top:4rem">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="all-title">
-					<div class="sec-title">
-						<h3>
-							<span> {{__('Country’s biggest vegetable market')}}</span>
-						</h3>
-					</div>
 					<p>
 						{{ __("The need to bring improvement in the state of Kalimati market was identified as a priority. Hence an agreement was signed in 1989 between Government of Nepal (GON) and United Nation's Capital Development Fund (UNCDF) to construct and equip the market with physical infrastructures. The present facilities are the outcome of that agreement.") }}
 					</p>
@@ -76,15 +70,25 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6" id="archetypeParent">
-				<h4 class="h-border">{{ __('Regulating the market in Nepalese consumer interest since 1995')}}</h4>
+				<h4 class="h-border">{{ __('Introduction')}}</h4>
 				<div class="abt-para">
+					@if ( 'ne' !== __( app()->getLocale() ) )
 					<p>
-						{{ __('Kalimati Fruits and Vegetables Market is the pioneer organized terminal wholesale market in Nepal where retailers, institutional consumers and other bulk consumers procure their supplies. This market alone covers 60 to 70 percent of demand of Kathmandu valley. For giving an organized shape to the marketing of agricultural produce, especially, vegetables and fruits in Kathmandu valley, Kalimati Fruits and Vegetables Wholesale Market was set up by then the Department of Food and Agriculture Marketing Services under the Ministry of Agriculture in 1986.')}}
-					</p>
-					<p>
-						{!! __("In 1995, government felt the need of an independent body for the efficient operation and management of the market. Keeping this in view, Kalimati Fruits and Vegetables Wholesale Market Development Board was formulated on 13 February 1995 under the Development Board Act 1957. Likewise, with a view to manage the operations of the market in an organized way and ensuring planned development of agriculture marketing, the Government of Nepal has formulated new organizational set up “Kalimati Fruits and Vegetables Market Development Board 2002” replacing the previous one.") !!}
-					</p>
+					Kalimati Fruits and Vegetables Markets is the pioneer organized terminal wholesale market in Nepal where retailers, institutional consumers and other bulk consumers procure their supplies. This market alone covers 60 to 70 percent of demand of Kathmandu valley. For giving an organized shape to the marketing of agricultural produce, especially, vegetables and fruits in Kathmandu valley, Kalimati Fruits and Vegetables Wholesale Market was set up by then the Department of Food and Agriculture Marketing Services under the Ministry of Agriculture in 1986.
 
+					<br>The need to bring improvement in the state of Kalimati market was identified as a priority. Hence an agreement (NEP/89/CO1) was signed in 1989 between Government of Nepal (GON) and United Nation's Capital Development Fund (UNCDF) to construct and equip the market with physical infrastructures. The present facilities are the outcome of that agreement.
+
+					<br>In 1995, government felt the need of an independent body for the efficient operation and management of the market. Keeping this in view, Kalimati Fruits and Vegetables Wholesale Market Development Board was formulated on 13 February 1995 under the Development Board Act 1957. Likewise, with a view to manage the operations of the market in on organized way and ensuring planned development of agriculture marketing, the Government of Nepal has formulated new organizational set up "Kalimati Fruits and Vegetables Market Development Board 2002" replacing the previous one.
+					</p>
+					@else
+					<p>
+					लामो समयदेखि काठमाडौं उपत्यका तथा अन्य क्षेत्रको तरकारी तथा फलफूलहरुको वेचविखन गर्ने थलोको रुपमा रहदै आएको कालीमाटी बजार वि.सं. २०४३ आश्विन १५ गते देखि तत्कालिन खाद्य तथा कृषि बजार सेवा विभाग अन्तर्गत सञ्चालनमा आएको थियो । बजार सञ्चालनको क्रममा बजार आगमन र कारोबारको स्थितिमा भएको विस्तार एवं बजार प्रयोगकर्ताहरुको बढ्दो चापलाई मध्यनजर गरी नेपाल सरकार तथा संयुक्त राष्ट्रसंघीय पूँजी विकास कोष (UNCDF) को सहयोगमा हालका अधिकांश संरचना निर्माण भएका हुन् ।
+
+					<br>कालीमाटी तरकारी बजारको निर्माण तथा व्यवस्थापनको लागि एउटा स्वायत्त निकायको आवश्यकता महशुस गरी नेपाल सरकारद्वारा विकास समिति ऐन-२०१३ अन्तर्गत वि.सं. २०५१ फागुन १ गते "कालीमाटी फलफूल तथा तरकारी थोक बजार विकास समिति (गठन) आदेश, २०५१" जारी गरियो । समितिको कार्य क्षेत्रलाई विस्तार गर्ने अभिप्रायले नेपाल सरकारले वि.सं. २०५८ चैत्र १९ गते साविकको आदेश खारेज गरी सोही ऐन अन्तर्गत "कालीमाटी फलफूल तथा तरकारी बजार विकास समिति(गठन) आदेश, २०५८" जारी गरी सोही अनुसार संघीय संरचना बमोजिम यस समितिलाई संघ अन्तर्गतको निकाय कायम गरिएको छ । नेपाल सरकारबाट निर्माण भएको कृषि उपज बजार बालाजु २०६२ असार महिना देखि समितिले सञ्चालन गर्दै आएको छ ।
+
+					<br>समितिको स्वामित्वमा रहेको कीर्तिपुर नगरपालिका वडा नं.६ चोभारमा करिब २२ रोपनी जग्गामा फलफूल तथा पुष्प बजार निर्माणाधिन अवस्थामा छ । यसैगरी धादिङ्ग नौविसे स्थित आफ्नै स्वामित्वको करिव ४.५ रोपनी जग्गामा सङ्कलन केन्द्र स्थापना गर्ने सोचाई समितिले राखेको छ ।
+					</p>
+					@endif
 				</div>
 
 				<a href="#" class="btn btn-theme btn-active">{{__('read more')}}</a>

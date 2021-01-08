@@ -96,8 +96,8 @@
 
 			<div class="theme-mobile-menu d-lg-none top-head">
 				<div class="mobile-logo">
-					<a href="#">
-						<img src="img/logo.png" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}"> {{ __('Kalimati Market Development Board') }}
+					<a href="{{route('frontend.index')}}">
+						<img src="img/logo.png" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}"> <strong style="color:white;">{{ __('Kalimati Market Development Board') }}</strong>
 					</a>
 				</div>
 
@@ -122,10 +122,10 @@
 									<a href="{{route('frontend.index')}}" class="menu-link">{{ __('Home') }}</a>
 								</li>
 								<li class="menu-item">
-									<a href="#" class="menu-link">{{ __('About us') }}</a>
+									<a href="#archetypeParent" class="menu-link">{{ __('About us') }}</a>
 								</li>
 								<li class="menu-item">
-									<a href="#" class="menu-link">{{ __('Contact us') }}</a>
+									<a href="#contact" class="menu-link">{{ __('Contact us') }}</a>
 								</li>
 								@guest
 
