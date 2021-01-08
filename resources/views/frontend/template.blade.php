@@ -205,11 +205,14 @@
 										</li>
 										<li>
 											<i class="fa fa-envelope"></i>
-											<p>contact@kalimatimarket.gov.np </p>
+											<p>kalimatimarket@gmail.com </p>
 										</li>
 										<li>
 											<i class="fa fa-globe"></i>
 											<p>www.kalimatimarket.gov.np</p>
+										</li>
+										<li>
+											<p>Notice Board Service: 1618070766666</p>
 										</li>
 									</ul>
 								</div>

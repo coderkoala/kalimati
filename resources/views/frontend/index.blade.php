@@ -63,7 +63,7 @@
 			<div class="col-sm-12">
 				<div class="all-title">
 					<p>
-						{{ __("The need to bring improvement in the state of Kalimati market was identified as a priority. Hence an agreement was signed in 1989 between Government of Nepal (GON) and United Nation's Capital Development Fund (UNCDF) to construct and equip the market with physical infrastructures. The present facilities are the outcome of that agreement.") }}
+						{{ __("") }}
 					</p>
 				</div>
 			</div>
