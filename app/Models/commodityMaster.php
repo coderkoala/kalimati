@@ -41,22 +41,24 @@ class commodityMaster extends Model
 
 
 	protected static $arrayMapperDigits = array(
-		0 => '०',
-		1 => '१',
-		2 => '२',
-		3 => '३',
-		4 => '४',
-		5 => '५',
-		6 => '६',
-		7 => '७',
-		8 => '८',
-		9 => '९'
+		0   => '०',
+		1   => '१',
+		2   => '२',
+		3   => '३',
+		4   => '४',
+		5   => '५',
+		6   => '६',
+		7   => '७',
+		8   => '८',
+		9   => '९',
+		'.' => '.'
 	);
 
 	// Usage : App\Models\commodityMaster::digits()
-	public static function digits( $string ) {
+	public static function digits( $string, $is_formatted = false ) {
+		$string = $is_formatted ? ( number_format( ( float ) $string, 2, '.', '' ) ) : ( int ) $string;
 		if (  'ne' === __( app()->getLocale() ) ) {
-			return str_replace( array_keys( self::$arrayMapperDigits ), array_values( self::$arrayMapperDigits ), (int) $string );
+			return str_replace( array_keys( self::$arrayMapperDigits ), array_values( self::$arrayMapperDigits ), $string  );
 		} else {
 			return $string;
 		}
