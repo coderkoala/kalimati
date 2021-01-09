@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\commodityMaster as translator;
 use App\Models\tradersMaster as due;
+use App\Models\commodityPriceDaily as maxdate;
 use Validator;
 
 /**
