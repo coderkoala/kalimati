@@ -20,3 +20,10 @@ Route::get('terms', [TermsController::class, 'index'])
         $trail->parent('frontend.index')
             ->push(__('Terms & Conditions'), route('frontend.pages.terms'));
     });
+
+Route::get('dues', [HomeController::class, 'checkPrices'])
+    ->name('frontend.dues')
+    ->breadcrumbs(function (Trail $trail) {
+        $trail->parent('frontend.index')
+            ->push(__('Trader Dues'), route('frontend.frontend.dues'));
+	});

@@ -301,13 +301,14 @@ $main_window.on('scroll', function () {
 				var i18n = _Q('#i18n').val(),
 					i18nurl = 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/English.json';
 				if ( 'ne' === i18n ) {
-					i18nurl = 'http://cdn.datatables.net/plug-ins/1.10.22/i18n/Nepali.json';
+					i18nurl = 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Nepali.json';
 
 				}
 				window.currentInt = 0;
 				window.Kalimati_table = dt.dataTable( {
 					"pageLength": 10,
 					"bFilter": false,
+					"className": 'details-control',
 					"paging": true,
 					language: {
 						url : i18nurl,
