@@ -56,7 +56,7 @@ class commodityMaster extends Model
 
 	// Usage : App\Models\commodityMaster::digits()
 	public static function digits( $string, $is_formatted = false ) {
-		$string = $is_formatted ? ( number_format( ( float ) $string, 2, '.', '' ) ) : ( int ) $string;
+		$string = $is_formatted ? ( number_format( ( float ) $string, 2, '.', '' ) ) : ( string ) $string;
 		if (  'ne' === __( app()->getLocale() ) ) {
 			return str_replace( array_keys( self::$arrayMapperDigits ), array_values( self::$arrayMapperDigits ), $string  );
 		} else {

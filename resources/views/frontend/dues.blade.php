@@ -47,10 +47,11 @@
                             </ul>
 								<div class="para">
 									<div class="comment-box">
-									<form action="#" class="comment-form">
+									<form action="#" class="comment-form" method="POST">
+										@csrf
 										<div class="row">
 											<div class="col-sm-3">
-												<input id="shopid" type="text" class="form-control" placeholder="{{__('Shop Identification Number')}}">
+												<input id="id" name="id" type="text" class="form-control" placeholder="{{__('Trader Identification Number')}}">
 											</div>
 											<div class="col-sm-3">
 												<button type="submit" class="btn comment-btn">{{__('Check Dues')}}</button>
@@ -68,20 +69,36 @@
 						<h4>{{ __('Trader Dues') }}</h4>
 						<div class="pro-info">
 							<p>
-								date :
-								<span> 24 fevruary 2018</span>
+							{{__('Trader\'s Name')}} :
+								<span id="tradername"> Financial Service</span>
 							</p>
 							<p>
-								Location :
-								<span> New York, NY</span>
+								{{__('Shop Number')}} :
+								<span id="shopno"> KC40000</span>
 							</p>
 							<p>
-								Category :
-								<span> Financial Service</span>
+								{{__('Due Date')}} :
+								<span id="duedate"> 24 fevruary 2018</span>
 							</p>
 							<p>
-								Category :
-								<span> Home Loan</span>
+							{{__('Monthly Rent')}} :
+								<span id="mrent"> Rs. 33,000</span>
+							</p>
+							<p>
+							{{__('Late Fee')}} :
+								<span id="lfee"> Rs 0.00</span>
+							</p>
+							<p>
+							{{__('Other Amount')}} :
+								<span id="otheramt"> Rs 1366</span>
+							</p>
+							<p>
+							{{__('Adjustment')}} :
+								<span id="adjustment"> Rs 7657</span>
+							</p>
+							<p>
+							{{__('Total Amount')}} :
+								<span id="totalamt"> Rs 12334</span>
 							</p>
 						</div>
 					</div>

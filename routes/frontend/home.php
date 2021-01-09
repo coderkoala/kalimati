@@ -27,3 +27,6 @@ Route::get('dues', [HomeController::class, 'checkPrices'])
         $trail->parent('frontend.index')
             ->push(__('Trader Dues'), route('frontend.dues'));
 	});
+
+Route::post('dues', [HomeController::class, 'checkIndividualPrice'])
+	->name('duesPolling');
