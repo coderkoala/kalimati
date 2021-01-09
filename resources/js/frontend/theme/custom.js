@@ -360,7 +360,8 @@ $main_window.on('scroll', function () {
 
 		btn.on('click' , function(e) {
 			e.preventDefault();
-			$(".notice-error-404").addClass('notice-error-404');
+			$(".alert-danger").addClass('notice-error-404');
+			$("#findfees").fadeOut(500);
 
 			jQuery('#preloader').show();
 			jQuery.ajax({
@@ -380,9 +381,8 @@ $main_window.on('scroll', function () {
 								html:  response.error,
 							});
 							$('.ajax-hide').hide();
-							$('.notice-error-404').removeClass('notice-error-404');
-							$(".notice-error-404").slideUp("slow");
-							$('html, body').animate({ scrollTop:  $('.notice-error-404').offset().top - 150 }, 'slow');
+							$('.alert-danger').removeClass('notice-error-404');
+							$('.alert-danger').fadeIn(2000);
 						} else {
 							var pricingData;
 							if ( undefined !== response.message ) {
@@ -393,6 +393,7 @@ $main_window.on('scroll', function () {
 								$('.ajax-hide').show();
 							}
 							$(".project-detail").slideDown("slow");
+							$('.alert-danger').addClass('notice-error-404');
 							$('html, body').animate({ scrollTop:  $('.project-detail').offset().top - 150 }, 'slow');
 
 						}
@@ -406,6 +407,7 @@ $main_window.on('scroll', function () {
 				  }
 			  });
 			  $('#preloader').hide();
+			  $("#findfees").fadeIn(200);
 			})
 		});
 	})(jQuery.noConflict()));
