@@ -125,6 +125,9 @@
 									<a href="#archetypeParent" class="menu-link">{{ __('About us') }}</a>
 								</li>
 								<li class="menu-item">
+									<a href="{{route('frontend.dues')}}" class="menu-link">{{ __('Trader Dues') }}</a>
+								</li>
+								<li class="menu-item">
 									<a href="#contact" class="menu-link">{{ __('Contact us') }}</a>
 								</li>
 								@guest

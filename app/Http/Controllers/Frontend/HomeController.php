@@ -32,14 +32,14 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
 	public function checkPrices() {
-		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y', strtotime( maxDate::getDateMax() ) ) . ' A.D.';
+		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y' ) . ' A.D.';
 		if ( is_null( $date ) ) {
 			$nepaliDate = new conversion();
-			$date = explode('-', date( 'Y-m-d', strtotime( maxDate::getDateMax() ) ) );
+			$date = explode('-', date( 'Y-m-d') );
 			$nepali = $nepaliDate->get_nepali_date( $date[0], $date[1], $date[2]);
 			$date = 'वि.सं. ' . $nepali['M'] . ' ' . translator::digits( $nepali['d'] ) . ', ' .  translator::digits( $nepali['y'] ) ;
 		}
-        return view('frontend.index', array(
+        return view('frontend.dues', array(
 			'date' => $date
 		));
 	}

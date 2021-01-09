@@ -125,6 +125,9 @@
 									<a href="#archetypeParent" class="menu-link">{{ __('About us') }}</a>
 								</li>
 								<li class="menu-item">
+									<a href="{{route('frontend.dues')}}" class="menu-link">{{ __('Trader Dues') }}</a>
+								</li>
+								<li class="menu-item">
 									<a href="#contact" class="menu-link">{{ __('Contact us') }}</a>
 								</li>
 								@guest
@@ -205,11 +208,14 @@
 										</li>
 										<li>
 											<i class="fa fa-envelope"></i>
-											<p>contact@kalimatimarket.gov.np </p>
+											<p>kalimatimarket@gmail.com </p>
 										</li>
 										<li>
 											<i class="fa fa-globe"></i>
 											<p>www.kalimatimarket.gov.np</p>
+										</li>
+										<li>
+											<p>Notice Board Service: 1618070766666</p>
 										</li>
 									</ul>
 								</div>

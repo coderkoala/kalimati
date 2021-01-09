@@ -22,8 +22,8 @@ Route::get('terms', [TermsController::class, 'index'])
     });
 
 Route::get('dues', [HomeController::class, 'checkPrices'])
-    ->name('frontend.dues')
+    ->name('dues')
     ->breadcrumbs(function (Trail $trail) {
         $trail->parent('frontend.index')
-            ->push(__('Trader Dues'), route('frontend.frontend.dues'));
+            ->push(__('Trader Dues'), route('frontend.dues'));
 	});
