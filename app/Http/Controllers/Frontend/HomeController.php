@@ -64,7 +64,7 @@ class HomeController extends Controller
 
 		try {
 			if ( $validator->fails() ) {
-				return response()->json( [ 'header'=> __('error') ,'status'=> 400 , 'icon' => 'error', 'error' => $validator->messages() ], 400 );
+				return response()->json( [ 'header'=> __('Error') ,'status'=> 400 , 'icon' => 'error', 'error' => $validator->messages() ], 400 );
 			}
 
 			$traderTuple =  due::get_instance()
@@ -73,13 +73,13 @@ class HomeController extends Controller
 								->first();
 
 			if ( ! $traderTuple ) {
-				return response()->json( [ 'header'=> __('error') ,'status'=> 200 , 'icon' => 'error', 'error' => __('No trader with that identification number found.') ], 200 );
+				return response()->json( [ 'header'=> __('Error') ,'status'=> 200 , 'icon' => 'error', 'error' => __('No trader with that identification number found.') ], 200 );
 			} else {
 				$traderTuple->duedate = empty( $traderTuple->duedate ) ? 'Not found.' : translator::digits( $traderTuple->duedate );
-				return response()->json( [ 'header'=> __('success') ,'status'=> 200 , 'icon' => 'success', 'message' => $traderTuple->toArray() ], 200 );
+				return response()->json( [ 'header'=> __('Success') ,'status'=> 200 , 'icon' => 'success', 'message' => $traderTuple->toArray() ], 200 );
 			}
 		} catch (\Exception $ex ) {
-			return response()->json( [ 'header'=> __('error') ,'status'=> 500 , 'icon' => 'error', 'error' => __('An error occured. Please try again later.') ], 500 );
+			return response()->json( [ 'header'=> __('Error') ,'status'=> 500 , 'icon' => 'error', 'error' => __('An error occured. Please try again later.') ], 500 );
 		}
 	}
 }

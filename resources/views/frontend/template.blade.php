@@ -215,7 +215,8 @@
 											<p>www.kalimatimarket.gov.np</p>
 										</li>
 										<li>
-											<p>Notice Board Service: 1618070766666</p>
+											<i class="fa fa-phone-square"></i>
+											<p>{{__('Notice Board Number')}}: {{ __('16180 707 66666')}}</p>
 										</li>
 									</ul>
 								</div>

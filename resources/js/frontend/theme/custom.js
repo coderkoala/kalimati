@@ -6,6 +6,8 @@
  * Copyright 2018.
  -------------------------------------------------------------------*/
 
+const { default: Swal } = require("sweetalert2");
+
 
 (function($) {
   "use strict";
@@ -351,3 +353,59 @@ $main_window.on('scroll', function () {
       google.maps.event.addDomListener(window, 'load', initialize);
   }
   // map initialization code  ends
+
+  (( function($) {
+	$(document.body).ready( function() {
+		var btn = $('#findfees');
+
+		btn.on('click' , function(e) {
+			e.preventDefault();
+			$(".notice-error-404").addClass('notice-error-404');
+
+			jQuery('#preloader').show();
+			jQuery.ajax({
+				method: "POST",
+				url: '/dues',
+				data: {
+					'id' : jQuery('#id').val(),
+					'_token' : jQuery('#csrf').val(),
+				},
+				dataType: 'json',
+				success: function( response ) {
+						console.log( response );
+						if (  'error' === response.icon ) {
+							Swal.fire({
+								icon: response.icon,
+								title: response.header,
+								html:  response.error,
+							});
+							$('.ajax-hide').hide();
+							$('.notice-error-404').removeClass('notice-error-404');
+							$(".notice-error-404").slideUp("slow");
+							$('html, body').animate({ scrollTop:  $('.notice-error-404').offset().top - 150 }, 'slow');
+						} else {
+							var pricingData;
+							if ( undefined !== response.message ) {
+								pricingData = response.message;
+								Object.keys( pricingData ).forEach( function( index) {
+									 $( '#' + index ).html( pricingData[index] )
+								});
+								$('.ajax-hide').show();
+							}
+							$(".project-detail").slideDown("slow");
+							$('html, body').animate({ scrollTop:  $('.project-detail').offset().top - 150 }, 'slow');
+
+						}
+					 },
+				error : function ( xhr ){
+					Swal.fire({
+					  title: 'Error!',
+					  icon:  'error',
+					  text:  'Error occured. Please try again later.',
+				  });
+				  }
+			  });
+			  $('#preloader').hide();
+			})
+		});
+	})(jQuery.noConflict()));
