@@ -36,7 +36,7 @@
                             <ul class="post-detail-meta" style="border-top:none;">
                                 <li>
                                     <i class="fa fa-calendar"></i>
-                                    <span>{{ $date }}</span>
+                                    <span>{{ $date }}</span> <!--Remove this date -->
 
                                 </li>
                                 <li>
