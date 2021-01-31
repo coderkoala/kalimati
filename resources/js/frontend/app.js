@@ -9,11 +9,16 @@ require('./theme/plugins');
 
 
 // Theme specific items.
+require('./theme/flatpikr');
+require('./theme/datepicker-nepali');
 require('./theme/owl.carousel.min');
 require('./theme/jquery.waypoints.min');
 require('./theme/jquery.counterup.min');
 require('./theme/datatables');
 require('./theme/datatables-responsive');
+require('./theme/jszip');
+require('./theme/datatables-button');
+require('./theme/datatables-button-html');
 require('./theme/imagesloaded');
 require('./theme/isotope.min');
 require('./theme/lity.min');

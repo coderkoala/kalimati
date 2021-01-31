@@ -51,39 +51,29 @@ class commodityPriceDaily extends Model
 
 	// @usage App\Models\commodityPriceDaily::getPrice( date('Y-m-d', time() ));
 	public static function getPrice( $date = null ) {
-		$date = self::getDateMax();
+		$date = $date ? $date : date('Y-m-d'); 
 		$queryLang = __( app()->getLocale() );
 		$commodityColumn = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityengname`' : '`commoditynepname`';
 		$queryLang = 'en' === $queryLang && 'ne' !== $queryLang ? '`commodityuniten`' : '`commodityunitnp`';
 		$query= <<<EOD
 		SELECT
-		(
-			SELECT $commodityColumn
-			FROM
-			`tbl_commoditylist`
-			WHERE
-			`commodityid` = `tbl_dlypriceentry`.`commodityid`
-		) as `commodityname`,
-		(
-			select {$queryLang}
-			from
-			`tbl_commoditylist`
-			where
-			`commodityid` = `tbl_dlypriceentry`.`commodityid`
-		) as `commodityunit`,
-		`minprice`,
-		`maxprice`,
-		`avgprice`
-		FROM
-		`tbl_dlypriceentry`
-		WHERE
-		`entrydate` = '{$date}'
-		AND
-		`pricetype` = 'R'
-		order by
-		`commodityid`
+		`commodity`.{$commodityColumn} AS `commodityname`,
+		`commodity`.{$queryLang} AS `commodityunit`,
+		`pricelist`.`minprice`,
+		`pricelist`.`maxprice`,
+		`pricelist`.`avgprice` FROM
+		( SELECT *
+		  FROM
+		  `tbl_dlypriceentry` AS `pivot`
+		  WHERE
+		  (`entrydate`) IN
+		  ( '$date' )
+		) AS `pricelist`
+		INNER JOIN
+		`tbl_commoditylist` AS `commodity`
+		ON
+		`commodity`.`commodityid` = `pricelist`.`commodityid`;
 		EOD;
-
 		return collect( DB::select( DB::raw( $query ) ) );
 	}
 

@@ -125,6 +125,9 @@
 									<a href="#archetypeParent" class="menu-link">{{ __('About us') }}</a>
 								</li>
 								<li class="menu-item">
+									<a href="{{route('frontend.price')}}" class="menu-link">{{ __('Check Prices') }}</a>
+								</li>
+								<li class="menu-item">
 									<a href="{{route('frontend.dues')}}" class="menu-link">{{ __('Trader Dues') }}</a>
 								</li>
 								<li class="menu-item">
@@ -215,8 +218,7 @@
 											<p>www.kalimatimarket.gov.np</p>
 										</li>
 										<li>
-											<i class="fa fa-phone-square"></i>
-											<p>{{__('Notice Board Number')}}: {{ __('16180 707 66666')}}</p>
+											<p>Notice Board Service: 1618070766666</p>
 										</li>
 									</ul>
 								</div>

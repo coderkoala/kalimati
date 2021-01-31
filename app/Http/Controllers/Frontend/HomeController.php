@@ -50,8 +50,49 @@ class HomeController extends Controller
 	/**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-	public function checkIndividualPrice( Request $request ) {
+	public function checkDailyPrices() {
+		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y' ) . ' A.D.';
+		if ( is_null( $date ) ) {
+			$nepaliDate = new conversion();
+			$date = explode('-', date( 'Y-m-d') );
+			$nepali = $nepaliDate->get_nepali_date( $date[0], $date[1], $date[2]);
+			$date = 'वि.सं. ' . $nepali['M'] . ' ' . translator::digits( $nepali['d'] ) . ', ' .  translator::digits( $nepali['y'] ) ;
+		}
+        return view('frontend.singleDayPricings', array( 'date' => $date ) );
+	}
 
+	/**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+	public function checkDailyPricesPOST( Request $request ) {
+		$validator = Validator::make(
+			$request->all(),
+			array(
+				'datePricing' => 'required|date_format:Y-m-d',
+			)
+		);
+
+		$dateRequested = $request->datePricing;
+		if ( $validator->fails() ) {
+			$dateRequested = date('Y-m-d');
+		}
+		$date = 'ne' === __( app()->getLocale() ) ? null : date('F j, Y', strtotime( $dateRequested ) ) . ' A.D.';
+		if ( is_null( $date ) ) {
+			$nepaliDate = new conversion();
+			$date = explode('-', $dateRequested );
+			$nepali = $nepaliDate->get_nepali_date( $date[0], $date[1], $date[2]);
+			$date = 'वि.सं. ' . $nepali['M'] . ' ' . translator::digits( $nepali['d'] ) . ', ' .  translator::digits( $nepali['y'] ) ;
+		}
+        return view('frontend.singleDayPricings', array(
+			'date'      => $date,
+			'paramDate' => $dateRequested
+		));
+	}
+
+	/**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+	public function checkIndividualPrice( Request $request ) {
 		$traderid = strtoupper( $request->input('id') );
 		$validator = Validator::make(
 			$request->all(),
