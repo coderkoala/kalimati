@@ -298,6 +298,49 @@ $main_window.on('scroll', function () {
 
 	(( function(_Q) {
 		_Q(document.body).ready( function( event ) {
+			dt = _Q('#commodityPriceParticular');
+			if ( 1 === dt.length ) {
+				var i18n = _Q('#i18n').val(),
+					i18nurl = 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/English.json';
+				if ( 'ne' === i18n ) {
+					i18nurl = 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Nepali.json';
+
+				}
+				window.Kalimati_table = dt.dataTable( {
+					"pageLength": 25,
+					"bFilter": true,
+					"className": 'details-control',
+					"paging": true,
+					language: {
+						url : i18nurl,
+					},
+					rowReorder: {
+						selector: 'td:nth-child(2)'
+					},
+          responsive: true,
+          dom: 'Bfrtip',
+          buttons: [
+            'copy', 'csv'
+          ]
+        });
+			}
+    });
+    jQuery(".datePricing-en").flatpickr({
+      enableTime: false,
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d",
+    });
+    jQuery(".datePricing-ne").flatpickr({
+      enableTime: false,
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d",
+    });
+	})(jQuery.noConflict()));
+
+	(( function(_Q) {
+		_Q(document.body).ready( function( event ) {
 			dt = _Q('#commodityDailyPrice');
 			if ( 1 === dt.length ) {
 				var i18n = _Q('#i18n').val(),
@@ -359,55 +402,55 @@ $main_window.on('scroll', function () {
 		var btn = $('#findfees');
 
 		btn.on('click' , function(e) {
-			e.preventDefault();
-			$(".alert-danger").addClass('notice-error-404');
-			$("#findfees").fadeOut(500);
+        e.preventDefault();
+        $(".alert-danger").addClass('notice-error-404');
+        $("#findfees").fadeOut(500);
 
-			jQuery('#preloader').show();
-			jQuery.ajax({
-				method: "POST",
-				url: '/dues',
-				data: {
-					'id' : jQuery('#id').val(),
-					'_token' : jQuery('#csrf').val(),
-				},
-				dataType: 'json',
-				success: function( response ) {
-						console.log( response );
-						if (  'error' === response.icon ) {
-							Swal.fire({
-								icon: response.icon,
-								title: response.header,
-								html:  response.error,
-							});
-							$('.ajax-hide').hide();
-							$('.alert-danger').removeClass('notice-error-404');
-							$('.alert-danger').fadeIn(2000);
-						} else {
-							var pricingData;
-							if ( undefined !== response.message ) {
-								pricingData = response.message;
-								Object.keys( pricingData ).forEach( function( index) {
-									 $( '#' + index ).html( pricingData[index] )
-								});
-								$('.ajax-hide').show();
-							}
-							$(".project-detail").slideDown("slow");
-							$('.alert-danger').addClass('notice-error-404');
-							$('html, body').animate({ scrollTop:  $('.project-detail').offset().top - 150 }, 'slow');
+        jQuery('#preloader').show();
+        jQuery.ajax({
+          method: "POST",
+          url: '/dues',
+          data: {
+            'id' : jQuery('#id').val(),
+            '_token' : jQuery('#csrf').val(),
+          },
+          dataType: 'json',
+          success: function( response ) {
+              console.log( response );
+              if (  'error' === response.icon ) {
+                Swal.fire({
+                  icon: response.icon,
+                  title: response.header,
+                  html:  response.error,
+                });
+                $('.ajax-hide').hide();
+                $('.alert-danger').removeClass('notice-error-404');
+                $('.alert-danger').fadeIn(2000);
+              } else {
+                var pricingData;
+                if ( undefined !== response.message ) {
+                  pricingData = response.message;
+                  Object.keys( pricingData ).forEach( function( index) {
+                    $( '#' + index ).html( pricingData[index] )
+                  });
+                  $('.ajax-hide').show();
+                }
+                $(".project-detail").slideDown("slow");
+                $('.alert-danger').addClass('notice-error-404');
+                $('html, body').animate({ scrollTop:  $('.project-detail').offset().top - 150 }, 'slow');
 
-						}
-					 },
-				error : function ( xhr ){
-					Swal.fire({
-					  title: 'Error!',
-					  icon:  'error',
-					  text:  'Error occured. Please try again later.',
-				  });
-				  }
-			  });
-			  $('#preloader').hide();
-			  $("#findfees").fadeIn(200);
-			})
-		});
-	})(jQuery.noConflict()));
+              }
+            },
+          error : function ( xhr ){
+            Swal.fire({
+              title: 'Error!',
+              icon:  'error',
+              text:  'Error occured. Please try again later.',
+            });
+            }
+          });
+          $('#preloader').hide();
+          $("#findfees").fadeIn(200);
+        })
+      });
+    })(jQuery.noConflict()));
