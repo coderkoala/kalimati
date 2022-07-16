@@ -2,7 +2,7 @@
     <div>
         <strong>
             @lang('Copyright') &copy; {{ date('Y') }}
-            <x-utils.link href="http://laravel-boilerplate.com" target="_blank" :text="__(appName())" />
+            <x-utils.link href="http://kalimatimarket.gov.np" target="_blank" :text="__(appName())" />
         </strong>
 
         @lang('All Rights Reserved')
@@ -10,7 +10,6 @@
 
     <div class="mfs-auto">
         @lang('Powered by')
-        <x-utils.link href="http://laravel-boilerplate.com" target="_blank" :text="__(appName())" /> &
-        <x-utils.link href="https://coreui.io" target="_blank" text="CoreUI" />
+        <x-utils.link href="https://comptech.com.np" target="_blank" text="Comptech International Pvt. Ltd." />
     </div>
 </footer>

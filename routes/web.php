@@ -26,3 +26,12 @@ Route::group(['as' => 'frontend.'], function () {
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
     includeRouteFiles(__DIR__.'/backend/');
 });
+
+/*
+ * FS Routes
+ *
+ * These routes can only be accessed by users with type `auth`
+ */
+Route::group(['prefix' => '/admin/file-repositary', 'as' =>'unisharp.lfm.', 'middleware' => ['web', 'auth']], function () {
+    includeRouteFiles(__DIR__.'/services/');
+});

@@ -1,5 +1,27 @@
-@extends('errors::minimal')
+@extends('frontend.template')
 
-@section('title', __('Server Error'))
+@section('title', __('Not Found') . ' | ' . __idf(500,false))
 @section('code', '500')
-@section('message', __('Server Error'))
+@section('message', __('Not Found'))
+
+@section('content')
+<section class="banner" style="background-image:url({{ asset('img/slide1.jpg') }});min-height:80vh">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="banner-heading">
+                        <h2>{{__('Unknown request')}}</h2>
+                    </div>
+                    <div class="banner-link">
+                        <ul>
+                            <li>
+                                <span class="active">{{__('Server has received a request it can not fulfill, please try again later')}}</span>
+                            </li>
+                        </ul>
+                        <a href="{{url('/')}}" class="btn btn-theme bg-success mt-5">{{__('back to home')}} <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

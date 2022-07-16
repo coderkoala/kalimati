@@ -1,36 +1,13 @@
 @import "../global";
 
 // Rest of the scss stuff.
-@import '~bootstrap/scss/bootstrap';
-@import './css/animate';
-@import './css/datatables';
-@import './css/owl.carousel.min';
-@import './css/owl.theme.default.min';
-@import './css/lity.min';
-@import './css/style';
-@import './css/skin';
-@import './css/responsive';
-@import './css/datatables-buttons';
-@import './css/customheader';
-@import './css/nepali-datepicker';
-@import './css/flatpikr';
-
-.dataTables_wrapper .dataTables_filter input {
-    background-color: white;
-}
-
-.dataTables_wrapper .dataTables_length select {
-    background-color: white;
-}
-
-#commodityDailyPrice_length {
-	display:none;
-}
-
-.ajax-hide {
-	display:none;
-}
-
-.notice-error-404 {
-	display:none;
-}
+@import "~bootstrap/scss/bootstrap";
+@import "./css/owl.carousel.min";
+@import "./css/owl.theme.default.min";
+@import "./css/animate";
+@import "./css/style";
+@import "./css/skin";
+@import "./css/responsive";
+@import "./css/customheader";
+@import "./css/table";
+@import "./css/tweaks";

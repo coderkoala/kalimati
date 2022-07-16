@@ -10,7 +10,7 @@ class tradersMaster extends Model
 	use HasFactory;
 
 	public 	  $timestamps = false;
-	protected $table = "tbl_traderdue";
+	protected $table = "traders_due";
 	protected static $instance = null;
 	protected $keyType = "string";
 	protected $fillable = array(

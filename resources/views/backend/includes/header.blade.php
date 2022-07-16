@@ -3,11 +3,7 @@
         <i class="c-icon c-icon-lg cil-menu"></i>
     </button>
 
-    <a class="c-header-brand d-lg-none" href="#">
-        <svg width="118" height="46" alt="CoreUI Logo">
-            <use xlink:href="{{ asset('img/brand/coreui.svg#full') }}"></use>
-        </svg>
-    </a>
+    <img class="c-header-brand d-lg-none" style="padding: 5px;" width="118" height="46" src="{{ asset('img/logo.png') }}" alt="{{ appName() }}">
 
     <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
         <i class="c-icon c-icon-lg cil-menu"></i>
@@ -26,9 +22,20 @@
                     aria-haspopup="true"
                     aria-expanded="false" />
 
-                @include('includes.partials.lang')
+                @include('includes.partials.lang-backend')
             </li>
         @endif
+
+        <li class="c-header-nav-item px-3">
+            <span class="c-header-nav-link">
+                {{ __('Your logged IP address') }} : {{ __idf(Request::ip(), false) }}
+            </span>
+        </li>
+        <li class="c-header-nav-item px-3">
+            <span class="c-header-nav-link">
+                {{ __('Last logged in') }} : {{ __idf(__dt(date('l, H:i a', strtotime(Auth::user()->last_login_at))), false) }}
+            </span>
+        </li>
     </ul>
 
     <ul class="c-header-nav ml-auto mr-4">
@@ -36,7 +43,7 @@
             <x-utils.link class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <x-slot name="text">
                     <div class="c-avatar">
-                        <img class="c-avatar-img" src="{{ $logged_in_user->avatar }}" alt="{{ $logged_in_user->email ?? '' }}">
+                        <img class="c-avatar-img" src="{{ str_contains( $logged_in_user->avatar, '64e1b8d34f425d19e1ee2ea7236d3028' ) ? asset('img/logo.png') : $logged_in_user->avatar }}" alt="{{ $logged_in_user->email ?? '' }}">
                     </div>
                 </x-slot>
             </x-utils.link>

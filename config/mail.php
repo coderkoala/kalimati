@@ -70,6 +70,14 @@ return [
         'array' => [
             'transport' => 'array',
         ],
+
+        'failover' => [
+            'transport' => 'failover',
+            'mailers' => [
+                'smtp',
+                'log',
+            ],
+        ],
     ],
 
     /*
@@ -84,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'kalimatimarket.gov.np'),
+        'name' => env('MAIL_FROM_NAME', 'Kalimati Fruits and Vegetable Market Development Board'),
     ],
 
     /*

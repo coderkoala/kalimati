@@ -1,7 +1,7 @@
 <?php
 
 /*
- * All configuration options for Kalimati Market
+ * All configuration options for Laravel Boilerplate
  * http://laravel-boilerplate.com.
  */
 
@@ -16,9 +16,9 @@ return [
     'access' => [
         'captcha' => [
             'configs' => [
-                'site_key'   => env('INVISIBLE_RECAPTCHA_SITEKEY'),
+                'site_key' => env('INVISIBLE_RECAPTCHA_SITEKEY'),
                 'secret_key' => env('INVISIBLE_RECAPTCHA_SECRETKEY'),
-                'options'   => [
+                'options' => [
                     'hidden' => false,
                     'location' => 'bottomright',
                     'timeout' => 5,
@@ -54,7 +54,7 @@ return [
              * How many days before users have to change their passwords
              * false is off
              */
-            'password_expires_days' => env('PASSWORD_EXPIRES_DAYS', 180),
+            'password_expires_days' => env('PASSWORD_EXPIRES_DAYS', 365),
 
             /*
              * The number of most recent previous passwords to check against when changing/resetting a password
@@ -63,7 +63,7 @@ return [
              * Note: Enabling single_login will have an effect on this as it force changes the users password on login,
              * which will force a record into the password_histories table. I currently do not have a fix in mind.
              */
-            'password_history' => env('PASSWORD_HISTORY', 3),
+            'password_history' => env('PASSWORD_HISTORY', 5),
 
             /*
              * Whether or not a user can be permanently deleted from the system via the backend
@@ -75,7 +75,7 @@ return [
             /*
              * Whether or not the register route and view are active
              */
-            'registration' => env('ENABLE_REGISTRATION', true),
+            'registration' => env('ENABLE_REGISTRATION', false),
 
             /*
              * When active, a user can only have one session active at a time
@@ -83,7 +83,7 @@ return [
              * (They can only be logged into one place at a time, all others will be logged out)
              * AuthenticateSession middleware must be enabled
              */
-            'single_login' => env('SINGLE_LOGIN', false),
+            'single_login' => env('SINGLE_LOGIN', true),
         ],
 
         'role' => [
@@ -124,15 +124,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Google Analytics
-    |--------------------------------------------------------------------------
-    |
-    | Found in views/includes/partials/ga.blade.php
-    */
-    'google_analytics' => env('GOOGLE_ANALYTICS', 'UA-XXXXX-X'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Locale
     |--------------------------------------------------------------------------
     |
@@ -156,8 +147,8 @@ return [
          * Commenting out languages will make them unavailable to the user
          */
         'languages' => [
-            'en' => ['name' => '🇬🇧 English ', 'rtl' => false],
-            'ne' => ['name' => '🇳🇵 नेपाली', 'rtl' => false],
+            'np' => ['name' => 'नेपाली', 'rtl' => false],
+            'en' => ['name' => 'English', 'rtl' => false],
         ],
     ],
 

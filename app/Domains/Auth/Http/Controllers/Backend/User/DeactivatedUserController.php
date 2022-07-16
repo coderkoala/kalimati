@@ -4,13 +4,12 @@ namespace App\Domains\Auth\Http\Controllers\Backend\User;
 
 use App\Domains\Auth\Models\User;
 use App\Domains\Auth\Services\UserService;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
  * Class UserStatusController.
  */
-class DeactivatedUserController extends Controller
+class DeactivatedUserController
 {
     /**
      * @var UserService
@@ -39,8 +38,8 @@ class DeactivatedUserController extends Controller
      * @param  Request  $request
      * @param  User  $user
      * @param $status
-     *
      * @return mixed
+     *
      * @throws \App\Exceptions\GeneralException
      */
     public function update(Request $request, User $user, $status)
