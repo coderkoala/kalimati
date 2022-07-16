@@ -3,16 +3,16 @@
 namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
 
 use App\Domains\Auth\Events\User\UserLoggedIn;
-use App\Http\Controllers\Controller;
 use App\Rules\Captcha;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
 use LangleyFoxall\LaravelNISTPasswordRules\PasswordRules;
 
 /**
  * Class LoginController.
  */
-class LoginController extends Controller
+class LoginController
 {
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,6 @@ class LoginController extends Controller
      *
      * @param  Request  $request
      * @param $user
-     *
      * @return mixed
      */
     protected function authenticated(Request $request, $user)

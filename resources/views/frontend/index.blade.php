@@ -1,256 +1,535 @@
 @extends('frontend.template')
 @section('content')
-<input style="display:none;" id="i18n" value="{{__( app()->getLocale() )}}"/>
-<!-- ====== top slider ====== -->
-<section class="top-slider">
-	<div class="theme-slider main-slider owl-carousel owl-theme" data-items="1" data-loop="true" data-pause-on-hover="true" data-autoplay="true"
-		data-dots="true" data-nav="true" data-r-x-small="1" data-r-x-small-nav="false" data-r-x-small-dots="true" data-r-x-medium="1"
-		data-r-x-medium-nav="false" data-r-x-medium-dots="true" data-r-small="1" data-r-small-nav="false" data-r-small-dots="true"
-		data-r-medium="1" data-r-medium-nav="true" data-r-medium-dots="true" data-r-large="1" data-r-large-nav="true" data-r-large-dots="true">
-		<div class="item">
-			<img src="img/slide1.jpg" alt="slide">
-			<div class="slide-overlay">
-				<div class="slide-table">
-					<div class="slide-table-cell">
-						<div class="container">
-							<div class="slide-content">
-								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
-								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <section class="top-slider pt-1">
+        <div class="container-fluid">
+            <div class="row row-eq-height">
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <section class="top-slider">
+                        <div class="theme-slider main-slider owl-carousel owl-theme" data-items="1" data-loop="true" data-pause-on-hover="true" data-autoplay="true"
+                            data-dots="true" data-nav="true" data-r-x-small="1" data-r-x-small-nav="false" data-r-x-small-dots="true" data-r-x-medium="1"
+                            data-r-x-medium-nav="false" data-r-x-medium-dots="true" data-r-small="1" data-r-small-nav="false" data-r-small-dots="true"
+                            data-r-medium="1" data-r-medium-nav="true" data-r-medium-dots="true" data-r-large="1" data-r-large-nav="true" data-r-large-dots="true">
+                            <div class="item">
+                                <img src="{{ asset('img/slide1.jpg') }}" alt="slide">
+                            </div>
 
-		<div class="item">
-			<img src="img/slide2.jpg" alt="slide">
-			<div class="slide-overlay">
-				<div class="slide-table">
-					<div class="slide-table-cell">
-						<div class="container">
-							<div class="slide-content">
-								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
-								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                            <div class="item">
+                                <img src="{{ asset('img/slide2.jpg') }}" alt="slide">
+                            </div>
 
-		<div class="item">
-			<img src="img/slide3.jpg" alt="slide">
-			<div class="slide-overlay">
-				<div class="slide-table">
-					<div class="slide-table-cell">
-						<div class="container">
-							<div class="slide-content">
-								<a href="#commodityPricesDailyTable" class="btn btn-theme btn-active">{{__('check prices')}}</a>
-								<a href="#contact" class="btn btn-theme">{{ __('Contact us') }}</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                            <div class="item">
+                                <img src="{{ asset('img/slide3.jpg') }}" alt="slide">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12 side-team">
+                    <div class="team-sidenav">
+                      <img src="{{ setting()->get('chairperson_image','https://place-hold.it/400x400') }}" alt="{{__('Chair Person')}}">
+                      <div>
+                        <span>{{__('board_members.chairperson')}}</span>
+                        {{__('Chair Person')}}
+                        <ul class="social social-header">
+                            @if(setting()->get('chairperson_email', false))
+                            <li>
+                                <a class="link-blue" href="mailto:{{ setting()->get('chairperson_email', false) }}">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                            @endif
+                            @if(setting()->get('chairperson_email', false))
+                            <li>
+                                <a class="link-blue" href="tel:{{ setting()->get('chairperson_phone', false) }}">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="team-sidenav">
+                      <img src="{{ setting()->get('executive_image', 'https://place-hold.it/400x400') }}" alt="{{__('Executive Director')}}">
+                      <div>
+                        <span>{{__("board_members.executive_director")}}</span>
+                        {{__('Executive Director')}}
+                        <ul class="social social-header">
+                            @if(setting()->get('executive_email', false))
+                            <li>
+                                <a class="link-blue" href="mailto:{{ setting()->get('executive_email', false) }}">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                            @endif
+                            @if(setting()->get('executive_email', false))
+                            <li>
+                                <a class="link-blue" href="tel:{{ setting()->get('executive_phone', false) }}">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="team-sidenav">
+                      <img src="{{ setting()->get('deputy_image', 'https://place-hold.it/400x400') }}" alt="{{__('Information Officer')}}">
+                      <div>
+                        <span>{{__('board_members.deputy_director')}}</span>
+                        {{__('Information Officer')}}
+                        <ul class="social social-header">
+                            @if(setting()->get('deputy_email', false))
+                            <li>
+                                <a class="link-blue" href="mailto:{{ setting()->get('deputy_email', false) }}">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                            @endif
+                            @if(setting()->get('deputy_email', false))
+                            <li>
+                                <a class="link-blue" href="tel:{{ setting()->get('deputy_phone', false) }}">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
 
-<section class="grow-business" style="margin-top:4rem">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="all-title">
-					<p>
-						{{ __("") }}
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6" id="archetypeParent">
-				<h4 class="h-border">{{ __('Introduction')}}</h4>
-				<div class="abt-para">
-					@if ( 'ne' !== __( app()->getLocale() ) )
-					<p>
-					Kalimati Fruits and Vegetables Markets is the pioneer organized terminal wholesale market in Nepal where retailers, institutional consumers and other bulk consumers procure their supplies. This market alone covers 60 to 70 percent of demand of Kathmandu valley. For giving an organized shape to the marketing of agricultural produce, especially, vegetables and fruits in Kathmandu valley, Kalimati Fruits and Vegetables Wholesale Market was set up by then the Department of Food and Agriculture Marketing Services under the Ministry of Agriculture in 1986.
+    <section class="grow-business mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="archetypeParent">
+                    <h4 class="h-border">{{ __('Introduction') }}</h4>
+                    <div class="abt-para">
 
-					<br>The need to bring improvement in the state of Kalimati market was identified as a priority. Hence an agreement (NEP/89/CO1) was signed in 1989 between Government of Nepal (GON) and United Nation's Capital Development Fund (UNCDF) to construct and equip the market with physical infrastructures. The present facilities are the outcome of that agreement.
+                    <p>
 
-					<br>In 1995, government felt the need of an independent body for the efficient operation and management of the market. Keeping this in view, Kalimati Fruits and Vegetables Wholesale Market Development Board was formulated on 13 February 1995 under the Development Board Act 1957. Likewise, with a view to manage the operations of the market in on organized way and ensuring planned development of agriculture marketing, the Government of Nepal has formulated new organizational set up "Kalimati Fruits and Vegetables Market Development Board 2002" replacing the previous one.
-					</p>
-					@else
-					<p>
-					लामो समयदेखि काठमाडौं उपत्यका तथा अन्य क्षेत्रको तरकारी तथा फलफूलहरुको वेचविखन गर्ने थलोको रुपमा रहदै आएको कालीमाटी बजार वि.सं. २०४३ आश्विन १५ गते देखि तत्कालिन खाद्य तथा कृषि बजार सेवा विभाग अन्तर्गत सञ्चालनमा आएको थियो । बजार सञ्चालनको क्रममा बजार आगमन र कारोबारको स्थितिमा भएको विस्तार एवं बजार प्रयोगकर्ताहरुको बढ्दो चापलाई मध्यनजर गरी नेपाल सरकार तथा संयुक्त राष्ट्रसंघीय पूँजी विकास कोष (UNCDF) को सहयोगमा हालका अधिकांश संरचना निर्माण भएका हुन् ।
+                        {{ __('frontend.introduction_first_para') }}
 
-					<br>कालीमाटी तरकारी बजारको निर्माण तथा व्यवस्थापनको लागि एउटा स्वायत्त निकायको आवश्यकता महशुस गरी नेपाल सरकारद्वारा विकास समिति ऐन-२०१३ अन्तर्गत वि.सं. २०५१ फागुन १ गते "कालीमाटी फलफूल तथा तरकारी थोक बजार विकास समिति (गठन) आदेश, २०५१" जारी गरियो । समितिको कार्य क्षेत्रलाई विस्तार गर्ने अभिप्रायले नेपाल सरकारले वि.सं. २०५८ चैत्र १९ गते साविकको आदेश खारेज गरी सोही ऐन अन्तर्गत "कालीमाटी फलफूल तथा तरकारी बजार विकास समिति(गठन) आदेश, २०५८" जारी गरी सोही अनुसार संघीय संरचना बमोजिम यस समितिलाई संघ अन्तर्गतको निकाय कायम गरिएको छ । नेपाल सरकारबाट निर्माण भएको कृषि उपज बजार बालाजु २०६२ असार महिना देखि समितिले सञ्चालन गर्दै आएको छ ।
+                        <br>{{ __('frontend.introduction_second_para') }}
 
-					<br>समितिको स्वामित्वमा रहेको कीर्तिपुर नगरपालिका वडा नं.६ चोभारमा करिब २२ रोपनी जग्गामा फलफूल तथा पुष्प बजार निर्माणाधिन अवस्थामा छ । यसैगरी धादिङ्ग नौविसे स्थित आफ्नै स्वामित्वको करिव ४.५ रोपनी जग्गामा सङ्कलन केन्द्र स्थापना गर्ने सोचाई समितिले राखेको छ ।
-					</p>
-					@endif
-				</div>
+                        <br>{{ __('frontend.introduction_third_para') }}
 
-				<a href="#" class="btn btn-theme btn-active">{{__('read more')}}</a>
-				<a href="#contact" class="btn btn-theme">{{__('Contact us')}}</a>
-			</div>
-			<div id="commodityPricesDailyTable" class="col-md-6" style="flex: 1;">
-				<div class="row" style="margin:0">
-					<div class="col-sm-12">
-						<div class="features-inner even" style="background-color:#1abc9c;">
-							<h5 style="padding-top:0">{{__('Daily prices')}} - {{$date }}</h5>
-							<table id="commodityDailyPrice" class="display" style="width:100%">
-							<thead>
-							<tr>
-								<th>{{__('Commodity')}}</th>
-								<th>{{__('Unit')}}</th>
-								<th>{{__('Minimum')}}</th>
-								<th>{{__('Maximum')}}</th>
-								<th>{{__('Average')}}</th>
-							</tr>
-							</thead>
-							<tbody>
-							@foreach( App\Models\commodityPriceDaily::getPriceOptimized() as $index => $value )
-							<tr>
-								<td>{{ $value->commodityname }}</td>
-								<td>{{ $value->commodityunit }}</td>
-								<td>{{ 'ne' === __( app()->getLocale() ) ? 'रू' : 'Rs' }}. {{ App\Models\commodityMaster::digits( $value->minprice ) }}</td>
-								<td>{{ 'ne' === __( app()->getLocale() ) ? 'रू' : 'Rs' }}. {{ App\Models\commodityMaster::digits( $value->maxprice ) }}</td>
-								<td> {{ App\Models\commodityMaster::digits( ( $value->minprice +  $value->maxprice ) / 2 , true ) }}</td>
-							</tr>
-							@endforeach
-							</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                    </p>
 
-<!-- ====== our team ====== -->
-<section class="our-team mb-2rem">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="all-title">
-					<div class="sec-title">
-						<h3>
-							<span></span>
-						</h3>
-					</div>
-					<p></p>
-				</div>
-			</div>
-		</div>
-		<div class="row flex-force">
-			<div class="col-md-3 col-sm-6">
-				<div class="team-members">
-					<img src="img/team-1.png" alt="member">
-					<div class="team-overlay">
-						<div class="overlay-content">
-							<h4>
-								<a href="#">{{__('Dr. Yogendra Kumar Karki')}}</a>
-							</h4>
-							<h5>{{__('Chair Person')}}</h5>
-							<ul class="social">
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="team-members">
-					<img src="img/team-2.png" alt="member">
-					<div class="team-overlay">
-						<div class="overlay-content">
-							<h4>
-								<a href="#">{{__("Binod Kumar Bhattarai")}}</a>
-							</h4>
-							<h5>{{__('Executive Director')}}</h5>
-							<ul class="social">
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="team-members">
-					<img src="img/team-3.png" alt="member">
-					<div class="team-overlay">
-						<div class="overlay-content">
-							<h4>
-								<a href="#">{{__('Binay Shrestha')}}</a>
-							</h4>
-							<h5>{{__('Deputy Director')}}</h5>
-							<ul class="social">
-								<li>
-									<a href="mailto:binaystha@gmail.com">
-										<i class="fas fa-envelope"></i>
-									</a>
-								</li>
-								<li>
-									<a href="tel:+977015123086">
-										<i class="fas fa-phone"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                    </div>
 
-<!-- ====== contact us ====== -->
-<section id="contact" class="contact-us mb-4rem" style="margin-top:6rem">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="all-title">
-					<div class="sec-title">
-						<h3>
-							<span>{{__('Contact us')}}</span>
-						</h3>
-					</div>
-					<p>
-						{!! __('Kalimati Market welcomes queries. Be it a few questions, or be it proposals for ambitious projects, we are always open ears, and will be more happy to accommodate you as best as we can. <br>Simply reach out to us via phone, Website form or email given below. Please allow upto a business day for email replies, we’re constantly striving to up our customer service game.') !!}
-					</p>
-				</div>
-			</div>
-		</div>
-		<form action="#">
-			<div class="row">
-				<div class="col-md-6">
-					<input type="text" placeholder="{{__('Full Name')}}" class="form-control">
-				</div>
-				<div class="col-md-6">
-					<input type="Email" placeholder="{{__('Email Address')}}" class="form-control">
-				</div>
-				<div class="col-md-6">
-					<input type="text" placeholder="{{__('Phone no.')}}" class="form-control">
-				</div>
-				<div class="col-md-6">
-					<div class="sel-wrap">
-						<select class="form-control custom-select" id="service">
-							<option selected='selected' disabled>{{__('Nature of help needed')}}</option>
-							<option>{{__('General Query')}}</option>
-							<option>{{__('Administration related')}}</option>
-							<option>{{__('Suggestion')}}</option>
-							<option>{{__('Support')}}</option>
-						</select>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<textarea name="massage" class="form-control" id="message" placeholder="{{__('Your Query')}}" rows="10"></textarea>
-				</div>
-				<div class="col-md-12 clearfix">
-					<a href="#" class="btn btn-theme send">{{__('submit')}}</a>
-				</div>
-			</div>
-		</form>
-	</div>
-</section>
+                    <a href="{{ route('frontend.pages.about') }}" class="btn btn-theme btn-active">{{ __('read more') }}</a>
+                    <a href="{{ route('frontend.pages.contact') }}" class="btn btn-theme">{{ __('Contact us') }}</a>
+                </div>
+                <div id="commodityPricesDailyTable" class="col-md-6" style="flex: 1;">
+                    <div class="row" style="margin:0">
+                        <div class="col-sm-12">
+                            <div class="features-inner even bg-white">
+                                <h5 style="padding-top:0;color:#006400">{{ __('Daily prices') }} - {{ $date }}
+                                </h5>
+                                <table id="commodityDailyPrice" class="dt table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>{{ __('Commodity') }}</th>
+                                            <th>{{ __('Min') }}</th>
+                                            <th>{{ __('Max') }}</th>
+                                            <th>{{ __('Avg') }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (App\Models\commodityPriceDaily::getPriceOptimized() as $index => $value)
+                                            @php
+                                                $currency = 'np' === __(app()->getLocale()) ? 'रू ' : 'Rs ';
+                                            @endphp
+                                            <tr>
+                                                <td class="dt-body-left">{{ $value->commodityname }} <span class="text-muted">({{ $value->commodityunit }})</span></td>
+                                                <td>{{ $currency . __i($value->minprice) }}</td>
+                                                <td>{{ $currency . __i($value->maxprice) }}</td>
+                                                <td>{{ $currency . __idf(($value->avgprice)) }}
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="get-q">
+                        <a href="{{ asset('/apk/kalimati.apk') }}" class="btn btn-theme">{{ __('Download') }} <i class="fab fa-android" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <p>{{ __('Get Commodity Prices On Your Phone') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="service-01 sp-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="service-wrap current" data-tab="defi-tab-1"
+                                style="background-image:url('{{ asset('img/defi-bg1') }}.jpg')">
+                                <div class="service-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h4>{{ __('General Notice') }}</h4>
+                                <p>{{ __('Click here to check') }} {{ __('General Notice') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="service-wrap" data-tab="defi-tab-2"
+                                style="background-image:url('{{ asset('img/defi-bg2') }}.jpg')">
+                                <div class="service-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h4>{{ __('Tender Invitations') }}</h4>
+                                <p>{{ __('Click here to check') }} {{ __('Tender Invitations') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="service-wrap" data-tab="defi-tab-3"
+                                style="background-image:url('{{ asset('img/defi-bg3') }}.jpg')">
+                                <div class="service-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h4>{{ __('Pesticides Report') }}</h4>
+                                <p>{{ __('Click here to check') }} {{ __('Pesticides Report') }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-pull-3">
+                    <div class="defi-panel">
+                        <div class="panel-content current" id="defi-tab-1">
+                            <div class="content-wrap">
+                                <h2>{{ __('General Notice') }}</h2>
+                                <div class="project-detail">
+                                    <h4>{{ __('frontend_notice.notice_list_title', ['title' => __('General Report')]) }}</h4>
+                                    <div class="pro-info">
+                                        <div class="table-responsive">
+                                            @php
+                                                $tableRow = 1;
+                                            @endphp
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{ __('Title') }}</th>
+                                                        <th>{{ __('Download') }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (\App\Models\Backend\Notices::where('type', 'notice')->orderBy('published_at', 'desc')->take(5)->get() as $noticeTuple)
+                                                        <tr>
+                                                            <td><a href="{{ route('frontend.pages.notice-show', $noticeTuple->id) }}">{!! strip_tags($noticeTuple->{'title_' . app()->getLocale()}) !!}</a></td>
+                                                            <td><a href="{{ $noticeTuple->url  }}" download><i class="fa fa-download" aria-hidden="true"></i> {{ __('Download') }}</a></td>
+                                                        </tr>
+                                                        @php
+                                                            ++$tableRow;
+                                                        @endphp
+                                                    @endforeach
+                                                    @if(1 === $tableRow)
+                                                    <tr>
+                                                        <td colspan="2">{{__('frontend_notice.notice_no_results_found')}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td colspan="2"><a href="{{ route('frontend.pages.notice', 'notice')  }}">{{__('View All')}}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content" id="defi-tab-2">
+                            <div class="content-wrap">
+                                <h2>{{ __('Tender Invitations') }}</h2>
+                                <div class="project-detail">
+                                    <h4>{{ __('frontend_notice.notice_list_title', ['title' => __('Tender Invitations')]) }}</h4>
+                                    <div class="pro-info">
+                                        <div class="table-responsive">
+                                            @php
+                                                $tableRow = 1;
+                                            @endphp
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{ __('Title') }}</th>
+                                                        <th>{{ __('Download') }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (\App\Models\Backend\Notices::where('type', 'tender')->orderBy('published_at', 'desc')->take(5)->get() as $noticeTuple)
+                                                        <tr>
+                                                            <td><a href="{{ route('frontend.pages.notice-show', $noticeTuple->id) }}">{!! strip_tags($noticeTuple->{'title_' . app()->getLocale()}) !!}</a></td>
+                                                            <td><a href="{{ $noticeTuple->url  }}" download><i class="fa fa-download" aria-hidden="true"></i> {{ __('Download') }}</a></td>
+                                                        </tr>
+                                                        @php
+                                                            ++$tableRow;
+                                                        @endphp
+                                                    @endforeach
+                                                    @if(1 === $tableRow)
+                                                    <tr>
+                                                        <td colspan="2">{{__('frontend_notice.notice_no_results_found')}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td colspan="2"><a href="{{ route('frontend.pages.notice', 'tender')  }}">{{__('View All')}}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content" id="defi-tab-3">
+                            <div class="content-wrap">
+                                <h2> {{ __('Pesticides Report') }}</h2>
+                                <div class="project-detail">
+                                    <h4>{{ __('frontend_notice.notice_list_title', ['title' => __('Pesticides Report')]) }}</h4>
+                                    <div class="pro-info">
+                                        <div class="table-responsive">
+                                            @php
+                                                $tableRow = 1;
+                                            @endphp
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{ __('Title') }}</th>
+                                                        <th>{{ __('Download') }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (\App\Models\Backend\Notices::where('type', 'pest')->orderBy('published_at', 'desc')->take(5)->get() as $noticeTuple)
+                                                        <tr>
+                                                            <td><a href="{{ route('frontend.pages.notice-show', $noticeTuple->id) }}">{!! strip_tags($noticeTuple->{'title_' . app()->getLocale()}) !!}</a></td>
+                                                            <td><a href="{{ $noticeTuple->url  }}" download><i class="fa fa-download" aria-hidden="true"></i> {{ __('Download') }}</a></td>
+                                                        </tr>
+                                                        @php
+                                                            ++$tableRow;
+                                                        @endphp
+                                                    @endforeach
+                                                    @if(1 === $tableRow)
+                                                    <tr>
+                                                        <td colspan="2">{{__('frontend_notice.notice_no_results_found')}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td colspan="2"><a href="{{ route('frontend.pages.notice', 'pest')  }}">{{__('View All')}}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content" id="defi-tab-4">
+                            <div class="content-wrap">
+                                <h2>{{ __('Bills Publication') }}</h2>
+                                <div class="project-detail">
+                                    <h4>{{ __('frontend_notice.notice_list_title', ['title' => __('Bills Publication')]) }}</h4>
+                                    <div class="pro-info">
+                                        <div class="table-responsive">
+                                            @php
+                                                $tableRow = 1;
+                                            @endphp
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{ __('Title') }}</th>
+                                                        <th>{{ __('Download') }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (\App\Models\Backend\Notices::where('type', 'bill_publication')->orderBy('published_at', 'desc')->take(5)->get() as $noticeTuple)
+                                                        <tr>
+                                                            <td><a href="{{ route('frontend.pages.notice-show', $noticeTuple->id) }}">{!! strip_tags($noticeTuple->{'title_' . app()->getLocale()}) !!}</a></td>
+                                                            <td><a href="{{ $noticeTuple->url  }}" download><i class="fa fa-download" aria-hidden="true"></i> {{ __('Download') }}</a></td>
+                                                        </tr>
+                                                        @php
+                                                            ++$tableRow;
+                                                        @endphp
+                                                    @endforeach
+                                                    @if(1 === $tableRow)
+                                                    <tr>
+                                                        <td colspan="2">{{__('frontend_notice.notice_no_results_found')}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td colspan="2"><a href="{{ route('frontend.pages.notice', 'bill_publication')  }}">{{__('View All')}}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content" id="defi-tab-5">
+                            <div class="content-wrap">
+                                <h2>{{ __('Right To Information') }}</h2>
+                                <div class="project-detail">
+                                    <h4>{{ __('frontend_notice.notice_list_title', ['title' => __('Reports')]) }}</h4>
+                                    <div class="pro-info">
+                                        <div class="table-responsive">
+                                            @php
+                                                $tableRow = 1;
+                                            @endphp
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{ __('Title') }}</th>
+                                                        <th>{{ __('Download') }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (\App\Models\Backend\Notices::where('type', 'annual')->orderBy('published_at', 'desc')->take(5)->get() as $noticeTuple)
+                                                        <tr>
+                                                            <td><a href="{{ route('frontend.pages.notice-show', $noticeTuple->id) }}">{!! strip_tags($noticeTuple->{'title_' . app()->getLocale()}) !!}</a></td>
+                                                            <td><a href="{{ $noticeTuple->url  }}" download><i class="fa fa-download" aria-hidden="true"></i> {{ __('Download') }}</a></td>
+                                                        </tr>
+                                                        @php
+                                                            ++$tableRow;
+                                                        @endphp
+                                                    @endforeach
+                                                    @if(1 === $tableRow)
+                                                    <tr>
+                                                        <td colspan="2">{{__('frontend_notice.notice_no_results_found')}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td colspan="2"><a href="{{ route('frontend.pages.notice', 'annual')  }}">{{__('View All')}}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content" id="defi-tab-6">
+                            <div class="content-wrap">
+                                <h2>{{ __('Literature Publication') }}</h2>
+                                <div class="project-detail">
+                                    <h4>{{ __('frontend_notice.notice_list_title', ['title' => __('Literature Publication')]) }}</h4>
+                                    <div class="pro-info">
+                                        <div class="table-responsive">
+                                            @php
+                                                $tableRow = 1;
+                                            @endphp
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{ __('Title') }}</th>
+                                                        <th>{{ __('Download') }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (\App\Models\Backend\Notices::where('type', 'publication')->orderBy('published_at', 'desc')->take(5)->get() as $noticeTuple)
+                                                        <tr>
+                                                            <td><a href="{{ route('frontend.pages.notice-show', $noticeTuple->id) }}">{!! strip_tags($noticeTuple->{'title_' . app()->getLocale()}) !!}</a></td>
+                                                            <td><a href="{{ $noticeTuple->url  }}" download><i class="fa fa-download" aria-hidden="true"></i> {{ __('Download') }}</a></td>
+                                                        </tr>
+                                                        @php
+                                                            ++$tableRow;
+                                                        @endphp
+                                                    @endforeach
+                                                    @if(1 === $tableRow)
+                                                    <tr>
+                                                        <td colspan="2">{{__('frontend_notice.notice_no_results_found')}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td colspan="2"><a href="{{ route('frontend.pages.notice', 'publication')  }}">{{__('View All')}}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-push-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="service-wrap" data-tab="defi-tab-4"
+                                style="background-image:url('{{ asset('img/defi-bg4') }}.jpg')">
+                                <div class="service-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h4>{{ __('Bills Publication') }}</h4>
+                                <p>{{ __('Click here to check') }} {{ __('Bills Publication') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="service-wrap" data-tab="defi-tab-5"
+                                style="background-image:url('{{ asset('img/defi-bg5') }}.jpg')">
+                                <div class="service-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h4>{{ __('Right To Information') }}</h4>
+                                <p>{{ __('Click here to check') }} {{ __('Reports') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="service-wrap" data-tab="defi-tab-6"
+                                style="background-image:url('{{ asset('img/defi-bg6') }}.jpg')">
+                                <div class="service-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h4>{{ __('Literature Publication') }}</h4>
+                                <p>{{ __('Click here to check') }} {{ __('Literature Publication') }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
+
+@push('footer')
+    <div class="quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <p>{{ __('Any complaints, feedback, or Insights?') }}</p>
+                </div>
+                <div class="col-sm-5">
+                    <div class="get-q">
+                        <a href="{{ route('frontend.pages.contact') }}" class="btn btn-theme">{{ __('Reach out to us') }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1926.1552009763843!2d85.29838516661253!3d27.699245188889606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1859798f8e47%3A0x191ede6479b87d77!2sVegetables%2C%20fruits%20wholesale%20market%20business%20entity!5e0!3m2!1sen!2snp!4v1655088651242!5m2!1sen!2snp"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+@endpush
+
+@include('includes.partials.notices_modal')

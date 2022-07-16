@@ -2,25 +2,23 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Carbon;
 use App\Models\commodityPriceDaily as commodity;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
-
 class FetchDailyCommodityPriceTable extends LivewireDatatable
 {
-	public $hideable = 'select';
+    public $hideable = 'select';
     public $exportable = true;
     public $afterTableSlot = 'components.selected';
-	public $model = commodity::class;
+    public $model = commodity::class;
 
     public function builder()
     {
-        return commodity::getPrice( date('Y-m-d', time() ) );
-	}
+        return commodity::getPrice(date('Y-m-d', time()));
+    }
 
-	public function columns()
+    public function columns()
     {
         return [
             Column::name('commodityname')
@@ -38,6 +36,6 @@ class FetchDailyCommodityPriceTable extends LivewireDatatable
             Column::name('avgprice')
                 ->filterable()
                 ->label('Average'),
-		];
-	}
+        ];
+    }
 }

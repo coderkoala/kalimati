@@ -22,5 +22,3 @@ jobs:
         run: npm run production
       - name: Generate Key
         run: php artisan key:generate
-      - name: Execute Tests
-        run: vendor/bin/phpunit

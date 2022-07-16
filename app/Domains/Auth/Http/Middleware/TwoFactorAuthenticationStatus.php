@@ -13,7 +13,6 @@ class TwoFactorAuthenticationStatus
      * @param $request
      * @param  Closure  $next
      * @param  string  $status
-     *
      * @return mixed
      */
     public function handle($request, Closure $next, $status = 'enabled')
@@ -23,7 +22,7 @@ class TwoFactorAuthenticationStatus
         }
 
         // If the backend does not require 2FA than continue
-        if ($status === 'enabled' && $request->is('admin/*') && ! config('boilerplate.access.user.admin_requires_2fa')) {
+        if ($status === 'enabled' && $request->is('admin*') && ! config('boilerplate.access.user.admin_requires_2fa')) {
             return $next($request);
         }
 
