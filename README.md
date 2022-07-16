@@ -1,7 +1,9 @@
-## Kalimati Fruits and Vegetable Market Development Board (Current: Laravel 8.*) ([Live](https://kalimatimarket.gov.np))
+## Kalimati Website Codebase (Current: Laravel 8.*) ([Demo](https://kalimatimarket.gov.np))
 
+[![Latest Stable Version](https://poser.pugx.org/rappasoft/laravel-boilerplate/v/stable)](https://packagist.org/packages/rappasoft/laravel-boilerplate)
+[![Latest Unstable Version](https://poser.pugx.org/rappasoft/laravel-boilerplate/v/unstable)](https://packagist.org/packages/rappasoft/laravel-boilerplate) 
 <br/>
-[![StyleCI](https://github.styleci.io/repos/326489547/shield?style=plastic)](https://github.styleci.io/repos/30171828)
+[![StyleCI](https://styleci.io/repos/30171828/shield?style=plastic)](https://github.styleci.io/repos/326489547)
 ![Tests](https://github.com/coderkoala/kalimati/workflows/Tests/badge.svg?branch=master)
 <br/>
 ![GitHub contributors](https://img.shields.io/github/contributors/coderkoala/kalimati.svg)
