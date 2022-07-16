@@ -16,13 +16,13 @@ class NoticeController extends Controller
      */
     public function index($notice_id = 'notice')
     {
-        $date = 'np' === __( app()->getLocale() ) ? null : date('F j, Y') . ' A.D.';
-		if ( is_null( $date ) ) {
-			$nepaliDate = new conversion();
-			$date = explode('-', date( 'Y-m-d') );
-			$nepali = $nepaliDate->get_nepali_date( $date[0], $date[1], $date[2]);
-			$date = 'वि.सं. ' . $nepali['M'] . ' ' . __idf( $nepali['d'], false ) . ', ' .  __idf( $nepali['y'], false ) ;
-		}
+        $date = 'np' === __(app()->getLocale()) ? null : date('F j, Y').' A.D.';
+        if (is_null($date)) {
+            $nepaliDate = new conversion();
+            $date = explode('-', date('Y-m-d'));
+            $nepali = $nepaliDate->get_nepali_date($date[0], $date[1], $date[2]);
+            $date = 'वि.सं. '.$nepali['M'].' '.__idf($nepali['d'], false).', '.__idf($nepali['y'], false);
+        }
 
         $allowed_notices = [
             'notice' => __('General Notice'),
@@ -31,7 +31,7 @@ class NoticeController extends Controller
             'traders' => __('Notice for Traders'),
             'bill_publication' => __('Bills Publication'),
             'publication' => __('Literature Publication'),
-            'annual' => __('General Report')
+            'annual' => __('General Report'),
         ];
 
         if (! in_array($notice_id, array_keys($allowed_notices))) {
@@ -42,7 +42,7 @@ class NoticeController extends Controller
             [
                 'notice'=> Notices::where('type', $notice_id)->orderBy('published_at', 'desc')->get(),
                 'date' => $date,
-                'notice_title' => $allowed_notices[$notice_id]
+                'notice_title' => $allowed_notices[$notice_id],
             ]
         );
     }
@@ -54,13 +54,13 @@ class NoticeController extends Controller
     {
         $notice_instance = Notices::findOrFail($id);
 
-        $date = 'np' === __( app()->getLocale() ) ? null : date('F j, Y') . ' A.D.';
-		if ( is_null( $date ) ) {
-			$nepaliDate = new conversion();
-			$date = explode('-', date( 'Y-m-d', strtotime($notice_instance->published_at)) );
-			$nepali = $nepaliDate->get_nepali_date( $date[0], $date[1], $date[2]);
-			$date = 'वि.सं. ' . $nepali['M'] . ' ' . __idf( $nepali['d'], false ) . ', ' .  __idf( $nepali['y'], false ) ;
-		}
+        $date = 'np' === __(app()->getLocale()) ? null : date('F j, Y').' A.D.';
+        if (is_null($date)) {
+            $nepaliDate = new conversion();
+            $date = explode('-', date('Y-m-d', strtotime($notice_instance->published_at)));
+            $nepali = $nepaliDate->get_nepali_date($date[0], $date[1], $date[2]);
+            $date = 'वि.सं. '.$nepali['M'].' '.__idf($nepali['d'], false).', '.__idf($nepali['y'], false);
+        }
 
         $allowed_notices = [
             'notice' => __('General Notice'),
@@ -69,7 +69,7 @@ class NoticeController extends Controller
             'traders' => __('Notice for Traders'),
             'bill_publication' => __('Bills Publication'),
             'publication' => __('Literature Publication'),
-            'annual' => __('General Report')
+            'annual' => __('General Report'),
         ];
 
         return view('frontend.pages.notice-single',
@@ -77,7 +77,7 @@ class NoticeController extends Controller
                 'notice'=> Notices::where('type', $notice_instance->type)->orderBy('published_at', 'desc')->get(),
                 'notice_instance'=> $notice_instance,
                 'date' => $date,
-                'notice_title' => $allowed_notices[$notice_instance->type]
+                'notice_title' => $allowed_notices[$notice_instance->type],
             ]
         );
     }

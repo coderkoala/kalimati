@@ -15,5 +15,4 @@ Route::get('price-history', [HomeController::class, 'checkPriceHistory'])
         ->push(__('Get Price History'), route('frontend.price-history'));
 });
 
-
 Route::post('price', [HomeController::class, 'checkDailyPricesPOST'])->name('pricePolling');

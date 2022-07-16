@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class ShipmentAir extends Model
 {
@@ -35,7 +35,7 @@ class ShipmentAir extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'shipment_mode' => [
                 'label' => __('Shipment Mode'),
                 'placeholder' => __('Select the mode to assign to the Shipment.'),
@@ -52,7 +52,7 @@ class ShipmentAir extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'shipper' => [
                 'label' => __('Shipper'),
@@ -65,7 +65,7 @@ class ShipmentAir extends Model
                 'model' => \App\Models\Backend\CRM\Account::class,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions'=>false
+                'loadOptions'=>false,
             ],
             'consignee' => [
                 'label' => __('Consignee'),
@@ -78,7 +78,7 @@ class ShipmentAir extends Model
                 'model' => \App\Models\Backend\CRM\Account::class,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions'=>false
+                'loadOptions'=>false,
             ],
             // Conditional Logic : Show only when shipment_mode:al
             'destination' => [
@@ -155,7 +155,7 @@ class ShipmentAir extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'gross_weight' => [
                 'label' => __('Gross Weight(KG)'),
@@ -198,7 +198,7 @@ class ShipmentAir extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'pickup_contact_existing' => [
                 'label' => __('Pickup Contact for a Shipment'),
@@ -230,7 +230,7 @@ class ShipmentAir extends Model
                         'designation' => 'Designation',
                         'name' => 'Contact Person',
                         'telephone' => 'Telephone',
-                    ]
+                    ],
                 ],
                 'required' => false,
                 'render' => true,
@@ -259,7 +259,7 @@ class ShipmentAir extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -270,7 +270,7 @@ class ShipmentAir extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

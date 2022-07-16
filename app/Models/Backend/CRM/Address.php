@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\CRM;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class Address extends Model
 {
@@ -26,7 +26,7 @@ class Address extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'address' => [
                 'label' => __('Address'),
                 'placeholder' => __('Address'),
@@ -86,7 +86,7 @@ class Address extends Model
                 'disabled' => false,
                 'showPK' => true,
             ],
-        );
+        ];
     }
 
     /**
@@ -97,7 +97,7 @@ class Address extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

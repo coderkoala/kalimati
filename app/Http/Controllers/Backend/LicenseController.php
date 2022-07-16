@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Backend\License as model;
-use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Classes\KoalaCipherEncrypt as Cipher;
+use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
+use App\Models\Backend\License as model;
+use Illuminate\Http\Request;
 
 class LicenseController
 {
@@ -77,6 +77,7 @@ class LicenseController
             $this->forbiddenMessage = __($e->getMessage());
             $this->bail();
         }
+
         return $this->baseStore($request);
     }
 
@@ -88,7 +89,7 @@ class LicenseController
      */
     public function update(Request $request, $id)
     {
-        return $this->baseUpdate($request, $id, ['name', 'phone', 'email', 'user_id', 'valid_until', 'license_data'] );
+        return $this->baseUpdate($request, $id, ['name', 'phone', 'email', 'user_id', 'valid_until', 'license_data']);
     }
 
     /**

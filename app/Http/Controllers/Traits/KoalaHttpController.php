@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Validator;
  */
 trait KoalaHttpController
 {
-
     /**
      * Boot up the create validation and shove it to a private attribute.
      */
@@ -43,9 +42,10 @@ trait KoalaHttpController
     */
     private function bail()
     {
-        if ( empty($route) || ! $route ) {
+        if (empty($route) || ! $route) {
             $route = $this->routes['index'];
         }
+
         return redirect()->route($route)->withFlashDanger(__('kalimati.unauthorized', ['resource' => $this->resourceName]));
     }
 
@@ -57,7 +57,7 @@ trait KoalaHttpController
     public function index()
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -73,10 +73,10 @@ trait KoalaHttpController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create( Request $request, $arrayFilter = ['all'] )
+    public function create(Request $request, $arrayFilter = ['all'])
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -97,29 +97,31 @@ trait KoalaHttpController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-        public function store(Request $request, $arrayTimestamps = ['created_at', 'updated_at'])
+    public function store(Request $request, $arrayTimestamps = ['created_at', 'updated_at'])
     {
         $validationObject = Validator::make($request->all(), $this->validationRules);
         if ($validationObject->fails()) {
             $errorstring = '';
             $error = $this->array_flatten(array_values($validationObject->getMessageBag()->toArray()));
             foreach ($error as $key => $value) {
-                $errorstring .= $value . " ";
+                $errorstring .= $value.' ';
             }
+
             return redirect()->route($this->routes['create'])->withFlashDanger($errorstring)->withInput();
         } else {
             $this->user = Auth::user();
-            if (!$this->user) {
+            if (! $this->user) {
                 return $this->bail();
             }
 
             if ($this->user->can($this->permissions['create'])) {
                 try {
                     // Add in created_at and updated_at to the request.
-                    foreach($arrayTimestamps as $timestampTuple) {
+                    foreach ($arrayTimestamps as $timestampTuple) {
                         $request->merge([$timestampTuple => date('Y-m-d H:i:s')]);
                     }
                     $this->model->insert($request->except('_token'));
+
                     return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.created', ['resource' => $this->resourceName]));
                 } catch (\Exception $e) {
                     return redirect()->route($this->routes['create'])->withFlashDanger(__('kalimati.create_failed', ['resource' => $this->resourceName]))->withInput();
@@ -132,11 +134,12 @@ trait KoalaHttpController
 
     /**
      * Wrangle a spepcific array's key value to a given value.
+     *
      * @return array
      */
     private function array_wrangle($parameters, $fields, $switch = null)
     {
-        $wrangledArray = array();
+        $wrangledArray = [];
         $source = $this->fieldData;
         array_walk($source, function ($tuple, $index) use (&$parameters, &$wrangledArray, &$fields, &$switch) {
             if (in_array('all', $fields) || in_array($index, $fields)) {
@@ -163,7 +166,7 @@ trait KoalaHttpController
     public function show($id)
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -193,10 +196,10 @@ trait KoalaHttpController
      * @param  $resource
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $id, $arrayFilter = ['all'] )
+    public function edit(Request $request, $id, $arrayFilter = ['all'])
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -233,12 +236,13 @@ trait KoalaHttpController
             $errorstring = '';
             $error = $this->array_flatten(array_values($validationObject->getMessageBag()->toArray()));
             foreach ($error as $key => $value) {
-                $errorstring .= $value . " ";
+                $errorstring .= $value.' ';
             }
+
             return redirect()->route($this->routes['edit'], $id)->withFlashDanger($errorstring)->withInput();
         } else {
             $this->user = Auth::user();
-            if (!$this->user) {
+            if (! $this->user) {
                 return $this->bail();
             }
 
@@ -251,6 +255,7 @@ trait KoalaHttpController
                     }
                     $this->model->update($request->only($arrayFilter));
                     $this->model->save();
+
                     return redirect()->route($this->routes['index'], $id)->withFlashSuccess(__('kalimati.updated', ['resource' => $this->resourceName]));
                 } catch (\Exception $e) {
                     return redirect()->route($this->routes['edit'], $id)->withFlashDanger(__('kalimati.update_failed', ['resource' => $this->resourceName]))->withInput();
@@ -270,7 +275,7 @@ trait KoalaHttpController
     public function destroy(Request $request, $id)
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -284,12 +289,13 @@ trait KoalaHttpController
 
         if ($this->user->can($this->permissions['deleteX'])) {
             try {
-                if ( method_exists($this->model, 'initializeSoftDeletes') && $this->model->trashed() ) {
+                if (method_exists($this->model, 'initializeSoftDeletes') && $this->model->trashed()) {
                     $this->model->restore();
                     $verb = 'restored';
                 } else {
                     $this->model->delete();
                 }
+
                 return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.deleted', ['resource' => $this->resourceName]));
             } catch (\Exception $e) {
                 return redirect()->route($this->routes['index'])->withFlashDanger(__('kalimati.delete_failed', ['resource' => $this->resourceName]));
@@ -301,23 +307,26 @@ trait KoalaHttpController
 
     /**
      * Convert a multi-dimensional array into a single-dimensional array.
+     *
      * @author Sean Cannon, LitmusBox.com | seanc@litmusbox.com
-     * @param  array $array The multi-dimensional array.
+     *
+     * @param  array  $array  The multi-dimensional array.
      * @return array
      */
     private function array_flatten($array)
     {
-        if (!is_array($array)) {
+        if (! is_array($array)) {
             return false;
         }
-        $result = array();
+        $result = [];
         foreach ($array as $key => $value) {
             if (is_array($value)) {
                 $result = array_merge($result, $this->array_flatten($value));
             } else {
-                $result = array_merge($result, array($key => $value));
+                $result = array_merge($result, [$key => $value]);
             }
         }
+
         return $result;
     }
 }

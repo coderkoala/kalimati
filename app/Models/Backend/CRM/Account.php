@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\CRM;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class Account extends Model
 {
@@ -33,16 +33,16 @@ class Account extends Model
             'tax_id',
             'exim_code',
             'website',
-            'contact_form'
+            'contact_form',
         ],
         'Shipping Address' => [
-            'shipping_contact_form'
+            'shipping_contact_form',
         ],
         'Billing Address' => [
             'billing_contact_form',
         ],
         'Notify Address' => [
-            'notify_contact_form'
+            'notify_contact_form',
         ],
         'Client Instructions' => [
             'client_instruction',
@@ -54,7 +54,7 @@ class Account extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'account_group' => [
                 'label' => __('Account Group'),
                 'placeholder' => __('Select the account group.'),
@@ -67,7 +67,7 @@ class Account extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'name' => [
                 'label' => __('Account Name'),
@@ -113,7 +113,7 @@ class Account extends Model
                     'columns' => [
                         'name' => 'Contact Person',
                         'address' => 'Address',
-                    ]
+                    ],
                 ],
                 'required' => true,
                 'render' => true,
@@ -132,7 +132,7 @@ class Account extends Model
                         'name' => 'Contact Name',
                         'address' => 'Address',
                         'telephone' => 'Telephone',
-                    ]
+                    ],
                 ],
                 'required' => false,
                 'render' => true,
@@ -151,7 +151,7 @@ class Account extends Model
                         'name' => 'Contact Name',
                         'address' => 'Address',
                         'telephone' => 'Telephone',
-                    ]
+                    ],
                 ],
                 'required' => false,
                 'render' => true,
@@ -170,7 +170,7 @@ class Account extends Model
                         'name' => 'Contact Name',
                         'address' => 'Address',
                         'telephone' => 'Telephone',
-                    ]
+                    ],
                 ],
                 'required' => false,
                 'render' => true,
@@ -199,18 +199,18 @@ class Account extends Model
                     'columns' => [
                         'name' => 'Instruction(HTML)',
                         'remarks' => 'Remarks',
-                    ]
+                    ],
                 ],
                 'required' => false,
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function afterCreate($data, $model)
     {
@@ -246,7 +246,7 @@ class Account extends Model
                 \App\Models\Backend\Meta\MetaAccountToInstruction::class,
                 'client_instruction',
                 [
-                    'assigned_to' => \App\Models\Backend\Meta\MetaInstructionToUsers::class
+                    'assigned_to' => \App\Models\Backend\Meta\MetaInstructionToUsers::class,
                 ]
             );
 
@@ -256,7 +256,6 @@ class Account extends Model
         }
     }
 
-
     /**
      * @param $query
      * @param $term
@@ -265,7 +264,7 @@ class Account extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

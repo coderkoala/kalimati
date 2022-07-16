@@ -9,25 +9,25 @@ class TraderDuesHistory extends Model
 {
     use HasFactory;
 
-	public 	  $timestamps = true;
-	protected $table = "traders_due_history";
+    public $timestamps = true;
+    protected $table = 'traders_due_history';
 
     // Setup fillable params.
     protected $fillable = [
-		'id',
-		'trader_id',
-		'tradername',
-		'shop_id',
-		'due_date',
-		'monthly_rent',
-		'late_fee',
-		'other_amount',
-		'adjustment',
-		'total_amount',
+        'id',
+        'trader_id',
+        'tradername',
+        'shop_id',
+        'due_date',
+        'monthly_rent',
+        'late_fee',
+        'other_amount',
+        'adjustment',
+        'total_amount',
     ];
 
     /**
-     * Get all of the payments for the TraderDuesHistory
+     * Get all of the payments for the TraderDuesHistory.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\Commodities as table_model;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\Commodities as table_model;
 
 /**
  * Class ArticleTable.
@@ -34,9 +34,9 @@ class CommoditiesTable extends DataTableComponent
         return [
             Column::make(__('Commodity Identifier'), 'name')
                 ->sortable(),
-            Column::make(__('Commodity Name'), "commodity_" . app()->getLocale() )
+            Column::make(__('Commodity Name'), 'commodity_'.app()->getLocale())
                 ->sortable(),
-            Column::make(__('Commodity Unit'), "unit_" . app()->getLocale())
+            Column::make(__('Commodity Unit'), 'unit_'.app()->getLocale())
                 ->sortable(),
             Column::make(__('Created By'), 'created_by')->sortable(),
             Column::make(__('Created At'), 'created_at')->sortable(),

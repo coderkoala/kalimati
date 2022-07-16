@@ -10,24 +10,24 @@ class TraderDuesPayment extends Model
 {
     use HasFactory;
 
-	public 	  $timestamps = true;
-	protected $table = "traders_due_payment";
+    public $timestamps = true;
+    protected $table = 'traders_due_payment';
 
     // Setup fillable params.
     protected $fillable = [
-		'vendor_id',
+        'vendor_id',
         'notify_email',
-		'payment_uuid',
-		'payment_channel',
-		'payment_data',
-		'reference_data',
-		'paid_on',
-		'status',
-		'amount_paid',
+        'payment_uuid',
+        'payment_channel',
+        'payment_data',
+        'reference_data',
+        'paid_on',
+        'status',
+        'amount_paid',
     ];
 
     protected $casts = [
-        'payment_data' => 'array'
+        'payment_data' => 'array',
     ];
 
     /**
@@ -35,7 +35,7 @@ class TraderDuesPayment extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'notify_email' => [
                 'label' => __('Notify Email Address'),
                 'placeholder' => __('Notify Email Address'),
@@ -146,7 +146,7 @@ class TraderDuesPayment extends Model
                 'hidden' => false,
                 'disabled' => true,
             ],
-        );
+        ];
     }
 
     /**
@@ -157,20 +157,20 @@ class TraderDuesPayment extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('payment_uuid', 'like', '%' . $term . '%')
-                ->orWhere('payment_channel', 'like', '%' . $term . '%')
-                ->orWhere('notify_email', 'like', '%' . $term . '%')
-                ->orWhere('status', 'like', '%' . $term . '%')
+            $query->where('payment_uuid', 'like', '%'.$term.'%')
+                ->orWhere('payment_channel', 'like', '%'.$term.'%')
+                ->orWhere('notify_email', 'like', '%'.$term.'%')
+                ->orWhere('status', 'like', '%'.$term.'%')
                 ->orWhereHas('trader_dues', function ($query) use ($term) {
                     $query->where('tradername', 'like', '%'.$term.'%')
                     ->orWhere('trader_id', 'like', '%'.$term.'%')
                     ->orWhere('shop_id', 'like', '%'.$term.'%');
                 });
-            });
+        });
     }
 
     /**
-     * Get the due associated with the TraderDuesPayment
+     * Get the due associated with the TraderDuesPayment.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

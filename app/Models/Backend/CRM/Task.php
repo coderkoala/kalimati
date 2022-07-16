@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\CRM;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class Task extends Model
 {
@@ -26,7 +26,7 @@ class Task extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Task Title'),
                 'placeholder' => __('Task Title'),
@@ -91,7 +91,7 @@ class Task extends Model
                     'affirm' => true,
                     'limit' => 10,
                 ],
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'recurrence' => [
                 'label' => __('Recurrence'),
@@ -126,7 +126,7 @@ class Task extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -137,7 +137,7 @@ class Task extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

@@ -39,6 +39,7 @@ class clearDues extends Command
     {
         \DB::table('traders_due')->truncate();
         $this->info('[Success] Cleared all trader dues from the database!');
+
         return 0;
     }
 }

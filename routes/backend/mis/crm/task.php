@@ -1,7 +1,7 @@
 <?php
 
-use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Backend\CRM\TasksController;
+use Tabuna\Breadcrumbs\Trail;
 
 Route::get('account-tasks', [TasksController::class, 'index'])
     ->name('account-tasks')

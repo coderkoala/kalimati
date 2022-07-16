@@ -15,5 +15,4 @@ Route::get('daily-arrivals', [HomeController::class, 'checkArrivals'])
         ->push(__('Get Arrivals'), route('frontend.daily-arrivals'));
 });
 
-
 Route::post('daily-arrivals', [HomeController::class, 'checkArrivalsPOST'])->name('daily-arrivals-POST');

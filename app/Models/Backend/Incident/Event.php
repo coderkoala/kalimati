@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\Incident;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class Event extends Model
 {
@@ -35,7 +35,7 @@ class Event extends Model
             'assigned_to',
         ],
         'Additional Information' => [
-            'file'
+            'file',
         ],
     ];
 
@@ -44,7 +44,7 @@ class Event extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Incident Title'),
                 'placeholder' => __('Incident Title'),
@@ -93,7 +93,7 @@ class Event extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'date_incident_filed_on' => [
                 'label' => __('Incident occured on'),
@@ -158,7 +158,7 @@ class Event extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'assigned_to' => [
                 'label' => __('Assigned To'),
@@ -176,7 +176,7 @@ class Event extends Model
                     'affirm' => true,
                     'limit' => 50,
                 ],
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'file' => [
                 'label' => __('Upload your files here'),
@@ -189,7 +189,7 @@ class Event extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -200,7 +200,7 @@ class Event extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

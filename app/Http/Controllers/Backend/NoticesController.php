@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Backend\Notices as model;
 use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
+use App\Models\Backend\Notices as model;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Classes\KoalaCipherEncrypt as Cipher;
 
 /**
  * Class NoticesController.
@@ -78,7 +77,7 @@ class NoticesController
             'content_np',
             'type',
             'published_at',
-            'modal_view'
+            'modal_view',
         ]);
     }
 
@@ -94,9 +93,11 @@ class NoticesController
             $request->request->add([
                 'created_by' => \Auth::user()->id,
             ]);
+
             return $this->baseStore($request);
         } catch (\Exception $e) {
             $this->forbiddenMessage = __($e->getMessage());
+
             return $this->bail();
         }
     }
@@ -112,6 +113,7 @@ class NoticesController
         $request->request->add([
             'created_by' => \Auth::user()->id,
         ]);
+
         return $this->baseUpdate($request, $id, [
             'title_en',
             'content_en',
@@ -119,7 +121,7 @@ class NoticesController
             'content_np',
             'type',
             'published_at',
-            'modal_view'
+            'modal_view',
         ]);
     }
 
@@ -138,7 +140,7 @@ class NoticesController
             'content_np',
             'type',
             'published_at',
-            'modal_view'
+            'modal_view',
         ]);
     }
 }

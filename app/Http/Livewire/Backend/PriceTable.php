@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\PriceLog as table_model;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\PriceLog as table_model;
 
 /**
  * Class ArticleTable.
@@ -34,9 +34,9 @@ class PriceTable extends DataTableComponent
         return [
             Column::make(__('Price Log Date'), 'date')
                 ->sortable(),
-            Column::make(__('Number of Commodities Logged'), "commodity_count" )
+            Column::make(__('Number of Commodities Logged'), 'commodity_count')
                 ->sortable(),
-            Column::make(__('Commodity Price Type'), "price_type")
+            Column::make(__('Commodity Price Type'), 'price_type')
                 ->sortable(),
             Column::make(__('Actions')),
         ];

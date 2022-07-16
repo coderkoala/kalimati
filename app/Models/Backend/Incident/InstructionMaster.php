@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\Incident;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 // @todo : @coderkoala
 // Allow this to map to the same table as the parent model.
@@ -46,7 +46,7 @@ class InstructionMaster extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'referenced_customer' => [
                 'label' => __('Referenced Customer'),
                 'placeholder' => __('Referenced Customer'),
@@ -98,9 +98,9 @@ class InstructionMaster extends Model
                     'affirm' => true,
                     'limit' => 50,
                 ],
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
-        );
+        ];
     }
 
     /**
@@ -111,7 +111,7 @@ class InstructionMaster extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\Incident;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class Investigation extends Model
 {
@@ -26,7 +26,7 @@ class Investigation extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Case Title'),
                 'placeholder' => __('Case Title'),
@@ -84,7 +84,7 @@ class Investigation extends Model
                 'disabled' => false,
                 'hidden' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -95,7 +95,7 @@ class Investigation extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

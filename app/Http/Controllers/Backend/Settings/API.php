@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class API
 {
-
     /**
-     * @param string $model
+     * @param  string  $model
      * @return Model
      */
     private function getModel($model)
@@ -27,7 +26,7 @@ class API
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function get(Request $request, $model)

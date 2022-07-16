@@ -32,7 +32,7 @@ class Notices extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'type'=>[
                 'label' => __('Type of the Notice'),
                 'placeholder' => __('Notice Type'),
@@ -48,7 +48,7 @@ class Notices extends Model
                     'traders' => __('Notice for Traders'),
                     'bill_publication' => __('Publicized Bills'),
                     'publication' => __('Literature Publication'),
-                    'annual' => __('General Report')
+                    'annual' => __('General Report'),
                 ],
                 'render' => true,
                 'hidden' => false,
@@ -108,7 +108,7 @@ class Notices extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'value'=> date('Y-m-d')
+                'value'=> date('Y-m-d'),
             ],
             'url' => [
                 'label' => __('Notice File'),
@@ -150,7 +150,7 @@ class Notices extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     // Set up a one to many inverse relationship with the users table.
@@ -167,11 +167,11 @@ class Notices extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('title_en', 'like', '%' . $term . '%')
-                ->orWhere('title_np', 'like', '%' . $term . '%')
-                ->orWhere('content_en', 'like', '%' . $term . '%')
-                ->orWhere('content_np', 'like', '%' . $term . '%')
-                ->orWhere('published_at', 'like', '%' . $term . '%');
+            $query->where('title_en', 'like', '%'.$term.'%')
+                ->orWhere('title_np', 'like', '%'.$term.'%')
+                ->orWhere('content_en', 'like', '%'.$term.'%')
+                ->orWhere('content_np', 'like', '%'.$term.'%')
+                ->orWhere('published_at', 'like', '%'.$term.'%');
         });
     }
 

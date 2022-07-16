@@ -7,31 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class tradersMaster extends Model
 {
-	use HasFactory;
+    use HasFactory;
 
-	public 	  $timestamps = false;
-	protected $table = "traders_due";
-	protected static $instance = null;
-	protected $keyType = "string";
-	protected $fillable = array(
-		'traderid',
-		'tradername',
-		'shopno',
-		'duedate',
-		'mrent',
-		'lfee',
-		'otheramt',
-		'adjustment',
-		'totalamt',
-	);
+    public $timestamps = false;
+    protected $table = 'traders_due';
+    protected static $instance = null;
+    protected $keyType = 'string';
+    protected $fillable = [
+        'traderid',
+        'tradername',
+        'shopno',
+        'duedate',
+        'mrent',
+        'lfee',
+        'otheramt',
+        'adjustment',
+        'totalamt',
+    ];
 
-	// @usage App\Models\tradersMaster::get_instance()
-	public static function get_instance() {
-		if ( is_null( self::$instance ) ) {
-			return self::$instance = new self;
-		} else {
-			return self::$instance;
-		}
-	}
-
+    // @usage App\Models\tradersMaster::get_instance()
+    public static function get_instance()
+    {
+        if (is_null(self::$instance)) {
+            return self::$instance = new self;
+        } else {
+            return self::$instance;
+        }
+    }
 }

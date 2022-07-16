@@ -1,16 +1,16 @@
 <?php
 
+use App\Http\Controllers\Backend\ArrivalLogController;
+use App\Http\Controllers\Backend\ArticlesController;
+use App\Http\Controllers\Backend\CommoditiesArrivalController;
+use App\Http\Controllers\Backend\CommoditiesController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\LicenseController;
-use App\Http\Controllers\Backend\ArticlesController;
-use App\Http\Controllers\Backend\CommoditiesController;
-use App\Http\Controllers\Backend\CommoditiesArrivalController;
+use App\Http\Controllers\Backend\NoticesController;
 use App\Http\Controllers\Backend\PriceLogController;
-use App\Http\Controllers\Backend\ArrivalLogController;
+use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\TradersDueController;
 use App\Http\Controllers\Backend\TradersPaymentController;
-use App\Http\Controllers\Backend\NoticesController;
-use App\Http\Controllers\Backend\SettingsController;
 use Tabuna\Breadcrumbs\Trail;
 
 // All route names are prefixed with 'admin.'.

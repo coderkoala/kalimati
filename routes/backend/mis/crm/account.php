@@ -1,7 +1,7 @@
 <?php
 
-use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Backend\CRM\AccountController;
+use Tabuna\Breadcrumbs\Trail;
 
 Route::get('account', [AccountController::class, 'index'])
     ->name('account')

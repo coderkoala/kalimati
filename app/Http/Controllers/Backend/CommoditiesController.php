@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Backend\Commodities as model;
 use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
+use App\Models\Backend\Commodities as model;
 use Illuminate\Http\Request;
 
 /**
@@ -75,9 +75,11 @@ class CommoditiesController
             $request->request->add([
                 'created_by' => $created_by,
             ]);
+
             return $this->baseStore($request);
         } catch (\Exception $e) {
             $this->forbiddenMessage = __($e->getMessage());
+
             return $this->bail();
         }
     }

@@ -1,7 +1,7 @@
 <?php
 
-use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Backend\Actions\InvestigationController;
+use Tabuna\Breadcrumbs\Trail;
 
 Route::get('incident-investigation', [InvestigationController::class, 'index'])
     ->name('incident-investigation')

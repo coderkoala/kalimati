@@ -2,9 +2,9 @@
 
 namespace App\Models\Backend\Settings;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Backend\Lib\Extensions;
 
 class SettingsAirlines extends Model
 {
@@ -30,7 +30,7 @@ class SettingsAirlines extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Country Name'),
                 'placeholder' => __('Country Name'),
@@ -86,7 +86,7 @@ class SettingsAirlines extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -97,10 +97,10 @@ class SettingsAirlines extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%')
-                  ->orWhere('prefix', 'like', '%' . $term . '%')
-                  ->orWhere('city_id', 'like', '%' . $term . '%')
-                  ->orWhere('id', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%')
+                  ->orWhere('prefix', 'like', '%'.$term.'%')
+                  ->orWhere('city_id', 'like', '%'.$term.'%')
+                  ->orWhere('id', 'like', '%'.$term.'%');
         });
     }
 }

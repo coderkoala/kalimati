@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Backend\CRM;
 
-use App\Models\Backend\CRM\Account as model;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Traits\BaseHttpController;
+use App\Models\Backend\CRM\Account as model;
 
 class AccountController extends BaseHttpController
 {

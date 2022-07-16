@@ -36,7 +36,7 @@ Route::get('/move', [
 
 Route::get('/domove', [
     'uses' => 'UniSharp\LaravelFilemanager\Controllers\ItemsController@domove',
-    'as' => 'domove'
+    'as' => 'domove',
 ]);
 
 // folders

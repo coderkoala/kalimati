@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\Notices as table_model;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\Notices as table_model;
 
 /**
  * Class NoticesTable.
@@ -32,7 +32,7 @@ class NoticesTable extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make(__('Title'), 'title_' . app()->getLocale())
+            Column::make(__('Title'), 'title_'.app()->getLocale())
                 ->sortable(),
             Column::make(__('Type'), 'type')
                 ->sortable(),

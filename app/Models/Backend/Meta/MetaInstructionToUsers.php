@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\Meta;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class MetaInstructionToUsers extends Model
 {

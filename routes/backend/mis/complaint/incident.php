@@ -1,7 +1,7 @@
 <?php
 
-use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Backend\Actions\IncidentController;
+use Tabuna\Breadcrumbs\Trail;
 
 Route::get('incident-events', [IncidentController::class, 'index'])
     ->name('incident-events')

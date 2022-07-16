@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class CreateLicensesTable extends Migration
 {
@@ -35,7 +35,7 @@ class CreateLicensesTable extends Migration
         });
         try {
             // DB::unprepared('CREATE TRIGGER `tr_Generate_UUID` BEFORE INSERT ON `licenses` FOR EACH ROW SET NEW.license_uuid = UUID();');
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             //
         }
     }
@@ -50,7 +50,7 @@ class CreateLicensesTable extends Migration
         Schema::dropIfExists('licenses');
         try {
             // DB::unprepared('DROP TRIGGER `tr_Generate_UUID`');
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             //
         }
     }
