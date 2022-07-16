@@ -10,12 +10,12 @@ class commodityMaster extends Model
 	use HasFactory;
 
 	public 	  $timestamps = false;
-	protected $table = "tbl_commoditylist";
+	protected $table = "commodities";
 	protected static $instance = null;
 	protected $keyType = "string";
-	protected $primaryKey = "commodityid";
+	protected $primaryKey = "id";
 	protected $fillable = array(
-		'commodityid',
+		'id',
 		'commoditynepname',
 		'commodityengname',
 		'commodityuniten',
@@ -37,30 +37,5 @@ class commodityMaster extends Model
 	public static function getAllData() {
 		$dataPtr = self::get_instance();
 		return collect( $dataPtr->all()->toArray() );
-	}
-
-
-	protected static $arrayMapperDigits = array(
-		0   => '०',
-		1   => '१',
-		2   => '२',
-		3   => '३',
-		4   => '४',
-		5   => '५',
-		6   => '६',
-		7   => '७',
-		8   => '८',
-		9   => '९',
-		'.' => '.'
-	);
-
-	// Usage : App\Models\commodityMaster::digits()
-	public static function digits( $string, $is_formatted = false ) {
-		$string = $is_formatted ? ( number_format( ( float ) $string, 2, '.', '' ) ) : ( string ) $string;
-		if (  'ne' === __( app()->getLocale() ) ) {
-			return str_replace( array_keys( self::$arrayMapperDigits ), array_values( self::$arrayMapperDigits ), $string  );
-		} else {
-			return $string;
-		}
 	}
 }

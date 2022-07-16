@@ -3,12 +3,11 @@
 namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
 
 use App\Domains\Auth\Http\Requests\Frontend\Auth\DisableTwoFactorAuthenticationRequest;
-use App\Http\Controllers\Controller;
 
 /**
  * Class DisableTwoFactorAuthenticationController.
  */
-class DisableTwoFactorAuthenticationController extends Controller
+class DisableTwoFactorAuthenticationController
 {
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -20,7 +19,6 @@ class DisableTwoFactorAuthenticationController extends Controller
 
     /**
      * @param  DisableTwoFactorAuthenticationRequest  $request
-     *
      * @return mixed
      */
     public function destroy(DisableTwoFactorAuthenticationRequest $request)

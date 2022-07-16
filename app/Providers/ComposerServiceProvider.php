@@ -22,7 +22,7 @@ class ComposerServiceProvider extends ServiceProvider
             $view->with('logged_in_user', auth()->user());
         });
 
-        View::composer(['frontend.index', 'frontend.layouts.app'], function ($view) use ($announcementService) {
+        View::composer(['frontend.index', 'frontend.template'], function ($view) use ($announcementService) {
             $view->with('announcements', $announcementService->getForFrontend());
         });
 

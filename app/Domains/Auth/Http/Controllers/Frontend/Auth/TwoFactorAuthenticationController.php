@@ -2,17 +2,15 @@
 
 namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
  * Class TwoFactorAuthenticationController.
  */
-class TwoFactorAuthenticationController extends Controller
+class TwoFactorAuthenticationController
 {
     /**
      * @param  Request  $request
-     *
      * @return mixed
      */
     public function create(Request $request)
@@ -26,7 +24,6 @@ class TwoFactorAuthenticationController extends Controller
 
     /**
      * @param  Request  $request
-     *
      * @return mixed
      */
     public function show(Request $request)
@@ -37,7 +34,6 @@ class TwoFactorAuthenticationController extends Controller
 
     /**
      * @param  Request  $request
-     *
      * @return mixed
      */
     public function update(Request $request)

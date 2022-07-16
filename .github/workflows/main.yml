@@ -23,4 +23,4 @@ jobs:
       - name: Generate Key
         run: php artisan key:generate
       - name: Execute Tests
-        run: vendor/bin/phpunit
+        run: php artisan dues:clear

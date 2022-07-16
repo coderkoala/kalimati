@@ -4,17 +4,15 @@ namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
 
 use App\Domains\Auth\Events\User\UserLoggedIn;
 use App\Domains\Auth\Services\UserService;
-use App\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
 
 /**
  * Class SocialController.
  */
-class SocialController extends Controller
+class SocialController
 {
     /**
      * @param $provider
-     *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function redirect($provider)
@@ -25,8 +23,8 @@ class SocialController extends Controller
     /**
      * @param $provider
      * @param  UserService  $userService
-     *
      * @return \Illuminate\Http\RedirectResponse
+     *
      * @throws \App\Exceptions\GeneralException
      */
     public function callback($provider, UserService $userService)

@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.setPublicPath('public')
     .setResourceRoot('../') // Turns assets paths in css relative to css file
+    .vue()
     .sass('resources/sass/frontend/app.scss', 'css/frontend.css')
     .sass('resources/sass/backend/app.scss', 'css/backend.css')
     .js('resources/js/frontend/app.js', 'js/frontend.js')
@@ -36,14 +37,3 @@ if (mix.inProduction()) {
         devtool: 'inline-source-map'
     });
 }
-
-module.exports = {
-	module: {
-	  loaders: [
-		// the url-loader uses DataUrls.
-		// the file-loader emits files.
-		{ test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-		{ test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
-	  ]
-	}
-  };

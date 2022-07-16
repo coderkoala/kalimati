@@ -3,7 +3,7 @@
 <input style="display:none;" id="i18n" value="{{__( app()->getLocale() )}}"/>
 
     <!--======  banner ====== -->
-    <section class="banner" style="background-image:url(img/slide1.jpg);overflow:hidden;">
+    <section class="banner" style="background-image:url({{ asset('img/slide1.jpg') }});overflow:hidden;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -34,11 +34,6 @@
 						<h4>{{ __('To check dues, please supply Trader Identification Number') }}</h4>
                         <div class="blog-detail-content">
                             <ul class="post-detail-meta" style="border-top:none;">
-                                <li>
-                                    <i class="fa fa-calendar"></i>
-                                    <span>{{ $date }}</span> <!--Remove this date -->
-
-                                </li>
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-user"></i>{{__('Kalimati Fruits and Vegetable Market Development Board')}}
@@ -99,8 +94,22 @@
 							</p>
 							<p>
 							{{__('Total Amount')}} :
-								<span id="totalamt"> Rs 12334</span>
+								<span id="totalamt_localed"> Rs 12334</span>
 							</p>
+                            <form action="https://uat.esewa.com.np/epay/main" method="POST">
+                                <input value="2" id="tAmt" name="tAmt" type="hidden">
+                                <input value="1" id="amt" name="amt" type="hidden">
+                                <input value="0" name="txAmt" type="hidden">
+                                <input value="0" name="psc" type="hidden">
+                                <input value="0" name="pdc" type="hidden">
+                                <input value="EPAYTEST" name="scd" type="hidden">
+                                <input value="{{ \Str::uuid()->toString() }}" name="pid" type="hidden">
+                                <input value="{{ url('/') }}/dues?q=success" type="hidden" name="su">
+                                <input value="{{ url('/') }}/dues?q=failure" type="hidden" name="fu">
+                                <button class="btn" type="submit">
+                                    <img src="{{ asset('img/esewa.jpg') }}" alt="esewa" width="80px" height="20px">
+                                </button>
+                            </form>
 						</div>
 					</div>
 				</div>
@@ -108,3 +117,22 @@
         </div>
     </div>
 @endsection
+
+@push('after-scripts')
+    <script>
+        (function($){
+            $(document).ready(function(){
+                var display = {{ $printSwalBox }};
+                if( display) {
+                    Swal.fire({
+                        title: "{{ __('Success!') }}",
+                        text: "{{ __('Dues have been successfully cleared!') }}",
+                        type: "success",
+                        confirmButtonText: "{{ __('OK') }}"
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+
+@endpush

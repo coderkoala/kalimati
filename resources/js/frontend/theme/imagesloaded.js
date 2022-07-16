@@ -1,7 +1,7 @@
 
 
 /*!
- * imagesLoaded PACKAGED v4.1.1
+ *  PACKAGED v4.1.1
  * JavaScript is all like "You images are done yet or what?"
  * MIT License
  */

@@ -4,12 +4,11 @@ namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
 
 use App\Domains\Auth\Http\Requests\Frontend\Auth\UpdatePasswordRequest;
 use App\Domains\Auth\Services\UserService;
-use App\Http\Controllers\Controller;
 
 /**
  * Class UpdatePasswordController.
  */
-class UpdatePasswordController extends Controller
+class UpdatePasswordController
 {
     /**
      * @var UserService
@@ -19,7 +18,7 @@ class UpdatePasswordController extends Controller
     /**
      * ChangePasswordController constructor.
      *
-     * @param UserService $userService
+     * @param  UserService  $userService
      */
     public function __construct(UserService $userService)
     {
@@ -28,8 +27,8 @@ class UpdatePasswordController extends Controller
 
     /**
      * @param  UpdatePasswordRequest  $request
-     *
      * @return mixed
+     *
      * @throws \Throwable
      */
     public function update(UpdatePasswordRequest $request)

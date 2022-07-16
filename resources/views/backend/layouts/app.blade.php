@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ appName() }} | @yield('title')</title>
+    <title>{{ __(appName()) }} | @yield('title')</title>
     <meta name="description" content="@yield('meta_description', appName())">
-    <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
+    <meta name="author" content="@yield('meta_author', 'Nobel Dahal(@coderkoala)')">
     @yield('meta')
 
     @stack('before-styles')
@@ -27,7 +27,9 @@
             <main class="c-main">
                 <div class="container-fluid">
                     <div class="fade-in">
-                        @include('includes.partials.messages')
+                        <div class='mb-1'>
+                            @include('includes.partials.messages')
+                        </div>
                         @yield('content')
                     </div><!--fade-in-->
                 </div><!--container-fluid-->
@@ -38,10 +40,10 @@
     </div><!--c-wrapper-->
 
     @stack('before-scripts')
+    <livewire:scripts />
     <script src="{{ mix('js/manifest.js') }}"></script>
     <script src="{{ mix('js/vendor.js') }}"></script>
     <script src="{{ mix('js/backend.js') }}"></script>
-    <livewire:scripts />
     @stack('after-scripts')
 </body>
 </html>
