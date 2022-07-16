@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Backend\Articles as model;
-use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Classes\KoalaCipherEncrypt as Cipher;
+use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
+use App\Models\Backend\Articles as model;
+use Illuminate\Http\Request;
 
 /**
  * Class ArticlesController.
@@ -63,15 +63,14 @@ class ArticlesController
         $this->bootValidationRules();
     }
 
-
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function menu(Request $request) {
+    public function menu(Request $request)
+    {
         return view('backend.articles.menu');
     }
 
@@ -81,23 +80,24 @@ class ArticlesController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function menuR(Request $request) {
+    public function menuR(Request $request)
+    {
         try {
             $menu = json_encode($request->data);
             $menu = json_decode($menu, true);
-            if ( $menu ) {
+            if ($menu) {
                 setting()->set('DATA_MENU', $menu);
                 setting()->save();
             } else {
                 setting()->forget('DATA_MENU');
                 setting()->save();
             }
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
+
         return response()->json(['success' => true], 200);
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -112,7 +112,7 @@ class ArticlesController
             'title_np',
             'content_en',
             'content_np',
-            'comment_status'
+            'comment_status',
         ]);
     }
 
@@ -128,28 +128,29 @@ class ArticlesController
             $crypto = new Cipher();
             $articleSlug = $crypto->slugify($request->title_en);
 
-
             // Check if articleSlug already exists. If it does, append a number to the end and recheck.
-            $articleSlugCount = $this->model->where('slug', 'like' , "%$articleSlug%")->count();
+            $articleSlugCount = $this->model->where('slug', 'like', "%$articleSlug%")->count();
             if ($articleSlugCount > 0) {
-                $articleSlug = $articleSlug . '-' . ++$articleSlugCount;
+                $articleSlug = $articleSlug.'-'.++$articleSlugCount;
             }
 
             // Get current userid .
             $user_id = \Auth::user()->id;
 
-            $content_excerpt_en = mb_substr( strip_tags($request->content_np) , 0,157 ,'UTF-8' ) . '...';
-            $content_excerpt_np = mb_substr( strip_tags($request->content_np) , 0,157 ,'UTF-8' ) . '...';
+            $content_excerpt_en = mb_substr(strip_tags($request->content_np), 0, 157, 'UTF-8').'...';
+            $content_excerpt_np = mb_substr(strip_tags($request->content_np), 0, 157, 'UTF-8').'...';
 
             $request->request->add([
                 'slug' => $articleSlug,
                 'user_id' => $user_id,
                 'content_excerpt_en' => $content_excerpt_en,
-                'content_excerpt_np' => $content_excerpt_np
+                'content_excerpt_np' => $content_excerpt_np,
             ]);
+
             return $this->baseStore($request);
         } catch (\Exception $e) {
             $this->forbiddenMessage = __($e->getMessage());
+
             return $this->bail();
         }
     }
@@ -164,25 +165,25 @@ class ArticlesController
     {
         $user_id = \Auth::user()->id;
         $request->request->add([
-            'user_id' => $user_id
+            'user_id' => $user_id,
         ]);
 
         return $this->baseUpdate($request, $id, [
-        'article_uuid',
-        'slug',
-        'article_url',
-        'title_en',
-        'title_np',
-        'content_en',
-        'content_excerpt_en',
-        'content_np',
-        'content_excerpt_np',
-        'user_id',
-        'status',
-        'comment_status',
-        'published_at',
-        'created_at',
-        'modified_at',
+            'article_uuid',
+            'slug',
+            'article_url',
+            'title_en',
+            'title_np',
+            'content_en',
+            'content_excerpt_en',
+            'content_np',
+            'content_excerpt_np',
+            'user_id',
+            'status',
+            'comment_status',
+            'published_at',
+            'created_at',
+            'modified_at',
         ]);
     }
 
@@ -203,6 +204,6 @@ class ArticlesController
             'content_excerpt_np',
             'status',
             'comment_status',
-            ]);
+        ]);
     }
 }

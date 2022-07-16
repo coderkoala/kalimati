@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Backend\PriceLog as model;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * Class PriceLogController.
  */
 class PriceLogController
 {
-        /**
+    /**
      * Properties for dep injection.
      */
     private $model;
@@ -76,23 +76,26 @@ class PriceLogController
 
     /**
      * Convert a multi-dimensional array into a single-dimensional array.
+     *
      * @author Sean Cannon, LitmusBox.com | seanc@litmusbox.com
-     * @param  array $array The multi-dimensional array.
+     *
+     * @param  array  $array  The multi-dimensional array.
      * @return array
      */
     private function array_flatten($array)
     {
-        if (!is_array($array)) {
+        if (! is_array($array)) {
             return false;
         }
-        $result = array();
+        $result = [];
         foreach ($array as $key => $value) {
             if (is_array($value)) {
                 $result = array_merge($result, $this->array_flatten($value));
             } else {
-                $result = array_merge($result, array($key => $value));
+                $result = array_merge($result, [$key => $value]);
             }
         }
+
         return $result;
     }
 
@@ -110,9 +113,10 @@ class PriceLogController
     */
     private function bail($route = null)
     {
-        if ( empty($route) || ! $route ) {
+        if (empty($route) || ! $route) {
             $route = $this->routes['index'];
         }
+
         return redirect()->route($route)->withFlashDanger(__('kalimati.unauthorized', ['resource' => $this->resourceName]));
     }
 
@@ -124,7 +128,7 @@ class PriceLogController
     public function index()
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -140,10 +144,10 @@ class PriceLogController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create( Request $request, $arrayFilter = ['all'] )
+    public function create(Request $request, $arrayFilter = ['all'])
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -163,25 +167,26 @@ class PriceLogController
     public function store(Request $request)
     {
         $this->validationRules = [
-            "file" => "required|url",
-            "entry_date" => "required|date",
-            "price_type" => "required|in:retail,wholesale",
+            'file' => 'required|url',
+            'entry_date' => 'required|date',
+            'price_type' => 'required|in:retail,wholesale',
         ];
         $validationObject = Validator::make($request->all(), $this->validationRules);
         if ($validationObject->fails()) {
             $errorstring = '';
             $error = $this->array_flatten(array_values($validationObject->getMessageBag()->toArray()));
             foreach ($error as $key => $value) {
-                $errorstring .= $value . " ";
+                $errorstring .= $value.' ';
             }
+
             return redirect()->route($this->routes['create'])->withFlashDanger($errorstring)->withInput();
         } else {
             $this->user = Auth::user();
-            if (!$this->user) {
+            if (! $this->user) {
                 return $this->bail();
             }
 
-            if (!file_exists($filePath = public_path(str_replace(env('APP_URL'), '', $request->file)))) {
+            if (! file_exists($filePath = public_path(str_replace(env('APP_URL'), '', $request->file)))) {
                 return redirect()->route($this->routes['create'])->withFlashDanger(__('kalimati.file_access'))->withInput();
             } else {
                 if ($this->user->can($this->permissions['create'])) {
@@ -200,25 +205,25 @@ class PriceLogController
     /**
      * Dump the data values from spreadsheet to the database.
      *
-     * @param  Request $request
-     * @param  string $data
+     * @param  Request  $request
+     * @param  string  $data
      */
-    private function commitToDatabase(Request $request, $data) {
-        $insertData = array();
+    private function commitToDatabase(Request $request, $data)
+    {
+        $insertData = [];
         $timestamp = date('Y-m-d H:i:s');
         $commodities = \App\Models\Backend\Commodities::withTrashed()->get()->pluck('commodity_id')->toArray();
 
         \DB::beginTransaction();
         array_shift($data);
 
-        foreach($data as $tuple) {
-
-            if(!in_array($tuple[0], $commodities)) {
+        foreach ($data as $tuple) {
+            if (! in_array($tuple[0], $commodities)) {
                 try {
                     $newCommodity = new \App\Models\Backend\Commodities();
                     $newCommodity->commodity_id = $tuple[0];
-                    $newCommodity->commodity_en = 'UNKNOWN_COMMODITY_' . $tuple[0];
-                    $newCommodity->commodity_np = 'अज्ञात_वस्तु_' . $tuple[0];
+                    $newCommodity->commodity_en = 'UNKNOWN_COMMODITY_'.$tuple[0];
+                    $newCommodity->commodity_np = 'अज्ञात_वस्तु_'.$tuple[0];
                     $newCommodity->unit_en = 'N/A';
                     $newCommodity->unit_np = 'N/A';
                     $newCommodity->created_by = $this->user->id;
@@ -227,6 +232,7 @@ class PriceLogController
                     $newCommodity->save();
                 } catch (\Exception $e) {
                     \DB::rollback();
+
                     return redirect()->route($this->routes['create'])->withFlashDanger(
                         __('kalimati.fatal_commodity', ['id' => $tuple[0]])
                     )->withInput();
@@ -238,7 +244,7 @@ class PriceLogController
                 $tuple[2] = $tuple[2] > 999.99 ? 0.0 : $tuple[2];
                 $tuple[3] = $tuple[3] > 999.99 ? 0.0 : $tuple[3];
 
-                $insertData[] = array(
+                $insertData[] = [
                     'commodity_id' => $tuple[0],
                     'min_price' => (float) $tuple[1],
                     'max_price' => (float) $tuple[2],
@@ -247,8 +253,8 @@ class PriceLogController
                     'entry_date' => $request->entry_date,
                     'created_at' => $timestamp,
                     'updated_at' => $timestamp,
-                );
-            } catch(\Exception $e) {
+                ];
+            } catch (\Exception $e) {
                 continue;
             }
         }
@@ -257,9 +263,11 @@ class PriceLogController
         try {
             model::insert($insertData);
             \DB::commit();
-            return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.created', ['resource' => $this->resourceName] ));
-        } catch(\Exception $e) {
+
+            return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.created', ['resource' => $this->resourceName]));
+        } catch (\Exception $e) {
             \DB::rollback();
+
             return redirect()->route($this->routes['create'])->withFlashDanger(
                 __('kalimati.fatal_bulkdispatch')
             )->withInput();
@@ -269,23 +277,24 @@ class PriceLogController
     /**
      * Parse the given xls/xlsx file using PHPOpffice, and dump the values into the database.
      *
-     * @param  Request $request
-     * @param  string $filePath
+     * @param  Request  $request
+     * @param  string  $filePath
      */
-    private function parseFile(Request $request, $filePath) {
+    private function parseFile(Request $request, $filePath)
+    {
         $reader = null;
         switch (strtolower(pathinfo($filePath, PATHINFO_EXTENSION))) {
             case 'xls':
-                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader("Xls");
+                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xls');
                 $reader->setReadDataOnly(true);
                 break;
 
             default:
-                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader("Xlsx");
+                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
                 $reader->setReadDataOnly(true);
         }
 
-        if ( ! $reader ) {
+        if (! $reader) {
             return redirect()
             ->route($this->routes['create'])
             ->withFlashDanger(__('kalimati.fatal_spoofed_file'))
@@ -317,7 +326,7 @@ class PriceLogController
     public function show($entry_date)
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -336,10 +345,10 @@ class PriceLogController
      * @param  $resource
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $entry_date )
+    public function edit(Request $request, $entry_date)
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -347,16 +356,15 @@ class PriceLogController
             return view($this->views['edit'],
             [
                 'id' => $entry_date,
-                'commodities'=> \App\Models\Backend\Commodities::
-                select('commodity_id', \DB::raw("commodity_" . app()->getLocale() ) . " as commodity")
+                'commodities'=> \App\Models\Backend\Commodities::select('commodity_id', \DB::raw('commodity_'.app()->getLocale()).' as commodity')
                 ->get(),
                 'data' => $this->model
                 ->select([
-                    "id",
-                    "commodity_id",
-                    "min_price",
-                    "max_price",
-                    "avg_price",
+                    'id',
+                    'commodity_id',
+                    'min_price',
+                    'max_price',
+                    'avg_price',
                 ])
                 ->where('entry_date', $entry_date)
                 ->where('price_type', 'wholesale')
@@ -382,7 +390,7 @@ class PriceLogController
             $errorstring = '';
             $error = $this->array_flatten(array_values($validation->getMessageBag()->toArray()));
             foreach ($error as $key => $value) {
-                $errorstring .= __($value) . " ";
+                $errorstring .= __($value).' ';
             }
 
             return response()->json([
@@ -392,13 +400,14 @@ class PriceLogController
         }
 
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
         if ($this->user->can($this->permissions['update'])) {
             try {
                 $this->model->find($id)->update($request->only('min_price', 'avg_price', 'max_price'));
+
                 return response()->json([
                     'status' => 'success',
                     'message' => __('kalimati.updated', ['resource' => $this->resourceName]),
@@ -415,7 +424,6 @@ class PriceLogController
                 'message' => __('kalimati.unauthorized', ['resource' => $this->resourceName]),
             ], 403);
         }
-
     }
 
     /**
@@ -427,7 +435,7 @@ class PriceLogController
     public function destroy(Request $request, $entry_date)
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 
@@ -437,6 +445,7 @@ class PriceLogController
         if ($this->user->can($this->permissions['delete'])) {
             try {
                 $this->model->delete();
+
                 return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.deleted', ['resource' => $this->resourceName]));
             } catch (\Exception $e) {
                 return redirect()->route($this->routes['index'])->withFlashDanger(__('kalimati.delete_failed', ['resource' => $this->resourceName]));

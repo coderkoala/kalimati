@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Backend\TraderDuesPayment as model;
-use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
+use App\Models\Backend\TraderDuesPayment as model;
 use Illuminate\Http\Request;
 
 /**
@@ -106,7 +105,7 @@ class TradersPaymentController
         $this->model = new \App\Models\Backend\TraderDuesHistory();
         $this->fieldData = \App\Models\Backend\TraderDues::getFieldData();
         $this->user = \Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->bail();
         }
 

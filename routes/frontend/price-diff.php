@@ -15,5 +15,4 @@ Route::get('comparative-prices', [PriceDiff::class, 'index'])
         ->push(__('Get Price History'), route('frontend.comparative-prices'));
 });
 
-
 Route::post('comparative-prices', [PriceDiff::class, 'post'])->name('price-diff-data');

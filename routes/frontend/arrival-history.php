@@ -15,5 +15,4 @@ Route::get('arrival-history', [HomeController::class, 'checkArrivalHistory'])
         ->push(__('Get Price History'), route('frontend.arrival-history'));
 });
 
-
 Route::post('arrival-history', [HomeController::class, 'checkArrivalPOST'])->name('arrivalHistoryPolling');

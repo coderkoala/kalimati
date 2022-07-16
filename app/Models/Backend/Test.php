@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class Test extends Model
 {
@@ -29,11 +29,11 @@ class Test extends Model
             'country',
             'isMale',
             'type',
-            'date'
+            'date',
         ],
         'Licensee Additional Data' => [
             'agenda',
-            'file'
+            'file',
         ],
     ];
 
@@ -42,7 +42,7 @@ class Test extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Name'),
                 'placeholder' => __('Name'),
@@ -142,7 +142,7 @@ class Test extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -153,7 +153,7 @@ class Test extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

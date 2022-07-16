@@ -4,7 +4,6 @@ namespace App\Http\Livewire\Backend\Traits;
 
 trait FormComponentTraits
 {
-
     /**
      * @return array
      */
@@ -69,12 +68,12 @@ trait FormComponentTraits
 
     public function updateSelectField($field, $value)
     {
-        if (!in_array($field, $this->columns) || !isset($this->fields[$field]) || 'select' !== $this->fields[$field]['type']) {
+        if (! in_array($field, $this->columns) || ! isset($this->fields[$field]) || 'select' !== $this->fields[$field]['type']) {
             return;
         }
 
         if (null === $this->data[$field]) {
-            if ( isset($fieldDataTuple['multiple']['affirm']) && $fieldDataTuple['multiple']['affirm'] ) {
+            if (isset($fieldDataTuple['multiple']['affirm']) && $fieldDataTuple['multiple']['affirm']) {
                 $this->data[$field] = [];
             } else {
                 $this->data[$field] = null;
@@ -84,13 +83,13 @@ trait FormComponentTraits
         if (isset($this->fields[$field]['multiple']) && is_array($this->fields[$field]['type']) && true === $this->fields[$field]['type']['affirm']) {
             $this->data[$field][] = array_values($value);
         } else {
-            $this->data[$field] =  $value;
+            $this->data[$field] = $value;
         }
     }
 
     public function updateTextAreaField($field, $value)
     {
-        if (!in_array($field, $this->columns) || !isset($this->fields[$field]) || 'textarea' !== $this->fields[$field]['type']) {
+        if (! in_array($field, $this->columns) || ! isset($this->fields[$field]) || 'textarea' !== $this->fields[$field]['type']) {
             return;
         }
 
@@ -99,19 +98,18 @@ trait FormComponentTraits
 
     public function deleteTupleData($field, $index)
     {
-        if ( ! isset($this->data[$field][$index])) {
+        if (! isset($this->data[$field][$index])) {
             return;
         }
 
-        unset( $this->data[$field][$index] );
+        unset($this->data[$field][$index]);
 
         return $this->emit('dispatchEvent', __('Success'), __('The selected data set has been successfully cleared.'), 'info');
-
     }
 
     public function appendFileUpload($field, $fileHash)
     {
-        if (!in_array($field, $this->columns)) {
+        if (! in_array($field, $this->columns)) {
             return;
         }
         if (null === $this->data[$field]) {
@@ -124,7 +122,7 @@ trait FormComponentTraits
 
     public function removeFileUpload($field, $fileHash)
     {
-        if (!in_array($field, $this->columns)) {
+        if (! in_array($field, $this->columns)) {
             return;
         }
 

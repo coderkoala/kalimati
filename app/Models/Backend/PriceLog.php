@@ -10,18 +10,18 @@ class PriceLog extends Model
 {
     use HasFactory;
 
-	public 	  $timestamps = true;
-	protected $table = "daily_price_log";
+    public $timestamps = true;
+    protected $table = 'daily_price_log';
 
     // Setup fillable params.
     protected $fillable = [
-		'id',
-		'commodity_id',
-		'entry_date',
-		'price_type',
-		'min_price',
-		'max_price',
-		'avg_price',
+        'id',
+        'commodity_id',
+        'entry_date',
+        'price_type',
+        'min_price',
+        'max_price',
+        'avg_price',
     ];
 
     /**
@@ -29,7 +29,7 @@ class PriceLog extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'commodity_id' => [
                 'label' => __('Commodity Identifier'),
                 'placeholder' => __('Commodity Identifier'),
@@ -125,7 +125,7 @@ class PriceLog extends Model
                 'hidden' => false,
                 'disabled' => true,
             ],
-        );
+        ];
     }
 
     /**
@@ -136,9 +136,9 @@ class PriceLog extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('entry_date', 'like', '%' . $term . '%')
-                ->orWhere('price_type', 'like', '%' . $term . '%');
-            });
+            $query->where('entry_date', 'like', '%'.$term.'%')
+                ->orWhere('price_type', 'like', '%'.$term.'%');
+        });
     }
 
     /**
@@ -146,29 +146,28 @@ class PriceLog extends Model
      * @param $price_type
      * @return mixed
      */
-    public static function getPriceLog($entry_date = null, $price_type="wholesale")
+    public static function getPriceLog($entry_date = null, $price_type = 'wholesale')
     {
-
         try {
-            if ( false === strtotime($entry_date ?? '')) {
-                $entry_date = self::select(\DB::raw("MAX(`entry_date`) as `today`"))->first()->today;
+            if (false === strtotime($entry_date ?? '')) {
+                $entry_date = self::select(\DB::raw('MAX(`entry_date`) as `today`'))->first()->today;
             }
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $entry_date = date('Y-m-d');
         }
 
         return [$entry_date, $price_type, self::join('commodities', 'commodities.commodity_id', '=', 'daily_price_log.commodity_id')
         ->select(
             'daily_price_log.id',
-            'commodities.' . "commodity_" . app()->getLocale() . ' as commodity',
+            'commodities.'.'commodity_'.app()->getLocale().' as commodity',
             'daily_price_log.price_type',
             'daily_price_log.min_price',
             'daily_price_log.max_price',
             'daily_price_log.avg_price',
             )
-        ->where('daily_price_log.entry_date', $entry_date )
-        ->where('daily_price_log.price_type', $price_type )
-        ->where('commodities.deleted_at', null)->get()];
+        ->where('daily_price_log.entry_date', $entry_date)
+        ->where('daily_price_log.price_type', $price_type)
+        ->where('commodities.deleted_at', null)->get(), ];
     }
 
     /**

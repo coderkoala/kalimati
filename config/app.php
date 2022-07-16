@@ -184,7 +184,7 @@ return [
         App\Providers\LocaleServiceProvider::class,
         App\Providers\ObserverServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        anlutro\LaravelSettings\ServiceProvider::class
+        anlutro\LaravelSettings\ServiceProvider::class,
     ],
 
     /*

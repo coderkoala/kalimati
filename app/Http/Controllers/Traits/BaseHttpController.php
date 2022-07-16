@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Traits;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -41,7 +40,7 @@ class BaseHttpController
     public function index()
     {
         $this->user = Auth::user();
-        if (!$this->user) {
+        if (! $this->user) {
             return $this->deAuthorize();
         }
 

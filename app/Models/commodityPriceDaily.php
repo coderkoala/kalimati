@@ -10,10 +10,10 @@ class commodityPriceDaily extends Model
 {
     use HasFactory;
 
-    protected $table = "daily_price_log";
+    protected $table = 'daily_price_log';
     protected static $instance = null;
-    protected $keyType = "string";
-    protected $fillable = array(
+    protected $keyType = 'string';
+    protected $fillable = [
         'commodity_id',
         'entry_date',
         'price_type',
@@ -21,13 +21,13 @@ class commodityPriceDaily extends Model
         'max_price',
         'avg_price',
         'created_by',
-    );
+    ];
 
     // @usage App\Models\commodityPriceDaily::getDateMax()
     public static function getDateMax()
     {
         $date = DB::select(DB::raw('SELECT max( `entry_date` ) as `today` FROM `daily_price_log`;'));
-        if (!empty($date[0]) && isset($date[0]->today)) {
+        if (! empty($date[0]) && isset($date[0]->today)) {
             return $date[0]->today;
         } else {
             return null;
@@ -38,7 +38,7 @@ class commodityPriceDaily extends Model
     public static function getMaxDateArrivalCommodity()
     {
         $date = DB::select(DB::raw('SELECT max( `entry_date` ) as `today` FROM `daily_arrival_log`;'));
-        if (!empty($date[0]) && isset($date[0]->today)) {
+        if (! empty($date[0]) && isset($date[0]->today)) {
             return $date[0]->today;
         } else {
             return null;
@@ -59,6 +59,7 @@ class commodityPriceDaily extends Model
     public static function getAllData()
     {
         $dataPtr = self::get_instance();
+
         return collect($dataPtr->limit($limit)->toArray());
     }
 
@@ -84,9 +85,9 @@ class commodityPriceDaily extends Model
         `commodities`
         ON
         `commodities`.`commodity_id` = `pivot`.`commodity_id`;";
+
         return collect(DB::select(DB::raw($query)));
     }
-
 
     // @usage App\Models\getPriceOptimized::getPriceOptimized();
     public static function getPriceOptimized()
@@ -110,6 +111,7 @@ class commodityPriceDaily extends Model
         `commodities`
         ON
         `commodities`.`commodity_id` = `pivot`.`commodity_id`;";
+
         return collect(
             DB::select(
                 DB::raw($query)

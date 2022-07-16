@@ -36,7 +36,7 @@ class Articles extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'article_uuid' => [
                 'label' => __('Page UUID'),
                 'placeholder' => __('Page UUID'),
@@ -226,8 +226,8 @@ class Articles extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => true,
-            ]
-        );
+            ],
+        ];
     }
 
     // Set up a one to many inverse relationship with the users table.
@@ -244,14 +244,14 @@ class Articles extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('title_en', 'like', '%' . $term . '%')
-                ->orWhere('title_np', 'like', '%' . $term . '%')
-                ->orWhere('content_en', 'like', '%' . $term . '%')
-                ->orWhere('content_excerpt_en', 'like', '%' . $term . '%')
-                ->orWhere('content_np', 'like', '%' . $term . '%')
-                ->orWhere('content_excerpt_np', 'like', '%' . $term . '%')
-                ->orWhere('status', 'like', '%' . $term . '%')
-                ->orWhere('content_np', 'like', '%' . $term . '%');
+            $query->where('title_en', 'like', '%'.$term.'%')
+                ->orWhere('title_np', 'like', '%'.$term.'%')
+                ->orWhere('content_en', 'like', '%'.$term.'%')
+                ->orWhere('content_excerpt_en', 'like', '%'.$term.'%')
+                ->orWhere('content_np', 'like', '%'.$term.'%')
+                ->orWhere('content_excerpt_np', 'like', '%'.$term.'%')
+                ->orWhere('status', 'like', '%'.$term.'%')
+                ->orWhere('content_np', 'like', '%'.$term.'%');
         });
     }
 

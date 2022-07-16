@@ -9,12 +9,10 @@ use anlutro\LaravelSettings\Facade as Setting;
  */
 class KoalaCipherEncrypt
 {
-
     private $key = '';
     private $nonce = '';
 
     /**
-     *
      * @return void
      */
     public function __construct()
@@ -24,7 +22,6 @@ class KoalaCipherEncrypt
     }
 
     /**
-     *
      * @return type
      */
     public function getKey()
@@ -33,7 +30,6 @@ class KoalaCipherEncrypt
     }
 
     /**
-     *
      * @return type
      */
     public function getNonce()
@@ -46,7 +42,6 @@ class KoalaCipherEncrypt
     }
 
     /**
-     *
      * @return type
      */
     private function create_encryption_key()
@@ -59,7 +54,6 @@ class KoalaCipherEncrypt
     }
 
     /**
-     *
      * @return type
      */
     private function create_nonce()
@@ -70,29 +64,30 @@ class KoalaCipherEncrypt
     }
 
     /**
-     * Encrypt a message
+     * Encrypt a message.
      *
-     * @param string $message - message to encrypt
-     * @param string $key - encryption key created using create_encryption_key()
+     * @param  string  $message  - message to encrypt
+     * @param  string  $key  - encryption key created using create_encryption_key()
      * @return string
      */
     public function encrypt($message)
     {
         $nonce = '' === $this->nonce ? $this->create_nonce() : $this->nonce;
         $cipher =
-            $nonce .
+            $nonce.
             sodium_crypto_secretbox(
                 $message,
                 $nonce,
                 $this->key
             );
+
         return sodium_bin2hex($cipher);
     }
 
     /**
      * Slugify a title into a valid slug.
      *
-     * @param string $message - string to slugify
+     * @param  string  $message  - string to slugify
      * @return string
      */
     public function slugify($message)
@@ -101,13 +96,15 @@ class KoalaCipherEncrypt
         $message = preg_replace('/[^a-z0-9_\s-]/', '', $message);
         $message = preg_replace('/[\s-]+/', ' ', $message);
         $message = preg_replace('/[\s_]/', '-', $message);
+
         return $message;
     }
 
     /**
-     * Decrypt a message
-     * @param string $encrypted - message encrypted with safeEncrypt()
-     * @param string $key - key used for encryption
+     * Decrypt a message.
+     *
+     * @param  string  $encrypted  - message encrypted with safeEncrypt()
+     * @param  string  $key  - key used for encryption
      * @return string
      */
     public function decrypt($encrypted)
@@ -118,7 +115,7 @@ class KoalaCipherEncrypt
             throw new \Exception('Encrypted message is invalid.');
         }
 
-        if (!$decoded) {
+        if (! $decoded) {
             throw new \Exception('Decryption error : the encoding failed');
         }
 

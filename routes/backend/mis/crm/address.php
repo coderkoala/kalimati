@@ -1,7 +1,7 @@
 <?php
 
-use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Backend\CRM\AddressController;
+use Tabuna\Breadcrumbs\Trail;
 
 Route::get('account-address', [AddressController::class, 'index'])
     ->name('account-address')

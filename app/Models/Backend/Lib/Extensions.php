@@ -18,10 +18,11 @@ trait Extensions
     /**
      * @return null
      */
-    public function saveMetaData($from, $to, $meta, $data = null){
-        if ( isset($this->saveData[$meta])) {
+    public function saveMetaData($from, $to, $meta, $data = null)
+    {
+        if (isset($this->saveData[$meta])) {
             $metaData = [];
-            foreach( $this->saveData[$meta] as $individualDataTuple ) {
+            foreach ($this->saveData[$meta] as $individualDataTuple) {
                 $metaDataModel = new $from();
                 $savedRowID = $metaDataModel->create($individualDataTuple)->id;
                 $metaDataTuple = [
@@ -30,11 +31,11 @@ trait Extensions
                     'meta' => $meta,
                 ];
 
-                if ( is_array($data) ) {
-                    foreach( $data as $field => $modelAssociation ) {
-                        if ( isset($individualDataTuple[$field]) ) {
+                if (is_array($data)) {
+                    foreach ($data as $field => $modelAssociation) {
+                        if (isset($individualDataTuple[$field])) {
                             $fillData = [];
-                            foreach( $individualDataTuple[$field] as $individualRowID ) {
+                            foreach ($individualDataTuple[$field] as $individualRowID) {
                                 $fillData[] = [
                                     'from' => $savedRowID,
                                     'to' => $individualRowID,
@@ -43,7 +44,7 @@ trait Extensions
                             }
 
                             $modelAssociationInit = new $modelAssociation();
-                            if( ! $modelAssociationInit->insert($fillData) ) {
+                            if (! $modelAssociationInit->insert($fillData)) {
                                 throw 'Not inserted correctly.';
                             }
                         }
@@ -54,7 +55,7 @@ trait Extensions
             }
 
             $metaInsertedData = new $to();
-            if( ! $metaInsertedData->insert($metaData) ) {
+            if (! $metaInsertedData->insert($metaData)) {
                 throw 'Not inserted correctly.';
             }
 
@@ -73,7 +74,7 @@ trait Extensions
             return [
                 0 => array_keys(
                     self::getFieldData()
-                )
+                ),
             ];
         }
     }
@@ -92,18 +93,20 @@ trait Extensions
     public static function getPermissions()
     {
         $canonical = self::$modelNameSlug;
+
         return [
-            "create" => "admin.$canonical.create",
-            "read" => "admin.$canonical.read",
-            "update" => "admin.$canonical.update",
-            "delete" => "admin.$canonical.delete",
+            'create' => "admin.$canonical.create",
+            'read' => "admin.$canonical.read",
+            'update' => "admin.$canonical.update",
+            'delete' => "admin.$canonical.delete",
         ];
     }
 
     /**
      * @return array
      */
-    public static function getTableColumns() {
+    public static function getTableColumns()
+    {
         if (property_exists(self::class, 'tableColumns')) {
             return self::$tableColumns;
         } else {

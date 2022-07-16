@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend\Incident;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class InstructionSlave extends Model
 {
@@ -29,7 +29,7 @@ class InstructionSlave extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Instructions'),
                 'placeholder' => __('Instructions'),
@@ -68,7 +68,7 @@ class InstructionSlave extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'assigned_to' => [
                 'label' => __('Assigned To'),
@@ -86,9 +86,9 @@ class InstructionSlave extends Model
                     'affirm' => true,
                     'limit' => 50,
                 ],
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
-        );
+        ];
     }
 
     /**
@@ -99,7 +99,7 @@ class InstructionSlave extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

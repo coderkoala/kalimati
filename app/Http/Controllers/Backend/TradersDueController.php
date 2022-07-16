@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Backend\TraderDues as model;
-use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Traits\KoalaHttpController as HttpController;
+use App\Models\Backend\TraderDues as model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * Class TradersDueController.
@@ -74,6 +74,7 @@ class TradersDueController
             return $this->baseStore($request);
         } catch (\Exception $e) {
             $this->forbiddenMessage = __($e->getMessage());
+
             return $this->bail();
         }
     }
@@ -125,25 +126,27 @@ class TradersDueController
      *
      * @return \Illuminate\Http\Response
      */
-    public function upload(Request $request) {
+    public function upload(Request $request)
+    {
         $rules = [
-            "file" => "required|url",
+            'file' => 'required|url',
         ];
         $validationObject = Validator::make($request->all(), $rules);
         if ($validationObject->fails()) {
             $errorstring = '';
             $error = $this->array_flatten(array_values($validationObject->getMessageBag()->toArray()));
             foreach ($error as $key => $value) {
-                $errorstring .= $value . " ";
+                $errorstring .= $value.' ';
             }
+
             return redirect()->route($this->routes['index'])->withFlashDanger($errorstring)->withInput();
         } else {
             $this->user = \Auth::user();
-            if (!$this->user) {
+            if (! $this->user) {
                 return $this->bail();
             }
 
-            if (!file_exists($filePath = public_path(str_replace(env('APP_URL'), '', $request->file)))) {
+            if (! file_exists($filePath = public_path(str_replace(env('APP_URL'), '', $request->file)))) {
                 return redirect()->route($this->routes['index'])->withFlashDanger(__('kalimati.file_access'))->withInput();
             } else {
                 if ($this->user->can('admin.traderdues')) {
@@ -159,26 +162,27 @@ class TradersDueController
         }
     }
 
-        /**
+    /**
      * Parse the given xls/xlsx file using PHPOpffice, and dump the values into the database.
      *
-     * @param  Request $request
-     * @param  string $filePath
+     * @param  Request  $request
+     * @param  string  $filePath
      */
-    private function parseFile(Request $request, $filePath) {
+    private function parseFile(Request $request, $filePath)
+    {
         $reader = null;
         switch (strtolower(pathinfo($filePath, PATHINFO_EXTENSION))) {
             case 'xls':
-                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader("Xls");
+                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xls');
                 $reader->setReadDataOnly(true);
                 break;
 
             default:
-                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader("Xlsx");
+                $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
                 $reader->setReadDataOnly(true);
         }
 
-        if ( ! $reader ) {
+        if (! $reader) {
             return redirect()
             ->route($this->routes['index'])
             ->withFlashDanger(__('kalimati.fatal_spoofed_file'))
@@ -190,7 +194,7 @@ class TradersDueController
             foreach ($allSheets as $sheet) {
                 $sheetData = $sheet->toArray();
                 if ($sheetData !== [[0 => null]]) {
-                   return $this->commitToDatabase($request, $sheetData);
+                    return $this->commitToDatabase($request, $sheetData);
                 } else {
                     return redirect()
                     ->route($this->routes['create'])
@@ -204,22 +208,23 @@ class TradersDueController
     /**
      * Dump the data values from spreadsheet to the database.
      *
-     * @param  Request $request
-     * @param  string $data
+     * @param  Request  $request
+     * @param  string  $data
      */
-    private function commitToDatabase(Request $request, $data) {
-        $insertData = array();
+    private function commitToDatabase(Request $request, $data)
+    {
+        $insertData = [];
         $timestamp = date('Y-m-d H:i:s');
 
         array_shift($data);
 
-        foreach($data as $tuple) {
+        foreach ($data as $tuple) {
             try {
-                $tuple[4] = ( $tuple[4] && $tuple[4] > 9999999.99 ) ? 9999999.99 : $tuple[4];
-                $tuple[5] = ( $tuple[5] && $tuple[5] > 9999999.99 ) ? 9999999.99 : $tuple[5];
-                $tuple[6] = ( $tuple[6] && $tuple[6] > 9999999.99 ) ? 9999999.99 : $tuple[6];
-                $tuple[7] = ( $tuple[7] && $tuple[7] > 9999999.99 ) ? 9999999.99 : $tuple[7];
-                $tuple[8] = ( $tuple[8] && $tuple[8] > 9999999.99 ) ? 9999999.99 : $tuple[8];
+                $tuple[4] = ($tuple[4] && $tuple[4] > 9999999.99) ? 9999999.99 : $tuple[4];
+                $tuple[5] = ($tuple[5] && $tuple[5] > 9999999.99) ? 9999999.99 : $tuple[5];
+                $tuple[6] = ($tuple[6] && $tuple[6] > 9999999.99) ? 9999999.99 : $tuple[6];
+                $tuple[7] = ($tuple[7] && $tuple[7] > 9999999.99) ? 9999999.99 : $tuple[7];
+                $tuple[8] = ($tuple[8] && $tuple[8] > 9999999.99) ? 9999999.99 : $tuple[8];
 
                 if ($tuple[0] && $tuple[1] && $tuple[2]) {
                     $insertData[] = [
@@ -236,7 +241,7 @@ class TradersDueController
                         'updated_at' => $timestamp,
                     ];
                 }
-            } catch(\Exception $e) {
+            } catch (\Exception $e) {
                 continue;
             }
         }
@@ -246,15 +251,17 @@ class TradersDueController
         try {
             \DB::table('traders_due')->delete();
             $this->model::insert($insertData);
-        } catch(\Exception $e) {
-            dd( $insertData );
+        } catch (\Exception $e) {
+            dd($insertData);
             \DB::rollback();
+
             return redirect()->route($this->routes['index'])->withFlashDanger(
-                __('kalimati.fatal_bulkdispatch') . ' ' .  __('Code')  . ' : ' . $e->getCode()
+                __('kalimati.fatal_bulkdispatch').' '.__('Code').' : '.$e->getCode()
             )->withInput();
         }
 
         \DB::commit();
-        return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.created', ['resource' => $this->resourceName] ));
+
+        return redirect()->route($this->routes['index'])->withFlashSuccess(__('kalimati.created', ['resource' => $this->resourceName]));
     }
 }

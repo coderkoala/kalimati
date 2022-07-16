@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\License;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\License;
 
 /**
  * Class LicenseTable.

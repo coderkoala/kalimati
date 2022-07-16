@@ -10,21 +10,21 @@ class TraderDues extends Model
 {
     use HasFactory;
 
-	public 	  $timestamps = true;
-	protected $table = "traders_due";
+    public $timestamps = true;
+    protected $table = 'traders_due';
 
     // Setup fillable params.
     protected $fillable = [
-		'id',
-		'trader_id',
-		'tradername',
-		'shop_id',
-		'due_date',
-		'monthly_rent',
-		'late_fee',
-		'other_amount',
-		'adjustment',
-		'total_amount',
+        'id',
+        'trader_id',
+        'tradername',
+        'shop_id',
+        'due_date',
+        'monthly_rent',
+        'late_fee',
+        'other_amount',
+        'adjustment',
+        'total_amount',
     ];
 
     /**
@@ -32,7 +32,7 @@ class TraderDues extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'trader_id' => [
                 'label' => __('Trader ID'),
                 'placeholder' => __('Trader ID'),
@@ -154,7 +154,7 @@ class TraderDues extends Model
                 'hidden' => false,
                 'disabled' => true,
             ],
-        );
+        ];
     }
 
     /**
@@ -165,10 +165,10 @@ class TraderDues extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('trader_id', 'like', '%' . $term . '%')
-                ->orWhere('tradername', 'like', '%' . $term . '%')
-                ->orWhere('shop_id', 'like', '%' . $term . '%');
-            });
+            $query->where('trader_id', 'like', '%'.$term.'%')
+                ->orWhere('tradername', 'like', '%'.$term.'%')
+                ->orWhere('shop_id', 'like', '%'.$term.'%');
+        });
     }
 
     /**

@@ -5,13 +5,12 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Queue\SerializesModels;
 
 class DispatchDailyPrices extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-
 
     public $daily_prices;
     public $message;
@@ -36,6 +35,6 @@ class DispatchDailyPrices extends Mailable implements ShouldQueue
     public function build()
     {
         return $this->markdown('vendor.notifications.daily_prices')->with(
-            array_merge(['daily_prices' => $this->daily_prices, 'url'=>env('APP_URL') ], $this->message->data()));
+            array_merge(['daily_prices' => $this->daily_prices, 'url'=>env('APP_URL')], $this->message->data()));
     }
 }

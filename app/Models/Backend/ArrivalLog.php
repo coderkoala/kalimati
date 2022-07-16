@@ -10,15 +10,15 @@ class ArrivalLog extends Model
 {
     use HasFactory;
 
-	public 	  $timestamps = true;
-	protected $table = "daily_arrival_log";
+    public $timestamps = true;
+    protected $table = 'daily_arrival_log';
 
     // Setup fillable params.
     protected $fillable = [
-		'id',
-		'commodity_id',
-		'entry_date',
-		'quantity',
+        'id',
+        'commodity_id',
+        'entry_date',
+        'quantity',
     ];
 
     /**
@@ -26,7 +26,7 @@ class ArrivalLog extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'commodity_id' => [
                 'label' => __('Commodity Identifier'),
                 'placeholder' => __('Commodity Identifier'),
@@ -62,7 +62,7 @@ class ArrivalLog extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -73,9 +73,9 @@ class ArrivalLog extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('entry_date', 'like', '%' . $term . '%')
-                ->orWhere('commodity_id', 'like', '%' . $term . '%');
-            });
+            $query->where('entry_date', 'like', '%'.$term.'%')
+                ->orWhere('commodity_id', 'like', '%'.$term.'%');
+        });
     }
 
     public static function getArrivals($date = null)
@@ -97,6 +97,7 @@ class ArrivalLog extends Model
         `commodities_arrival`
         ON
         `commodities_arrival`.`commodity_id` = `pivot`.`commodity_id`;";
+
         return collect(\DB::select(\DB::raw($query)));
     }
 

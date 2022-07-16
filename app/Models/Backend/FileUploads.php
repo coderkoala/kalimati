@@ -2,9 +2,9 @@
 
 namespace App\Models\Backend;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Backend\Lib\Extensions;
 
 class FileUploads extends Model
 {

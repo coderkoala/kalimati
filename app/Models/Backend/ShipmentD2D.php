@@ -2,10 +2,10 @@
 
 namespace App\Models\Backend;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Backend\Lib\Extensions;
 
 class ShipmentD2D extends Model
 {
@@ -35,7 +35,7 @@ class ShipmentD2D extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'shipment_mode' => [
                 'label' => __('Shipment Mode'),
                 'placeholder' => __('Select the mode to assign to the Shipment.'),
@@ -52,7 +52,7 @@ class ShipmentD2D extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'load_type' => [
                 'label' => __('Type of Container'),
@@ -71,7 +71,7 @@ class ShipmentD2D extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             // Show only if fcl (reefer and dry)
             'load_subtype' => [
@@ -90,7 +90,7 @@ class ShipmentD2D extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'shipper' => [
                 'label' => __('Shipper'),
@@ -103,7 +103,7 @@ class ShipmentD2D extends Model
                 'model' => \App\Models\Backend\CRM\Account::class,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions'=>false
+                'loadOptions'=>false,
             ],
             'consignee' => [
                 'label' => __('Consignee'),
@@ -116,7 +116,7 @@ class ShipmentD2D extends Model
                 'model' => \App\Models\Backend\CRM\Account::class,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions'=>false
+                'loadOptions'=>false,
             ],
             'destination' => [
                 'label' => __('Destination'),
@@ -190,7 +190,7 @@ class ShipmentD2D extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'gross_weight' => [
                 'label' => __('Gross Weight(KG)'),
@@ -233,7 +233,7 @@ class ShipmentD2D extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => false,
-                'loadOptions' => true
+                'loadOptions' => true,
             ],
             'pickup_contact_existing' => [
                 'label' => __('Pickup Contact for a Shipment'),
@@ -265,7 +265,7 @@ class ShipmentD2D extends Model
                         'designation' => 'Designation',
                         'name' => 'Contact Person',
                         'telephone' => 'Telephone',
-                    ]
+                    ],
                 ],
                 'required' => false,
                 'render' => true,
@@ -294,7 +294,7 @@ class ShipmentD2D extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -305,7 +305,7 @@ class ShipmentD2D extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%');
         });
     }
 }

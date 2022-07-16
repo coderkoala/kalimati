@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\TraderDues;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\TraderDues;
 
 /**
  * Class LicenseTable.
@@ -36,7 +36,7 @@ class TraderDuesTable extends DataTableComponent
             Column::make(__('Other Amount'), 'other_amount'),
             Column::make(__('Adjustment'), 'adjustment'),
             Column::make(__('Total Amount'), 'total_amount'),
-            Column::make(__('Actions'))
+            Column::make(__('Actions')),
         ];
     }
 

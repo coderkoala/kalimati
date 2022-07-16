@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\ArrivalLog as table_model;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\ArrivalLog as table_model;
 
 /**
  * Class ArrivalTable.
@@ -34,7 +34,7 @@ class ArrivalTable extends DataTableComponent
         return [
             Column::make(__('Created At'), 'date')
                 ->sortable(),
-            Column::make(__('Number of Commodities Logged'), "commodity_count" )
+            Column::make(__('Number of Commodities Logged'), 'commodity_count')
                 ->sortable(),
             Column::make(__('Actions')),
         ];

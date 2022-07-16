@@ -2,9 +2,9 @@
 
 namespace App\Models\Backend\Settings;
 
+use App\Models\Backend\Lib\Extensions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Backend\Lib\Extensions;
 
 class SettingsCity extends Model
 {
@@ -28,7 +28,7 @@ class SettingsCity extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('City Name'),
                 'placeholder' => __('City Name'),
@@ -63,7 +63,7 @@ class SettingsCity extends Model
                 'hidden' => false,
                 'disabled' => false,
             ],
-        );
+        ];
     }
 
     /**
@@ -74,7 +74,7 @@ class SettingsCity extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->orWhere('name', 'like', '%' . $term . '%')->orWhere('id', 'like', '%' . $term . '%')->orWhere('country_id', 'like', '%' . $term . '%');
+            $query->orWhere('name', 'like', '%'.$term.'%')->orWhere('id', 'like', '%'.$term.'%')->orWhere('country_id', 'like', '%'.$term.'%');
         });
     }
 }

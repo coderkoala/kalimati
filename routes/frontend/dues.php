@@ -15,5 +15,4 @@ Route::get('dues', [HomeController::class, 'checkPrices'])
             ->push(__('Trader Dues'), route('frontend.dues'));
     });
 
-
 Route::post('dues', [HomeController::class, 'checkIndividualPrice'])->name('duesPolling');

@@ -11,18 +11,18 @@ class Commodities extends Model
 {
     use HasFactory, SoftDeletes;
 
-	public 	  $timestamps = true;
-	protected $table = "commodities";
+    public $timestamps = true;
+    protected $table = 'commodities';
 
     // Setup fillable params.
     protected $fillable = [
-		'id',
-		'commodity_id',
-		'commodity_en',
-		'commodity_np',
-		'unit_en',
-		'unit_np',
-		'created_by',
+        'id',
+        'commodity_id',
+        'commodity_en',
+        'commodity_np',
+        'unit_en',
+        'unit_np',
+        'created_by',
     ];
 
     /**
@@ -30,7 +30,7 @@ class Commodities extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'commodity_id' => [
                 'label' => __('Commodity Identifier'),
                 'placeholder' => __('Commodity Identifier'),
@@ -131,8 +131,8 @@ class Commodities extends Model
                 'render' => true,
                 'hidden' => false,
                 'disabled' => true,
-            ]
-        );
+            ],
+        ];
     }
 
     // Set up a one to many inverse relationship with the users table.
@@ -142,7 +142,7 @@ class Commodities extends Model
     }
 
     /**
-     * Get all of the price_data for the Commodities
+     * Get all of the price_data for the Commodities.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -159,13 +159,13 @@ class Commodities extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('commodity_id', 'like', '%' . $term . '%')
-                ->orWhere('commodity_en', 'like', '%' . $term . '%')
-                ->orWhere('commodity_np', 'like', '%' . $term . '%')
-                ->orWhere('unit_en', 'like', '%' . $term . '%')
-                ->orWhere('unit_np', 'like', '%' . $term . '%')
-                ->orWhere('created_by', 'like', '%' . $term . '%');
-            });
+            $query->where('commodity_id', 'like', '%'.$term.'%')
+                ->orWhere('commodity_en', 'like', '%'.$term.'%')
+                ->orWhere('commodity_np', 'like', '%'.$term.'%')
+                ->orWhere('unit_en', 'like', '%'.$term.'%')
+                ->orWhere('unit_np', 'like', '%'.$term.'%')
+                ->orWhere('created_by', 'like', '%'.$term.'%');
+        });
     }
 
     /**

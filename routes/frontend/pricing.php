@@ -15,5 +15,4 @@ Route::get('price', [HomeController::class, 'checkDailyPrices'])
         ->push(__('Get Prices'), route('frontend.price'));
 });
 
-
 Route::post('price', [HomeController::class, 'checkDailyPricesPOST'])->name('pricePolling');

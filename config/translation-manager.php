@@ -19,9 +19,9 @@ return [
     ],
 
     /**
-     * Enable deletion of translations
+     * Enable deletion of translations.
      *
-     * @type boolean
+     * @var bool
      */
     'delete_enabled' => true,
 
@@ -29,7 +29,7 @@ return [
      * Exclude specific groups from Laravel Translation Manager.
      * This is useful if, for example, you want to avoid editing the official Laravel language files.
      *
-     * @type array
+     * @var array
      *
      *    array(
      *        'pagination',
@@ -42,7 +42,7 @@ return [
     /**
      * Exclude specific languages from Laravel Translation Manager.
      *
-     * @type array
+     * @var array
      *
      *    array(
      *        'fr',

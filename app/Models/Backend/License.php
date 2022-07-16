@@ -26,7 +26,7 @@ class License extends Model
         'created_at',
         'updated_at',
         'deleted_at',
-        'valid_until'
+        'valid_until',
     ];
 
     /**
@@ -34,7 +34,7 @@ class License extends Model
      */
     public static function getFieldData()
     {
-        return array(
+        return [
             'name' => [
                 'label' => __('Name'),
                 'placeholder' => __('Enter your name'),
@@ -145,7 +145,7 @@ class License extends Model
                 'type' => 'date',
                 'disabled' => false,
                 'render' => false,
-                'hidden' => true
+                'hidden' => true,
             ],
             'deleted_at' => [
                 'label' => __('Deleted At'),
@@ -156,14 +156,14 @@ class License extends Model
                 'type' => 'date',
                 'disabled' => false,
                 'render' => false,
-                'hidden' => true
-            ]
-        );
+                'hidden' => true,
+            ],
+        ];
     }
 
     // This data needs to be json, always.
     protected $casts = [
-        'license_data' => 'array'
+        'license_data' => 'array',
     ];
 
     // Set up a one to many inverse relationship with the users table.
@@ -180,11 +180,11 @@ class License extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($query) use ($term) {
-            $query->where('license_key', 'like', '%' . $term . '%')
-                ->orWhere('license_uuid', 'like', '%' . $term . '%')
-                ->orWhere('name', 'like', '%' . $term . '%')
-                ->orWhere('phone', 'like', '%' . $term . '%')
-                ->orWhere('email', 'like', '%' . $term . '%');
+            $query->where('license_key', 'like', '%'.$term.'%')
+                ->orWhere('license_uuid', 'like', '%'.$term.'%')
+                ->orWhere('name', 'like', '%'.$term.'%')
+                ->orWhere('phone', 'like', '%'.$term.'%')
+                ->orWhere('email', 'like', '%'.$term.'%');
         });
     }
 

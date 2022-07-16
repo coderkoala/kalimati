@@ -28,10 +28,11 @@ class FileUploadsHelper extends Model
         return $this->belongsTo('App\Domains\Auth\Models\User', 'user_id', 'id');
     }
 
-    public function getFileInformation($table_name) {
+    public function getFileInformation($table_name)
+    {
         return DB::table($table_name)
         ->join("{$this->table}", "{$this->table}.model_id", '=', 'orders.user_id')
-        ->where("{$this->table}.model_type",$table_name)
+        ->where("{$this->table}.model_type", $table_name)
         ->select("$table_name.*")
         ->get();
     }

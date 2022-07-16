@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Models\Backend\PriceLog;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Backend\PriceLog;
 
 /**
  * Class ArticleTable.
@@ -27,13 +27,13 @@ class PriceShowTable extends DataTableComponent
         return PriceLog::join('commodities', 'commodities.commodity_id', '=', 'daily_price_log.commodity_id')
         ->select(
             'daily_price_log.id',
-            'commodities.' . "commodity_" . app()->getLocale() . ' as commodity',
+            'commodities.'.'commodity_'.app()->getLocale().' as commodity',
             'daily_price_log.price_type',
             'daily_price_log.min_price',
             'daily_price_log.max_price',
             'daily_price_log.avg_price',
             )
-        ->where('daily_price_log.entry_date', $this->entry_date )
+        ->where('daily_price_log.entry_date', $this->entry_date)
         ->where('commodities.deleted_at', null);
     }
 
@@ -44,10 +44,10 @@ class PriceShowTable extends DataTableComponent
     {
         return [
             Column::make(__('Commodity Name'), 'commodity')->sortable(),
-            Column::make(__('Price Type'), "commodity_price_type" ),
-            Column::make(__('Minimum Price'), "commodity_min_price" ),
-            Column::make(__('Average Price'), "commodity_avg_price" ),
-            Column::make(__('Maximum Price'), "commodity_max_price" ),
+            Column::make(__('Price Type'), 'commodity_price_type'),
+            Column::make(__('Minimum Price'), 'commodity_min_price'),
+            Column::make(__('Average Price'), 'commodity_avg_price'),
+            Column::make(__('Maximum Price'), 'commodity_max_price'),
         ];
     }
 
