@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('frontend.template')
 
 @section('title', __('Two Factor Authentication is required'))
 
@@ -12,7 +12,7 @@
                     </x-slot>
 
                     <x-slot name="body">
-                        <p>@lang('To continue, open up your Authenticator app and issue your 2FA code.')</p>
+                        <p>@lang('To continue, open up your Authenticator app and issue your 2FA code')</p>
 
                         <x-forms.post :action="$action">
                             @foreach((array)$credentials as $name => $value)

@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('activitylog:clean')->daily();
+        $schedule->command('dues:clear')->cron('59 23 * * *');
     }
 
     /**

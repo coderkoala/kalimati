@@ -10,12 +10,11 @@ use App\Domains\Auth\Models\User;
 use App\Domains\Auth\Services\PermissionService;
 use App\Domains\Auth\Services\RoleService;
 use App\Domains\Auth\Services\UserService;
-use App\Http\Controllers\Controller;
 
 /**
  * Class UserController.
  */
-class UserController extends Controller
+class UserController
 {
     /**
      * @var UserService
@@ -47,7 +46,7 @@ class UserController extends Controller
     }
 
     /**
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
@@ -67,8 +66,8 @@ class UserController extends Controller
 
     /**
      * @param  StoreUserRequest  $request
-     *
      * @return mixed
+     *
      * @throws \App\Exceptions\GeneralException
      * @throws \Throwable
      */
@@ -81,7 +80,6 @@ class UserController extends Controller
 
     /**
      * @param  User  $user
-     *
      * @return mixed
      */
     public function show(User $user)
@@ -93,7 +91,6 @@ class UserController extends Controller
     /**
      * @param  EditUserRequest  $request
      * @param  User  $user
-     *
      * @return mixed
      */
     public function edit(EditUserRequest $request, User $user)
@@ -109,8 +106,8 @@ class UserController extends Controller
     /**
      * @param  UpdateUserRequest  $request
      * @param  User  $user
-     *
      * @return mixed
+     *
      * @throws \Throwable
      */
     public function update(UpdateUserRequest $request, User $user)
@@ -123,8 +120,8 @@ class UserController extends Controller
     /**
      * @param  DeleteUserRequest  $request
      * @param  User  $user
-     *
      * @return mixed
+     *
      * @throws \App\Exceptions\GeneralException
      */
     public function destroy(DeleteUserRequest $request, User $user)

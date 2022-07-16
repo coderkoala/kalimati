@@ -10,7 +10,7 @@ if (! function_exists('appName')) {
      */
     function appName()
     {
-        return config('app.name', 'Kalimati Market');
+        return config('app.name', 'Laravel Boilerplate');
     }
 }
 
@@ -19,8 +19,8 @@ if (! function_exists('carbon')) {
      * Create a new Carbon instance from a time.
      *
      * @param $time
-     *
      * @return Carbon
+     *
      * @throws Exception
      */
     function carbon($time)

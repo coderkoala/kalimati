@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('frontend.template')
 
 @section('title', __('Enable Two Factor Authentication'))
 

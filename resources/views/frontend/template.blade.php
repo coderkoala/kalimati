@@ -5,76 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ __('Kalimati Fruits and Vegetable Market Development Board') . ' : ' . __('Regulating the market in Nepalese consumer interest since 1995') }}</title>
         <meta name="description" content="{{__('Regulating the market in Nepalese consumer interest since 1995')}}">
-        <meta name="author" content="@yield('meta_author', 'Nobel Dahal')">
-        @yield('meta')
-
-        @stack('before-styles')
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <meta name="author" content="@yield('meta_author', 'Nobel Dahal(@coderkoala)')">
         <link href="{{ mix('css/frontend.css') }}" rel="stylesheet">
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-			[x-cloak] {
-				display: none;
-			}
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-        @stack('after-styles')
-
+        @yield('meta')
         @include('includes.partials.ga')
+        @stack('before-styles')
+        @stack('after-styles')
     </head>
-    <body id="demo-swicher">
-		<!-- ====== scroll to top ====== -->
-		<a id="oscornScroll" title="Go to top" href="javascript:void(0)" class="scrolltotop">
+
+    <body>
+		<a id="scrollToTop" title="Go to top" href="javascript:void(0)" class="scrollToTop">
 			<i class="fa fa-angle-up"></i>
 		</a>
 
@@ -82,14 +23,14 @@
 
 		<header class="web__navbar">
 			<div class="ui container d-none d-lg-block">
-				<div class="navbar__top"><a class="navbar-brand" href="/"><img src="images/gov_insignia.svg" alt="MOAD" class="ui small image"></a>
+				<div class="navbar__top"><a class="navbar-brand" href="/"><img src="{{ asset('images/gov_insignia.svg') }}" alt="MOAD" class="ui small image"></a>
 					<div class="site__meta">
 						<span>{!! __('Government of Nepal<br>Ministry of Agriculture and Livestock Development') !!}</span>
 						<h1>{{ __('Kalimati Fruits and Vegetable Market Development Board') }}</h1>
 					</div>
 
 					<div class="navbar__right">
-						<div style="display: flex; height: 73px; align-items: center;"><img src="img/logo.png" alt="Nepal Flag" class="ui image flag"></div>
+						<div style="display: flex; height: 73px; align-items: center;"><img src="{{ asset('img/logo.png') }}" alt="Nepal Flag" class="ui image flag"></div>
 					</div>
 				</div>
 			</div>
@@ -97,7 +38,7 @@
 			<div class="theme-mobile-menu d-lg-none top-head">
 				<div class="mobile-logo">
 					<a href="{{route('frontend.index')}}">
-						<img src="img/logo.png" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}"> <strong style="color:white;">{{ __('Kalimati Market Development Board') }}</strong>
+						<img src="{{ asset('img/logo.png') }}" style="height:60px" alt="{{__('Kalimati Fruits and Vegetable Market Development Board')}}"> <strong style="color:white;">{{ __('Kalimati Market Development Board') }}</strong>
 					</a>
 				</div>
 
@@ -121,18 +62,89 @@
 								<li class="menu-item">
 									<a href="{{route('frontend.index')}}" class="menu-link">{{ __('Home') }}</a>
 								</li>
-								<li class="menu-item">
-									<a href="#archetypeParent" class="menu-link">{{ __('About us') }}</a>
-								</li>
-								<li class="menu-item">
-									<a href="{{route('frontend.price')}}" class="menu-link">{{ __('Check Prices') }}</a>
-								</li>
-								<li class="menu-item">
-									<a href="{{route('frontend.dues')}}" class="menu-link">{{ __('Trader Dues') }}</a>
-								</li>
-								<li class="menu-item">
-									<a href="#contact" class="menu-link">{{ __('Contact us') }}</a>
-								</li>
+                                <li class="menu-item has-sub">
+                                    <a href="javascript:void(0)" class="menu-link">{{ __('About us') }}</a>
+                                    <ul class="dropdown">
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.about') }}" class="menu-link">{{ __('Overview') }}</a>
+                                        </li>
+                                        @foreach(setting()->get('DATA_MENU', []) as $menuTuple)
+                                            <li class="dropdown-item">
+                                                <a href="{{ route('frontend.pages', $menuTuple['slug']) }}" class="menu-link">{{ $menuTuple['title_'. app()->getLocale()] }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                <li class="menu-item has-sub">
+                                    <a href="javascript:void(0)" class="menu-link">{{ __('Market Info') }}</a>
+                                    <ul class="dropdown">
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.price')}}" class="menu-link">{{ __('Daily Price') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.daily-arrivals')}}" class="menu-link">{{ __('Daily Arrival') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.price-history')}}" class="menu-link">{{ __('Periodic Price') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.arrival-history')}}" class="menu-link">{{ __('Periodic Arrival') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.comparative-prices')}}" class="menu-link">{{ __('Comparative Price') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.arrival-comparision')}}" class="menu-link">{{ __('Comparative Arrival') }}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item has-sub">
+                                    <a href="javascript:void(0)" class="menu-link">{{ __('Trader Info') }}</a>
+                                    <ul class="dropdown">
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.dues')}}" class="menu-link">{{ __('Trader Dues') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{route('frontend.pages.notice', 'traders')}}" class="menu-link">{{ __('Notice for Traders') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a id="traderDB" href="#" class="menu-link">{{ __('Trader Database') }}</a>
+                                            <script defer>
+                                                document.getElementById('traderDB').addEventListener('click', function(){
+                                                    Swal.fire({
+                                                        icon:'info',
+                                                        title:'{{ __('Data not available') }}',
+                                                        html:'{{ __('Trader data has not been made available yet, please try again later') }}',
+                                                        confirmButtonText: '{{ __('OK') }}'
+                                                    });
+                                                });
+                                            </script>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item has-sub">
+                                    <a href="javascript:void(0)" class="menu-link">{{ __('Information') }}</a>
+                                    <ul class="dropdown">
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.notice', 'notice') }}">{{ __('Notices') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.notice', 'tender') }}">{{ __('Tender Invitations') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.notice', 'bill_publication') }}">{{ __('Publicized Bills') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.notice', 'annual') }}">{{ __('General Reports') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.notice', 'pest') }}">{{ __('Pesticides Report') }}</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="{{ route('frontend.pages.notice', 'publication') }}">{{ __('Publications') }}</a>
+                                        </li>
+                                    </ul>
+                                </li>
 								@guest
 
 								@else
@@ -164,9 +176,13 @@
 								@endif
 								@endguest
 
+                                <li class="menu-item">
+                                    <a href="{{ route('frontend.pages.contact') }}" class="menu-link">{{ __('Contact') }}</a>
+                                </li>
+
 								@if(config('boilerplate.locale.status') && count(config('boilerplate.locale.languages')) > 1)
 								<li class="menu-item has-sub">
-									<a href="javascript:void(0)" class="menu-link">{{ __(getLocaleName(app()->getLocale())) }}</a>
+									<a href="javascript:void(0)" class="menu-link"><img src="{{ asset("img/" . app()->getLocale() . ".svg") }}" width="15" height="15"/></a>
 									<ul class="dropdown">
 										@include('includes.partials.lang')
 									</ul>
@@ -184,15 +200,15 @@
 		@include('includes.partials.announcements')
 
 		<div id="app">
-			<!-- include('frontend.includes.nav') -->
 			@include('includes.partials.messages')
-
+			@include('includes.partials.prices')
 			<main>
 				@yield('content')
 			</main>
-		</div><!--app-->
+		</div>
 
-		<!-- ====== footer ====== -->
+        @stack('footer')
+
 		<section class="footer">
 			<div class="container">
 				<div class="footer-top">
@@ -206,19 +222,20 @@
 									<p>{{ __('Ganeshman Singh Road, Kathmandu 44600')}}</p>
 									<ul>
 										<li>
-											<i class="fa fa-phone" style="top: 20%;position: relative;"></i>
-											<a href="tel:+9775123086">{{__('5123086')}}</a>
+											<i class="fa fa-phone"></i>
+											<p>{{ __('Office Phone') }} : <a href="tel:+9775123086">{{__idf('5123086', false)}}</a>
+										</li>
+                                        <li>
+											<i class="fa fa-phone"></i>
+											<p>{{ __('Notice Board') }} : <a href="tel:+1618070766666">{{__idf('1618070766666', false)}}</a></p>
 										</li>
 										<li>
 											<i class="fa fa-envelope"></i>
-											<p>kalimatimarket@gmail.com </p>
+											<p>kalimatimarket@gmail.com</p>
 										</li>
 										<li>
 											<i class="fa fa-globe"></i>
 											<p>www.kalimatimarket.gov.np</p>
-										</li>
-										<li>
-											<p>Notice Board Service: 1618070766666</p>
 										</li>
 									</ul>
 								</div>
@@ -233,9 +250,22 @@
 						</div>
 
 						<div class="col-md-4 mb-60">
-							<h3>{{__('Find us')}}</h3>
-							<div class="soc-links">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14130.299391376013!2d85.3000801!3d27.6995323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc11005272af8e800!2sKalimati%20Fruits%20%26%20Vegetable%20Market%20Development%20Board!5e0!3m2!1sen!2snp!4v1609659067464!5m2!1sen!2snp" width="250" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							<div class="company-details">
+								<h2>
+								{{ __('Quick Links') }}
+								</h2>
+								<div class="f-content">
+									<ul>
+										<li><p><i class="fa fa-globe"></i><a href="/">{{ __('Home') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ route('frontend.pages.contact') }}">{{ __('Contact us') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ setting()->get('url_citizen_charter', '#') }}">{{ __('Citizen Charter') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ route('frontend.pages.notice', 'notice') }}">{{ __('Notices') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ setting()->get('url_organization_structure', '#') }}">{{ __('Organization Structure') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ route('frontend.pages.notice', 'pest') }}">{{ __('Pesticides Report') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ route('frontend.pages.notice', 'bill_publication') }}">{{ __('Public Billing Report') }}</a></p></li>
+										<li><p><i class="fa fa-globe"></i><a href="{{ route('frontend.pages.notice', 'tender') }}">{{ __('Tenders') }}</a></p></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-60">
@@ -249,16 +279,19 @@
 				</div>
 				<div class="footer-bottom">
 					<p>
-						{{__("© 2021")}} {{__('All Rights Reserved')}} | <a href="https://comptech.com.np" _target="blank">{{__('Powered by Comptech International Pvt. Ltd.')}}</a>
+						{{__("© " . __idf(date('Y'), false))}} {{__('All Rights Reserved')}} | <a href="https://comptech.com.np" _target="blank">{{__(appName())}}</a>
 					</p>
 				</div>
 			</div>
 		</section>
 
+        @stack('after-footer')
+
         @stack('before-scripts')
         <script src="{{ mix('js/manifest.js') }}"></script>
         <script src="{{ mix('js/vendor.js') }}"></script>
         <script src="{{ mix('js/frontend.js') }}"></script>
+        <script src="{{ asset('/vendor/dt/datatables.js') }}"></script>
         @stack('after-scripts')
     </body>
 </html>

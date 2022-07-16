@@ -1,0 +1,6012 @@
+﻿[
+    {
+        "prefix": "001",
+        "id": "AA",
+        "name": "AMERICAN AIRLINES",
+        "label": "AMERICAN AIRLINES",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "004",
+        "id": "BV",
+        "name": "BLUE PANAROMA AIRLINES S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "005",
+        "id": "CO",
+        "name": "CONTINENTAL AIRLINES",
+        "label": "CONTINENTAL AIRLINES",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "006",
+        "id": "DL",
+        "name": "DELTA AIRLINES",
+        "label": "DELTA CARGO",
+        "country": "",
+        "city": "ATL",
+        "airport": "Atlanta Airport",
+        "address": ""
+    },
+    {
+        "prefix": "009",
+        "id": "Z5",
+        "name": "GMG AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "011",
+        "id": "M9",
+        "name": "MOTOR-SICH JSC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "012",
+        "id": "NW",
+        "name": "NORTHWEST AIRLINES",
+        "label": "NORTHWEST AIRLINES",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "014",
+        "id": "AC1",
+        "name": "AIR CANADA",
+        "label": "AIR CANADA",
+        "country": "CA",
+        "city": null,
+        "airport": "PO Box 14000",
+        "address": ""
+    },
+    {
+        "prefix": "015",
+        "id": "TW",
+        "name": "TRANS WORLD AIRLINES INC.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "016",
+        "id": "UA",
+        "name": "UNITED AIRLINES",
+        "label": "UNITED AIRLINES",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "018",
+        "id": "CP",
+        "name": "CANADIAN AIRLINES INT. LTD.",
+        "label": "CANADIAN",
+        "country": "CA",
+        "city": null,
+        "airport": "700 nd Street SW",
+        "address": ""
+    },
+    {
+        "prefix": "019",
+        "id": "6D",
+        "name": "PT PELITA AIR SERVICE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "020",
+        "id": "LH1",
+        "name": "LUFTHANSA CARGO",
+        "label": "LUFTHANSA CARGO",
+        "country": "DE",
+        "city": null,
+        "airport": "Langer Kornweg 34i",
+        "address": ""
+    },
+    {
+        "prefix": "022",
+        "id": "5U",
+        "name": "LINEAS AEREAS DEL ESTADO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "023",
+        "id": "FX",
+        "name": "FEDERAL EXPRESS",
+        "label": "FEDERAL EXPRESS",
+        "country": "",
+        "city": "MEM",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "027",
+        "id": "AS",
+        "name": "ALASKA AIRLINES",
+        "label": "ALASKA AIRLINES",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "029",
+        "id": "3K",
+        "name": "TATONDUK OUTFITTERS LTD. D/B/A EVERT AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "030",
+        "id": "YT",
+        "name": "AIR TOGO S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "032",
+        "id": "ZU",
+        "name": "HELIOS AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "033",
+        "id": "7Q",
+        "name": "TEBISTI AIR LIBYA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "034",
+        "id": "GC",
+        "name": "GAMBIA INTERNATIONAL AIRLINES LTD.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "036",
+        "id": "AD",
+        "name": "AVIALEASING AVIATION COMP.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "037",
+        "id": "US",
+        "name": "US AIRWAYS",
+        "label": "US AIRWAYS",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "038",
+        "id": "TQ",
+        "name": "TANDEM AERO LTD.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "040",
+        "id": "LK",
+        "name": "AIR LUXOR S.A.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "042",
+        "id": "RG",
+        "name": "VARIG BRAZILIAN AIRLINES",
+        "label": "VARIG CARGO",
+        "country": "BR",
+        "city": null,
+        "airport": "Rio de Janerio",
+        "address": ""
+    },
+    {
+        "prefix": "043",
+        "id": "KA",
+        "name": "HONG KONG DRAGON AIRLINES LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "044",
+        "id": "AR",
+        "name": "AEROLINEAS ARGENTINAS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "045",
+        "id": "LA",
+        "name": "LAN CHILE",
+        "label": "LAN CHILE",
+        "country": "CL",
+        "city": "SYP",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "047",
+        "id": "TP",
+        "name": "TAP AIR PORTUGAL",
+        "label": "TAP CARGO",
+        "country": "PT",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "048",
+        "id": "CY",
+        "name": "CYPRUS AIRWAYS LTD",
+        "label": "CYPRUS AIRWAYS",
+        "country": "CY",
+        "city": "NIC",
+        "airport": "PO Box 1903",
+        "address": ""
+    },
+    {
+        "prefix": "050",
+        "id": "OA",
+        "name": "OLYMPIC AIRWAYS",
+        "label": "OLYMPIC AIRWAYS",
+        "country": "GR",
+        "city": "MMI",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "051",
+        "id": "LB",
+        "name": "LLOYD AEREO BOLIVIAN S. A (LAB)",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "053",
+        "id": "EI",
+        "name": "AER LINGUS IRISH AIRLINES",
+        "label": "AER LINGUS CARGO",
+        "country": "IE",
+        "city": "PSK",
+        "airport": "Dublin Airport",
+        "address": ""
+    },
+    {
+        "prefix": "055",
+        "id": "AZ",
+        "name": "ALITALIA",
+        "label": "ALITALIA",
+        "country": "IT",
+        "city": "ROM",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "056",
+        "id": "YK",
+        "name": "KIBRIS TURK HAVA YOLLARI",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "057",
+        "id": "AF",
+        "name": "AIR FRANCE",
+        "label": "AIR FRANCE CARGO",
+        "country": "FR",
+        "city": null,
+        "airport": "45 Rue de Paris",
+        "address": ""
+    },
+    {
+        "prefix": "058",
+        "id": "IC",
+        "name": "INDIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "059",
+        "id": "DF",
+        "name": "AEROLINEAS DE BELEARES AEBAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "061",
+        "id": "HM",
+        "name": "AIR SEYCHELLES",
+        "label": "AIR SEYCHELLES",
+        "country": "SC",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "062",
+        "id": "5V",
+        "name": "LVIV AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "063",
+        "id": "SB",
+        "name": "AIR CALEDONIE INTERNATIONAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "064",
+        "id": "OK",
+        "name": "CZECH AIRLINES",
+        "label": "CZECH AIRLINES",
+        "country": "CZ",
+        "city": null,
+        "airport": "Kolejni 550.2",
+        "address": ""
+    },
+    {
+        "prefix": "065",
+        "id": "SV",
+        "name": "SAUDI ARABIA AIRLINES",
+        "label": "SAUDI",
+        "country": "SA",
+        "city": null,
+        "airport": "PO Box 620",
+        "address": ""
+    },
+    {
+        "prefix": "067",
+        "id": "Y4",
+        "name": "EAGLE AVIATION LTD.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "068",
+        "id": "TM",
+        "name": "LAM- LINHAS AEREAS DE MOCAMBIQUE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "069",
+        "id": "MJ",
+        "name": "LINEAS AEREAS PRIVADAS ARGENTINAS (LAPA)",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "070",
+        "id": "RB",
+        "name": "SYRIAN ARAB AIRLINES",
+        "label": "SYRIAN ARAB AIRLINES",
+        "country": "",
+        "city": "DAM",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "071",
+        "id": "ET",
+        "name": "ETHIOPIAN AIRLINES CORP",
+        "label": "ETHIOPIAN AIRLINES",
+        "country": "ET",
+        "city": "ADD",
+        "airport": "PO Box 620",
+        "address": "Addis Ababa"
+    },
+    {
+        "prefix": "072",
+        "id": "GF",
+        "name": "GULF AIR",
+        "label": "GULF AIR",
+        "country": "BH",
+        "city": "BAH",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "073",
+        "id": "IA",
+        "name": "IRAQI AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "074",
+        "id": "KL",
+        "name": "KLM ROYAL DUTCH AIRLINES",
+        "label": "KLM CARGO",
+        "country": "",
+        "city": null,
+        "airport": "PO Box 7700",
+        "address": ""
+    },
+    {
+        "prefix": "075",
+        "id": "IB",
+        "name": "IBERIA",
+        "label": "IBERIA CARGO",
+        "country": "ES",
+        "city": null,
+        "airport": "130 Calle Velazque",
+        "address": ""
+    },
+    {
+        "prefix": "076",
+        "id": "ME",
+        "name": "MIDDLE EAST AIRLINES AIRLIBAN",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "077",
+        "id": "MS",
+        "name": "EGYPTAIR",
+        "label": "EGYPTAIR",
+        "country": "EG",
+        "city": "CIR",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "078",
+        "id": "JR",
+        "name": "AERO CALIFORNIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "079",
+        "id": "PR",
+        "name": "PHILIPPINE AIR LINES",
+        "label": "PHILIPPINE AIR LINES",
+        "country": "PH",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "081",
+        "id": "QF",
+        "name": "QANTAS AIRWAYS",
+        "label": "QANTAS AIRWAYS",
+        "country": "AU",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "082",
+        "id": "QG",
+        "name": "SN BRUSSELS AIRLINES (DELTA AIR TRANSPORT NV)",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "083",
+        "id": "YB",
+        "name": "SOUTH AFRICAN AIRWAYS",
+        "label": "SOUTH AFRICAN",
+        "country": "ZA",
+        "city": null,
+        "airport": "Airways Towers",
+        "address": ""
+    },
+    {
+        "prefix": "084",
+        "id": "FT",
+        "name": "SIEM REAP AIRWAYS INTERNATIONAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "085",
+        "id": "SR",
+        "name": "SWISS",
+        "label": "SWISSCARGO",
+        "country": "",
+        "city": "ZRH",
+        "airport": "Kloten Airport",
+        "address": ""
+    },
+    {
+        "prefix": "086",
+        "id": "NZ",
+        "name": "AIR NEW ZEALAND",
+        "label": "AIR NEW ZEALAND",
+        "country": "NZ",
+        "city": "AKL",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "087",
+        "id": "WT",
+        "name": "NIGERIA AIRWAYS LTD.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "088",
+        "id": "ARD",
+        "name": "ATA AEROCONDOR TRANSPORTES AEROS LDA.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "090",
+        "id": "AN",
+        "name": "ANSETT AUSTRALIA",
+        "label": "ANSETT AUSTRALIA",
+        "country": "",
+        "city": null,
+        "airport": "Melbourne Vic",
+        "address": ""
+    },
+    {
+        "prefix": "091",
+        "id": "DP",
+        "name": "FIRST CHOICE AIRWAYS LTD.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "092",
+        "id": "RK",
+        "name": "AIR AFRIQUE",
+        "label": "AIR AFRIQUE",
+        "country": "",
+        "city": "ABJ",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "095",
+        "id": "6A",
+        "name": "AVIACSA- CONSORCIO AVIAXSA, S.A, DE C.V.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "096",
+        "id": "IR",
+        "name": "IRAN AIR",
+        "label": "IRAN AIR",
+        "country": "",
+        "city": "THR",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "098",
+        "id": "AI",
+        "name": "AIR INDIA LTD",
+        "label": "AIR INDIA CARGO",
+        "country": "IN",
+        "city": null,
+        "airport": "Air India Building 16th Fl",
+        "address": ""
+    },
+    {
+        "prefix": "099",
+        "id": "9S",
+        "name": "SOUTHERN AIR INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "101",
+        "id": "EN",
+        "name": "AIR DOLOMITI S. P. A AEREE REGINALI EUROPEE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "103",
+        "id": "SG",
+        "name": "Sagawa Express",
+        "label": "Sagawa Express",
+        "country": "JP",
+        "city": "TYO",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "104",
+        "id": "EW",
+        "name": "EUROWINGS AG",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "105",
+        "id": "AY",
+        "name": "FINNAIR OY",
+        "label": "FINNAIR CARGO",
+        "country": "FI",
+        "city": "HEL",
+        "airport": "Mannerheimintie 102",
+        "address": ""
+    },
+    {
+        "prefix": "106",
+        "id": "BW",
+        "name": "BWIA INT'L AIRWAYS",
+        "label": "BWIA INT'L AIRWAYS",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "108",
+        "id": "FI",
+        "name": "ICELANDAIR",
+        "label": "ICELANDAIR",
+        "country": "IS",
+        "city": "REK",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "112",
+        "id": "CK",
+        "name": "CHINA CARGO AIRLINES LTD.,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "113",
+        "id": "GW",
+        "name": "AIRLINES OF KUBAN",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "114",
+        "id": "LY",
+        "name": "EL AL ISRAEL AIRLINES",
+        "label": "EL AL ISRAEL AIRLINES",
+        "country": "IL",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "117",
+        "id": "SK",
+        "name": "SCANDINAVIAN AIRLINES",
+        "label": "SAS CARGO",
+        "country": "SE",
+        "city": null,
+        "airport": "Froesundaviks Alle",
+        "address": ""
+    },
+    {
+        "prefix": "118",
+        "id": "DT",
+        "name": "TAAG ANGOLA AIRLINES",
+        "label": "TAAG ANGOLA AIRLINES",
+        "country": "AO",
+        "city": "LAD",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "119",
+        "id": "LM",
+        "name": "ALM ANTILLEAN AIRLINES",
+        "label": "ALM ANTILLEAN",
+        "country": "",
+        "city": "CUR",
+        "airport": "Hato Airport",
+        "address": ""
+    },
+    {
+        "prefix": "120",
+        "id": "JS",
+        "name": "AIR KORYO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "121",
+        "id": "ZY",
+        "name": "ADA AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "122",
+        "id": "K6",
+        "name": "KHALIFA AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "123",
+        "id": "ON",
+        "name": "AIR NAURU",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "124",
+        "id": "AH",
+        "name": "AIR ALGERIE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "125",
+        "id": "BA",
+        "name": "BRITISH AIRWAYS",
+        "label": "BA WORLD CARGO",
+        "country": "GB",
+        "city": "LHR",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "126",
+        "id": "GA",
+        "name": "GARUDA INDONESIA",
+        "label": "GARUDA INDONESIA",
+        "country": "ID",
+        "city": "JKT",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "129",
+        "id": "MP",
+        "name": "MARTINAIR",
+        "label": "MARTINAIR",
+        "country": "",
+        "city": null,
+        "airport": "PO Box 7507",
+        "address": ""
+    },
+    {
+        "prefix": "131",
+        "id": "JL",
+        "name": "JAPAN AIRLINES",
+        "label": "JAL CARGO",
+        "country": "JP",
+        "city": "TYO",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "132",
+        "id": "MX",
+        "name": "COMPANIA MEXICANA DE AVIACION S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "133",
+        "id": "LR",
+        "name": "LINEAS AEREAS COSTARRICENSES S.A[LACSA]",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "134",
+        "id": "AV",
+        "name": "AVIANCA-AEROVIAS NACINALES DE COLOMBIA S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "135",
+        "id": "VT",
+        "name": "AIR TAHITI",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "136",
+        "id": "CU",
+        "name": "CUBANA DE AVIACION S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "139",
+        "id": "AM",
+        "name": "AEROMEXICO-AEROVIAS DE MEXICO S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "140",
+        "id": "LI",
+        "name": "LIAT [1974] LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "141",
+        "id": "FZ",
+        "name": "FLY DUBAI",
+        "label": "",
+        "country": "AE",
+        "city": "DXB",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "142",
+        "id": "KF",
+        "name": "BLUE 1 OY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "143",
+        "id": "AU",
+        "name": "CIELOS DEL SUR S.A.D/B/A/AUSTRAL LINEAS AREAS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "144",
+        "id": "7T",
+        "name": "AERO EXPRESS DEL ECUADOR TRANS AM",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "146",
+        "id": "XK",
+        "name": "COMPAGNIE AERIENNE CORSE MEDITERRANEE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "147",
+        "id": "AT",
+        "name": "ROYAL AIR MAROC",
+        "label": "ROYAL AIR MAROC",
+        "country": "MA",
+        "city": "CAS",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "148",
+        "id": "LN",
+        "name": "LIBYAN ARAB AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "149",
+        "id": "LG",
+        "name": "LUXAIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "150",
+        "id": "UG",
+        "name": "TUNINTER S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "152",
+        "id": "VH",
+        "name": "AEROPOSTAL ALAS DE VENEZUELA C.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "154",
+        "id": "BU",
+        "name": "BRAATHENS SAFE AIRTRANSPORT",
+        "label": "BRAATHENS CARGO",
+        "country": "NO",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "155",
+        "id": "ES",
+        "name": "DHL INTERNATIONAL E.C",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "PO Box 55",
+        "address": ""
+    },
+    {
+        "prefix": "157",
+        "id": "QR",
+        "name": "QATAR AIRWAYS",
+        "label": "QATAR AIRWAYS",
+        "country": "QA",
+        "city": "DOH",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "159",
+        "id": "DR",
+        "name": "AIRLINK LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "160",
+        "id": "CX",
+        "name": "CATHAY PACIFIC AIRWAYS LTD.",
+        "label": "CATHAY CARGO",
+        "country": "HK",
+        "city": "HKG",
+        "airport": "Swire House 5th Floor",
+        "address": ""
+    },
+    {
+        "prefix": "161",
+        "id": "MN",
+        "name": "COMAIR LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "162",
+        "id": "PH",
+        "name": "POLYNESIAN LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "164",
+        "id": "7L",
+        "name": "AEROCARIBBEAN S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "165",
+        "id": "JP",
+        "name": "ADRIA AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "166",
+        "id": "IK",
+        "name": "IMAIR AIRLINE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "167",
+        "id": "QM",
+        "name": "AIR MALAWI LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "168",
+        "id": "UM",
+        "name": "AIR ZIMBABWE CORPORATION",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "169",
+        "id": "HR",
+        "name": "HAHN AIR LINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "170",
+        "id": "GE",
+        "name": "TRANSASIA AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "171",
+        "id": "GT",
+        "name": "GB AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "172",
+        "id": "CV",
+        "name": "CARGOLUX AIRLINES INT SA",
+        "label": "CARGOLUX",
+        "country": "LU",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "173",
+        "id": "HA",
+        "name": "HAWAIIAN AIRLINES, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "174",
+        "id": "MR",
+        "name": "AIR MAURITANIE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "175",
+        "id": "II",
+        "name": "IBC AIRWAYS , INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "176",
+        "id": "EK",
+        "name": "EMIRATES",
+        "label": "EMIRATES,DUBAI",
+        "country": "AE",
+        "city": "DXB",
+        "airport": "PO Box 696",
+        "address": ""
+    },
+    {
+        "prefix": "179",
+        "id": "DV",
+        "name": "PIPER AZTEC,INC D/B/A AZTEC AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "180",
+        "id": "KE",
+        "name": "KOREAN AIR",
+        "label": "KOREAN AIR",
+        "country": "KR",
+        "city": "SEL",
+        "airport": "PO Box  41 3 Sosomun Dong",
+        "address": "SEOUL, SOUTH KOREA"
+    },
+    {
+        "prefix": "181",
+        "id": "Z6",
+        "name": "DNIEPROVIA -JOINT STOCKAVIATION CO.#",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "182",
+        "id": "MA",
+        "name": "MALEV HUNGARIAN AIRLINES",
+        "label": "MALEV CARGO",
+        "country": "HU",
+        "city": "BUD",
+        "airport": "Roosevelt 2",
+        "address": ""
+    },
+    {
+        "prefix": "185",
+        "id": "GN",
+        "name": "AIR GABON",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "186",
+        "id": "SW",
+        "name": "AIR NAMIBIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "187",
+        "id": "DW",
+        "name": "AERO-CHARTER",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "190",
+        "id": "TY",
+        "name": "AIR CALEDONIE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "191",
+        "id": "IG",
+        "name": "MERIDIANA S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "192",
+        "id": "PY",
+        "name": "SURINAM AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "193",
+        "id": "IE",
+        "name": "SOLOMON AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "195",
+        "id": "FV",
+        "name": "PULKOVO AVIATION ENTERPRISE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "196",
+        "id": "LZ",
+        "name": "BALKAN BULGARIA AIRLINES",
+        "label": "BALKAN BULGARIA",
+        "country": "JM",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "197",
+        "id": "TC",
+        "name": "AIR TANZANIA COMPANY LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "Sofia",
+        "address": ""
+    },
+    {
+        "prefix": "199",
+        "id": "TU",
+        "name": "TUNISAIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "200",
+        "id": "SD",
+        "name": "SUDAN AIRWAYS CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "201",
+        "id": "JM",
+        "name": "AIR JAMAICA",
+        "label": "AIR JAMAICA",
+        "country": "",
+        "city": "YGK",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "202",
+        "id": "TA",
+        "name": "TACA INTL AIRLINES",
+        "label": "TACA INTL AIR",
+        "country": "",
+        "city": "ESR",
+        "airport": "San Salvador",
+        "address": ""
+    },
+    {
+        "prefix": "203",
+        "id": "5J",
+        "name": "CEBU PACIFIC AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "204",
+        "id": "T6",
+        "name": "TAVREY AIRCOMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "205",
+        "id": "NH",
+        "name": "ALL NIPPON AIRWAYS",
+        "label": "ALL NIPPON AIRWAYS",
+        "country": "JP",
+        "city": "TYO",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "207",
+        "id": "R6",
+        "name": "AIR SRPSAK",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "208",
+        "id": "B3",
+        "name": "BELLVIEW AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "209",
+        "id": "UB",
+        "name": "MYANMA AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "211",
+        "id": "2P",
+        "name": "AIR PHILIPPINES CORP",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "214",
+        "id": "PK",
+        "name": "PAKISTAN INTL. AIRLINES",
+        "label": "PIA CARGO",
+        "country": "PK",
+        "city": null,
+        "airport": "PIA Buliding",
+        "address": ""
+    },
+    {
+        "prefix": "215",
+        "id": "P7",
+        "name": "EAST LINE AIRLINES ,JSC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "217",
+        "id": "TG",
+        "name": "THAI AIRWAYS",
+        "label": "THAI CARGO",
+        "country": "TH",
+        "city": "BKK",
+        "airport": "89 Vibhavadi Rangsit Road",
+        "address": ""
+    },
+    {
+        "prefix": "218",
+        "id": "NF",
+        "name": "AIR VANUATU LIMITED.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "219",
+        "id": "YN",
+        "name": "AIR CREEBEC [1994]INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "220",
+        "id": "LH2",
+        "name": "DEUTSCHE LUFTHANSA AG",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "225",
+        "id": "HN",
+        "name": "HEAVYLIFT CARGO AIRLINES PTY .LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "228",
+        "id": "J9",
+        "name": "AIR GUINEA CARGO ,S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "229",
+        "id": "KU",
+        "name": "KUWAIT AIRWAYS",
+        "label": "KUWAIT AIRWAYS",
+        "country": "KW",
+        "city": "KWI",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "230",
+        "id": "CM",
+        "name": "COPA PANAMENA",
+        "label": "COPA PANAMENA",
+        "country": "PA",
+        "city": "PTY",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "231",
+        "id": "L4",
+        "name": "LAUDA AIR",
+        "label": "LAUDA AIR",
+        "country": "AT",
+        "city": "VIE",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "232",
+        "id": "MH",
+        "name": "MALAYSIAN AIRLINES",
+        "label": "MALAYSIAN AIRLINES",
+        "country": "MY",
+        "city": "KUL",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "234",
+        "id": "JD",
+        "name": "JAPAN AIR SYSTEM CO",
+        "label": "JAPAN AIR SYSTEM",
+        "country": "",
+        "city": null,
+        "airport": "Tokyo",
+        "address": ""
+    },
+    {
+        "prefix": "235",
+        "id": "TK",
+        "name": "TURKISH AIRLINES",
+        "label": "TURKISH AIRLINES",
+        "country": "TR",
+        "city": "IST",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "236",
+        "id": "BD",
+        "name": "BRITISH MIDLAND",
+        "label": "BRITISH MIDLAND",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "237",
+        "id": "GH",
+        "name": "GHANA AIRWAYS CORP",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "238",
+        "id": "IZ",
+        "name": "ARKIA-LSRAELI AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "239",
+        "id": "MK",
+        "name": "AIR MAURITIUS",
+        "label": "AIR MAURITIUS",
+        "country": "MU",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "240",
+        "id": "GU",
+        "name": "AVIATECA S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "242",
+        "id": "A4",
+        "name": "SOUTHERN WINDS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "244",
+        "id": "AC2",
+        "name": "AIR CANADA",
+        "label": "AIR CANADA",
+        "country": "CA",
+        "city": null,
+        "airport": "PO Box 14000",
+        "address": ""
+    },
+    {
+        "prefix": "245",
+        "id": "7F",
+        "name": "FRIST AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "250",
+        "id": "HY",
+        "name": "UZBEKISTAN HAVO YULLARY -UZBEKISTAN AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "252",
+        "id": "EZ",
+        "name": "SUN AIR [PACIFIC] LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "253",
+        "id": "U4",
+        "name": "PROGRESS MULTITRADE CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "255",
+        "id": "FG",
+        "name": "ARIANA AFGHAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "257",
+        "id": "OS",
+        "name": "AUSTRIAN AIRLINES",
+        "label": "AUSTRIAN CARGO",
+        "country": "AT",
+        "city": null,
+        "airport": "Postfach 50",
+        "address": ""
+    },
+    {
+        "prefix": "258",
+        "id": "MD",
+        "name": "AIR MADAGASCAR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "259",
+        "id": "VM",
+        "name": "REGIONAL AIR LINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "260",
+        "id": "FJ",
+        "name": "AIR PACIFIC LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "262",
+        "id": "U6",
+        "name": "URAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "265",
+        "id": "EF",
+        "name": "FAR EASTERN AIR TRANSPORT CORP",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "266",
+        "id": "LT",
+        "name": "LTU LUFTTRANSPORT",
+        "label": "LTU LUFTTRANSPORT",
+        "country": "",
+        "city": null,
+        "airport": "Dusseldorf",
+        "address": ""
+    },
+    {
+        "prefix": "267",
+        "id": "BE",
+        "name": "JERSEY EUROPEAN AIRWAYS LTD D/B/A / FLYBE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "269",
+        "id": "EQ",
+        "name": "TAME LINE AEREA DEL ECUADOR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "270",
+        "id": "TL",
+        "name": "TRANS MED. AIRWAYS",
+        "label": "TRANS MED. AIRWAYS",
+        "country": "LB",
+        "city": "BEY",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "271",
+        "id": "W7",
+        "name": "SAYAKHAT AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "272",
+        "id": "K4",
+        "name": "KALITTA AIR, LLC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "274",
+        "id": "GK",
+        "name": "GO ONE AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "275",
+        "id": "5L",
+        "name": "COMPANIA BOLIVIANA DE TRANSPORT AEROE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "277",
+        "id": "XF",
+        "name": "VIADIVOSTOK AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "278",
+        "id": "FS",
+        "name": "SERVICIOS DE TRANSPORTES AEREOS FUEGUINOS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "281",
+        "id": "RO",
+        "name": "TAROM-ROMANIAN AIR TRANSPORT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "284",
+        "id": "T2",
+        "name": "THAI AIR CARGO CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "285",
+        "id": "RA",
+        "name": "NEPAL AIRLINES CORPORATION",
+        "label": "NEPAL AIRLINES CORPORATION",
+        "country": "NP",
+        "city": "KTM",
+        "airport": "",
+        "address": "KANTIPATH, NEWROAD GATE,"
+    },
+    {
+        "prefix": "286",
+        "id": "PU",
+        "name": "PLUNA LINEAS AEREAS URUGUAYAS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "287",
+        "id": "4N",
+        "name": "AIR NORTH",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "288",
+        "id": "LD",
+        "name": "AIR HONG KONG",
+        "label": "AIR HONG KONG",
+        "country": "HK",
+        "city": "HKG",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "289",
+        "id": "OM",
+        "name": "MIAT- MONGOLIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "290",
+        "id": "BF",
+        "name": "BLUE BIRD CARGO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "291",
+        "id": "R2",
+        "name": "ORENBURG AIRLINES FEDERAL STATE UNITARY ENTERPRISE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "293",
+        "id": "SL",
+        "name": "RIO SUL LINHAS AEREAS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "295",
+        "id": "WM",
+        "name": "WINDWARD ISLANDS AIRWAYS INT'L N.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "296",
+        "id": "CD",
+        "name": "ALLIANCE AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "297",
+        "id": "CI",
+        "name": "CHINA AIRLINES LTD",
+        "label": "CHINA AIRLINES",
+        "country": "",
+        "city": "TPE",
+        "airport": "131 NANKING EAST ROAD SEC 3",
+        "address": ""
+    },
+    {
+        "prefix": "298",
+        "id": "P2",
+        "name": "UTAIR AVIATION JOINT-STOCK COMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "301",
+        "id": "5H",
+        "name": "STAR AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "302",
+        "id": "OO",
+        "name": "SKYWEST AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "303",
+        "id": "ZW",
+        "name": "AIR WISCONSIN AIRLINES CORPORATION",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "309",
+        "id": "EX",
+        "name": "AEROLINEAS SANTO DOMINGO S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "310",
+        "id": "3C",
+        "name": "CORPORATE AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "316",
+        "id": "5N",
+        "name": "ARKHANGELSK AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "317",
+        "id": "3A",
+        "name": "KENOSHA, INC.D/B/A ALLIANCE AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "319",
+        "id": "8D",
+        "name": "EXPO AVIATION [PVT] LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "321",
+        "id": "9J",
+        "name": "PACIFIC ISLAND AVIATION,INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "324",
+        "id": "SC",
+        "name": "SHANDONG AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "327",
+        "id": "AQ",
+        "name": "ALOHA AIRLINES INC,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "328",
+        "id": "N8",
+        "name": "NORWEGIAN AIR SHUTTLE A.S",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "330",
+        "id": "RF",
+        "name": "FLORIDA WEST INTERNATIONAL AIRWAYS ,INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "331",
+        "id": "S4",
+        "name": "SATA INTERNATIONAL SERVICOSE TRANSPORTES AEREOS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "332",
+        "id": "FL",
+        "name": "AIR TRAN AIRWAYS ,INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "334",
+        "id": "MM",
+        "name": "SOCIEDAD AERONAUTICA DE MEDELLIN CONSOLIDADA S",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "337",
+        "id": "SY",
+        "name": "SUN COUNTRY AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "338",
+        "id": "ZD",
+        "name": "DOLPHIN AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "339",
+        "id": "KS",
+        "name": "PENAIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "341",
+        "id": "EU",
+        "name": "ECUATORIANA",
+        "label": "ECUATORIANA",
+        "country": "",
+        "city": null,
+        "airport": "Quito",
+        "address": ""
+    },
+    {
+        "prefix": "343",
+        "id": "VP",
+        "name": "VIACAO AEREA SAO PAULO,S.A [VASP]",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "344",
+        "id": "L2",
+        "name": "LYNDEN AIR CARGO,LLC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "345",
+        "id": "NC",
+        "name": "NORTHERN AIR CARGO INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "346",
+        "id": "9R",
+        "name": "PHUKET AIRLINES CO. LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "347",
+        "id": "WP",
+        "name": "ALOHA ISLANDAIR INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "349",
+        "id": "VB",
+        "name": "MAERSK AIR",
+        "label": "MAERSK CARGO",
+        "country": "DK",
+        "city": "CPH",
+        "airport": "Copenhagen Airport",
+        "address": ""
+    },
+    {
+        "prefix": "350",
+        "id": "EE",
+        "name": "AERO AIRLINES A.S",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "351",
+        "id": "XV",
+        "name": "IVOIRE AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "352",
+        "id": "A7",
+        "name": "AIR COMET S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "353",
+        "id": "NU",
+        "name": "JAPAN TRANSOCEAN AIR CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "355",
+        "id": "E7",
+        "name": "ESTAFETA CARGO AEREA S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "356",
+        "id": "P6",
+        "name": "TRANS AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "357",
+        "id": "9C",
+        "name": "WIMBI DIRA AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "359",
+        "id": "3T",
+        "name": "TURAN AIR AIRLINE COMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "363",
+        "id": "RP",
+        "name": "CHAUTAUQUA AIRLINES INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "366",
+        "id": "TZ",
+        "name": "ATA AIRLINES ,INC. D/B/A ATA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "367",
+        "id": "IN",
+        "name": "MACEDONIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "369",
+        "id": "5Y",
+        "name": "ATLAS AIR",
+        "label": "ATLAS AIR",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "370",
+        "id": "OP",
+        "name": "FLYING BOAT INC .D/B/A CHALK'S INTERNATIONAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "372",
+        "id": "L4",
+        "name": "LAUDA AIR S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "373",
+        "id": "NB",
+        "name": "STERLING EUROPEAN KOMMANDITAKTIESELSKAB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "377",
+        "id": "4S",
+        "name": "AERO HONDURAS S.A D/B/A SOL AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "378",
+        "id": "KX",
+        "name": "CAYMAN AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "383",
+        "id": "QL",
+        "name": "SERENDIB EXPRESS [PVT] LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "384",
+        "id": "RQ",
+        "name": "KAM AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "387",
+        "id": "GQ",
+        "name": "BIG SKY AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "390",
+        "id": "A3",
+        "name": "AEGEAN AIRLINES S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "391",
+        "id": "Q3",
+        "name": "ZAMBIAN AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "394",
+        "id": "HO",
+        "name": "ANTINEA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "398",
+        "id": "YR",
+        "name": "EAGLE CANYON AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "400",
+        "id": "PF",
+        "name": "PALESTINIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "401",
+        "id": "HP",
+        "name": "AMERICA WEST AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "403",
+        "id": "PO",
+        "name": "POLAR AIR CARGO",
+        "label": "POLAR AIR CARGO",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "404",
+        "id": "JW",
+        "name": "ARROW AIR INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "406",
+        "id": "5X",
+        "name": "UPS",
+        "label": "UPS",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "407",
+        "id": "V7",
+        "name": "AIR SENEGAL INTERNATIONAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "409",
+        "id": "1I",
+        "name": "MONTENEGRO AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "410",
+        "id": "ZR",
+        "name": "AVIACON ZITOTRANS AIR COMPANY JSC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "411",
+        "id": "3G",
+        "name": "ATLANT -SOYUZ AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "412",
+        "id": "VI",
+        "name": "VOLGA-DNEPR AIRLINE JOINT STOCK",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "414",
+        "id": "9N",
+        "name": "TRANS STATES AIRLINES, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "419",
+        "id": "CF",
+        "name": "CITY AIRLINE AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "420",
+        "id": "GI",
+        "name": "AIR COMPANY ITEK-AIR LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "421",
+        "id": "S7",
+        "name": "SIBERIA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "422",
+        "id": "F9",
+        "name": "FRONTIER AIRLNES, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "423",
+        "id": "ER",
+        "name": "DHL AIRWAYS INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "425",
+        "id": "F6",
+        "name": "FIRST CAMBODIA AIRLINES CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "426",
+        "id": "9L",
+        "name": "COLGAN AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "427",
+        "id": "TX",
+        "name": "AIR CARAIBES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "428",
+        "id": "H5",
+        "name": "MAGADAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "430",
+        "id": "9E",
+        "name": "PINNACLE AIRLINES INC. D/B/A NORTHWEST AIRLINK",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "431",
+        "id": "ID",
+        "name": "INTERLINK AIRLINES [PTY] LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "433",
+        "id": "ZA",
+        "name": "ASTAIR LTD .COMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "435",
+        "id": "P3",
+        "name": "PREMIER TRANS AIRE INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "436",
+        "id": "KJ",
+        "name": "BRITISH MEDITERRANEAN AIRWAYS LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "439",
+        "id": "ZI",
+        "name": "AIGLE AZUR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "442",
+        "id": "OF",
+        "name": "AIR FINLAND LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "447",
+        "id": "F5",
+        "name": "COSMIC AIR PVT LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "449",
+        "id": "3M",
+        "name": "GULFSTREAM INTERNATIONAL AIRLINES, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "451",
+        "id": "R9",
+        "name": "VILLAGE AVIATION INC D/B/A CAMAI AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "452",
+        "id": "9Y",
+        "name": "AIR KAZAKSTAN",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "453",
+        "id": "YX",
+        "name": "MIDWEST AIRLINES INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "454",
+        "id": "2U",
+        "name": "AIR GUNINEE EXPRESS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "455",
+        "id": "NA",
+        "name": "NORTH AMERICAN AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "456",
+        "id": "SX",
+        "name": "AEROEJECUTIVO S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "457",
+        "id": "DQ",
+        "name": "COASTAL AIR TRANSPORT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "459",
+        "id": "WB",
+        "name": "RWANDAIR EXPRESS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "460",
+        "id": "EB",
+        "name": "PULLMANTOR AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "462",
+        "id": "XL",
+        "name": "LAN ECUAADOR-AEROLANE LINEAS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "463",
+        "id": "ZP",
+        "name": "SILK WAY AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "465",
+        "id": "4L",
+        "name": "AIR ASTANA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "468",
+        "id": "WO",
+        "name": "WORLD AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "469",
+        "id": "4M",
+        "name": "LAN DOMINICA-LINEA DE NEVEGACION DOMINICA S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "471",
+        "id": "ZV",
+        "name": "AIR MIDWEST",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "472",
+        "id": "BN",
+        "name": "FORWARD AIR INTERNATIONAL AIRLINES, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "473",
+        "id": "SE",
+        "name": "STAR AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "475",
+        "id": "UI",
+        "name": "EUROCYPRIA AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "478",
+        "id": "OW",
+        "name": "EXECUTIVE AIRLINES, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "479",
+        "id": "4G",
+        "name": "SHENZHEN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "480",
+        "id": "DH",
+        "name": "ATLANTIC COAST AIRLINES D/B/A UNITED EXPRESS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "481",
+        "id": "QX",
+        "name": "HORIZON AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "482",
+        "id": "3W",
+        "name": "WOODGATE EXECUTIVE AIR CHARTER UK LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "484",
+        "id": "ED",
+        "name": "AIRBLUE LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "487",
+        "id": "NK",
+        "name": "SPIRIT AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "489",
+        "id": "W8",
+        "name": "CARGOJET AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "491",
+        "id": "B9",
+        "name": "IRAN AIR TOURS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "494",
+        "id": "EZ",
+        "name": "EVERGREEN INTERNATIONAL AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "496",
+        "id": "SM",
+        "name": "SWEDLINE EXPRESS AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "497",
+        "id": "E3",
+        "name": "DOMODEDOVO AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "499",
+        "id": "7B",
+        "name": "KRASNOYARSK AIRLINES D/B/A KRASAIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "501",
+        "id": "V2",
+        "name": "KARAT JOINT STOCK COMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "504",
+        "id": "N7",
+        "name": "LAGUN AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "505",
+        "id": "BO",
+        "name": "BB AIRWAYS P. LTD",
+        "label": "492- MADHYA MARG, BUDDHANAGAR 10, KATHMANDU, NEPAL.",
+        "country": "NP",
+        "city": "KTM",
+        "airport": "KATHMANDU, NEPAL.",
+        "address": "492- MADHYA MARG, BUDDHANAGAR 10"
+    },
+    {
+        "prefix": "508",
+        "id": "QJ",
+        "name": "JET AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "509",
+        "id": "Z9",
+        "name": "AERO ZAMBIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "510",
+        "id": "JF",
+        "name": "L.A.B FLYING SERVICE INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "512",
+        "id": "RJ",
+        "name": "ROYAL JORDANIAN ALIA",
+        "label": "ALIA ROYAL JORDAN",
+        "country": "",
+        "city": "JDN",
+        "airport": "Amman",
+        "address": ""
+    },
+    {
+        "prefix": "514",
+        "id": "G9",
+        "name": "AIR ARABIA",
+        "label": "",
+        "country": "AE",
+        "city": "SHJ",
+        "airport": "SARJAH",
+        "address": ""
+    },
+    {
+        "prefix": "517",
+        "id": "2F",
+        "name": "FRONTIER FLYING SERVICE, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "518",
+        "id": "5T",
+        "name": "AIR NORTERRA INC. D/B/A CANADIAN NORTH.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "519",
+        "id": "FE",
+        "name": "PRIMARIS AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "521",
+        "id": "ZQ",
+        "name": "CARBBEAN SUN AIRLINES INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "524",
+        "id": "XM",
+        "name": "AUSTRALIAN AIR EXPRESS",
+        "label": "AUSTRALIAN AIR EXPRESS",
+        "country": "AU",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "525",
+        "id": "B7",
+        "name": "UNI AIRLINES CORP",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "526",
+        "id": "WN",
+        "name": "SOUTHWEST AIRLINES CO.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "529",
+        "id": "A2",
+        "name": "CIELOS DEL PERU,S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "532",
+        "id": "E4",
+        "name": "AERO ASIA INTERNATIONAL LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "533",
+        "id": "YV",
+        "name": "MESA AIRLINES INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "534",
+        "id": "WQ",
+        "name": "ROMAVIA AVIATION COMPANY ROMAVIA R.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "536",
+        "id": "Z2",
+        "name": "STYRINA AIRWAYS GMBH CO KG",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "537",
+        "id": "W5",
+        "name": "MAHAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "538",
+        "id": "KP",
+        "name": "KIWI INTERNATIONAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "539",
+        "id": "TH",
+        "name": "TRANSMILE AIR SERVICES SDN .BHD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "540",
+        "id": "TO",
+        "name": "PRESIDENT AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "541",
+        "id": "5Z",
+        "name": "BISMILLAH AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "542",
+        "id": "T5",
+        "name": "TURKMENISTAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "543",
+        "id": "9Q",
+        "name": "PB AIR COMPANY LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "544",
+        "id": "LP",
+        "name": "LAN PERU S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "545",
+        "id": "X8",
+        "name": "ICARO S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "546",
+        "id": "8U",
+        "name": "AFRIQIYAH AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "550",
+        "id": "BL",
+        "name": "PACIFIC AIRLINES CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "553",
+        "id": "FC",
+        "name": "FALCON EXPRESS CARGO AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "555",
+        "id": "SU",
+        "name": "AEROFLOT RUSSIAN INTL",
+        "label": "AEROFLOT CARGO",
+        "country": "RU",
+        "city": null,
+        "airport": "LENINGRADKY PROSPEKT 37",
+        "address": ""
+    },
+    {
+        "prefix": "557",
+        "id": "8B",
+        "name": "CARIBBEAN STAR AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "559",
+        "id": "K8",
+        "name": "DUTCH CARIBBEAN AIRLINE N.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "560",
+        "id": "H8",
+        "name": "DALAVIA-FAR EAST AIRWAYS-KHABAROVSK",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "562",
+        "id": "OB",
+        "name": "ASTRAKHAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "564",
+        "id": "XQ",
+        "name": "SUN EXPRESS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "566",
+        "id": "PS",
+        "name": "UKRAINE INTL AIRLINES",
+        "label": "UKRAINE INTL AIRLINES",
+        "country": "UA",
+        "city": "IEV",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "567",
+        "id": "CE",
+        "name": "NATIONWIDE AIRLINES [PTY] LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "568",
+        "id": "LW",
+        "name": "PACIFIC WINGS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "569",
+        "id": "7Z",
+        "name": "LAKER AIRWAYS [BAHAMAS] LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "572",
+        "id": "9U",
+        "name": "AIR MOLDOVA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "575",
+        "id": "7C",
+        "name": "COYNE AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "578",
+        "id": "OX",
+        "name": "ORIENT THAI AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "582",
+        "id": "XJ",
+        "name": "MESABA AVIATION INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "589",
+        "id": "9W",
+        "name": "JET AIRWAYS [INDIA] PRIVATE LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "592",
+        "id": "3Q",
+        "name": "CHINA YUNNAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "593",
+        "id": "7R",
+        "name": "RED SEA AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "596",
+        "id": "CS",
+        "name": "CONTINENTAL MICRONESIA, INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "597",
+        "id": "SI",
+        "name": "SKYNET AIRLINES LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "598",
+        "id": "HZ",
+        "name": "SAKHALINSKIE AVIATRASSY SAT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "599",
+        "id": "8M",
+        "name": "MYANMAR AIRWAYS INTERNATIONAL COMPANY LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "600",
+        "id": "YH",
+        "name": "WEST CARIBBEAN AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "603",
+        "id": "UL",
+        "name": "SRILANKAN AIRLINES",
+        "label": "SRILANKAN AIRLINES",
+        "country": "LK",
+        "city": "CMB",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "604",
+        "id": "UY",
+        "name": "CAMEROON AIRLINES",
+        "label": "CAMEROON AIRLINES",
+        "country": "CM",
+        "city": "DLA",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "605",
+        "id": "UY",
+        "name": "CAMEROON AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "606",
+        "id": "A9",
+        "name": "AIRZENA GEORGIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "607",
+        "id": "EY",
+        "name": "ETIHAD CRYSTAL CARGO AIRLINES",
+        "label": "ETIHAD CRYSTAL CARGO AIRLINES",
+        "country": "AE",
+        "city": "DXB",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "608",
+        "id": "XR",
+        "name": "SKYWEST AIRLINES PTY. LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "612",
+        "id": "WV",
+        "name": "SWE FLY AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "613",
+        "id": "JB",
+        "name": "HELIJET INTERNATIONAL INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "614",
+        "id": "IQ",
+        "name": "AUGSBURG AIRWAYS GMBH",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "615",
+        "id": "QY",
+        "name": "EUROPEAN AIR TRANSPORT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "617",
+        "id": "HF",
+        "name": "HAPAG LLOYD FLUGGESELLSCHAFT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "618",
+        "id": "SQ",
+        "name": "SINGAPORE AIRLINES",
+        "label": "SINGAPORE AIRLINES",
+        "country": "SG",
+        "city": "SIN",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "620",
+        "id": "BZ",
+        "name": "BLUE DART AVIATION LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "621",
+        "id": "MZ",
+        "name": "MERPATI NUSANTARA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "622",
+        "id": "MO",
+        "name": "CLAM AIR INTERNATIONAL LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "623",
+        "id": "FB",
+        "name": "BULGARIA AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "624",
+        "id": "J9A",
+        "name": "PEGASUS HAVI TASIMACILIGIA.S",
+        "label": "",
+        "country": "TR",
+        "city": "IST",
+        "airport": "KWI",
+        "address": "BASIN EKSPERSE CADDEST 2/A 34303  KUCUKEKEMECE HALKALI"
+    },
+    {
+        "prefix": "625",
+        "id": "D6",
+        "name": "INTER-AVIATION SERVICES D/B/A INTERAIR SOUTH AFRICA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "626",
+        "id": "CG",
+        "name": "AIRLINES OF PAPUA NEW GUINEA LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "627",
+        "id": "QV",
+        "name": "LAO AVIATION",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "628",
+        "id": "B2",
+        "name": "BELAVIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "629",
+        "id": "MI",
+        "name": "SILKAIR",
+        "label": "SILKAIR",
+        "country": "SG",
+        "city": "SIN",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "631",
+        "id": "GL",
+        "name": "AIR GREENLAND",
+        "label": "AIR GREENLAND",
+        "country": "GL",
+        "city": "GOH",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "632",
+        "id": "JV",
+        "name": "BEARSKIN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "634",
+        "id": "9M",
+        "name": "CENTRAL MOUNTAIN AIR LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "635",
+        "id": "IY",
+        "name": "YEMENIA -YEMEN AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "636",
+        "id": "BP",
+        "name": "AIR BOTSWANA CORPORATION",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "637",
+        "id": "B8",
+        "name": "ERITREAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "638",
+        "id": "PJ",
+        "name": "AIR ST.PIERRE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "639",
+        "id": "LV",
+        "name": "ALBANIAN AIRLINES MAK S.H.P.K",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "640",
+        "id": "FA",
+        "name": "SAFAIR [PROPRIETARY]LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "642",
+        "id": "5D",
+        "name": "AEROLITORAL S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "643",
+        "id": "KM",
+        "name": "AIR MALTA",
+        "label": "AIR MALTA",
+        "country": "MT",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "644",
+        "id": "Q7",
+        "name": "SOBELAIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "645",
+        "id": "6P",
+        "name": "CLUBAIR SIXGO S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "647",
+        "id": "QI",
+        "name": "CIMBER AIR A.S",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "649",
+        "id": "TS",
+        "name": "AIR TRANSAT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "652",
+        "id": "HH",
+        "name": "ISLANDSFLUG HF",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "654",
+        "id": "5K",
+        "name": "STATE AIR COMPANY ODESSA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "656",
+        "id": "PX",
+        "name": "AIR NIUGINI",
+        "label": "AIR NIUGINI",
+        "country": "PG",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "657",
+        "id": "BT",
+        "name": "AIRBALTIC",
+        "label": "AIRBALTIC",
+        "country": "LV",
+        "city": "RIX",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "659",
+        "id": "FU",
+        "name": "AIR LITTORAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "663",
+        "id": "EO",
+        "name": "HEWA BORA AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "664",
+        "id": "YE",
+        "name": "YAMAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "665",
+        "id": "ZN",
+        "name": "AIR BOURBON",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "666",
+        "id": "BO",
+        "name": "PT BOURAQ INDONESIA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "667",
+        "id": "PE",
+        "name": "AIR EUROPE S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "668",
+        "id": "HQ",
+        "name": "HMY AIRWAYS INC. D/B/A HARMONY AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "669",
+        "id": "U8",
+        "name": "AMAVIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "670",
+        "id": "UN",
+        "name": "TRANSAERO AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "671",
+        "id": "7P",
+        "name": "BATAVIA AIR -PT METRO BATAVIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "672",
+        "id": "BI",
+        "name": "ROYAL BRUNEI AIRLINES",
+        "label": "ROYAL BRUNEI AIR",
+        "country": "",
+        "city": null,
+        "airport": "Negara Brunei",
+        "address": ""
+    },
+    {
+        "prefix": "675",
+        "id": "NX",
+        "name": "AIR MACAU COMPANY LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "676",
+        "id": "WK",
+        "name": "AMERICAN FALCON S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "677",
+        "id": "PC",
+        "name": "AIR FIJI LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "680",
+        "id": "JK",
+        "name": "SPANIAR",
+        "label": "SPANIAR",
+        "country": "ES",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "681",
+        "id": "T4",
+        "name": "HELLAS JET S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "682",
+        "id": "WZ",
+        "name": "WEST AFRICAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "683",
+        "id": "CL",
+        "name": "LUFTHANSA CITY LINE GMBH",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "685",
+        "id": "NI",
+        "name": "PGA -PORTUGALIA AIRLINES.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "687",
+        "id": "9K",
+        "name": "AMIYI AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "688",
+        "id": "EG",
+        "name": "JAPAN ASIA AIRWAYS CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "689",
+        "id": "WX",
+        "name": "CITYJET",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "690",
+        "id": "LJ",
+        "name": "SIERRA NATIONAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "692",
+        "id": "PZ",
+        "name": "TAM-TRANSPORTES AEREOS DEL MERCOSUR S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "693",
+        "id": "Y2",
+        "name": "AFRICAN JOINT AIR SERVICES D/B/A ALLIANCE AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "694",
+        "id": "YW",
+        "name": "AIR NOSTRUM L.A.M.S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "695",
+        "id": "BR",
+        "name": "EVA AIRWAYS",
+        "label": "EVA AIRWAYS",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "696",
+        "id": "VR",
+        "name": "TRANSPORTES AEREOS DE CABO VERDE.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "700",
+        "id": "5C",
+        "name": "C.A.L. CARGO AIRLINES",
+        "label": "C.A.L.  CARGO AIRLINES",
+        "country": "IL",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "701",
+        "id": "WF",
+        "name": "WIDEROE'S FLYVESELSKAP A.S",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "706",
+        "id": "KQ",
+        "name": "KENYA AIRWAYS",
+        "label": "KENYA AIRWAYS",
+        "country": "",
+        "city": null,
+        "airport": "Nairobi",
+        "address": ""
+    },
+    {
+        "prefix": "708",
+        "id": "JO",
+        "name": "JALWAYS CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "709",
+        "id": "6L",
+        "name": "AKLAK INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "713",
+        "id": "RH",
+        "name": "PT REPUBLIC EXPRESS AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "714",
+        "id": "PD",
+        "name": "PLUTO AIRLINES L.L.C",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "716",
+        "id": "MB",
+        "name": "MNG AIRLINES CARGO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "722",
+        "id": "8Z",
+        "name": "LINEA AEREA DE SERVICO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "723",
+        "id": "QA",
+        "name": "AEROCARIBE.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "724",
+        "id": "LX",
+        "name": "SWISS",
+        "label": "SWISS",
+        "country": "CH",
+        "city": "ZRH",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "725",
+        "id": "YU",
+        "name": "AEROLINEAS DOMINICANAS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "729",
+        "id": "QT",
+        "name": "TRANSPORTES AEREOS MERCANTILES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "730",
+        "id": "HT",
+        "name": "AEROMIST-KHARKIV LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "731",
+        "id": "MF",
+        "name": "XIAMEN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "733",
+        "id": "D9",
+        "name": "AEROFLOT-DON",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "734",
+        "id": "VO",
+        "name": "TYROLEAN AIRWAYS TIROLER",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "735",
+        "id": "TJ",
+        "name": "TRANSPORTES AEREOS NACIONALES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "736",
+        "id": "GJ",
+        "name": "EUROFLY S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "737",
+        "id": "SP",
+        "name": "SATA -AIR ACORES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "738",
+        "id": "VN",
+        "name": "VIETNAM AIRLINES",
+        "label": "VIETNAM AIRLINES",
+        "country": "VN",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "740",
+        "id": "NL",
+        "name": "SHAHEEN AIR INTERNATIONAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "743",
+        "id": "M4",
+        "name": "AVIOIMPEX A.D. P.O",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "744",
+        "id": "8T",
+        "name": "AIR TINDIN LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "746",
+        "id": "3N",
+        "name": "AIR URGA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "747",
+        "id": "YO",
+        "name": "HELI AIR MONACO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "748",
+        "id": "DU",
+        "name": "HEMUS AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "749",
+        "id": "4Z",
+        "name": "SA AIRLINK D/B/A/ SOUTH AFRICAN AIRLINK",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "750",
+        "id": "DB",
+        "name": "BRIT AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "751",
+        "id": "UW",
+        "name": "UNIVERSAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "752",
+        "id": "JZ",
+        "name": "SKY WAYS AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "753",
+        "id": "N3",
+        "name": "OMSKAVIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "756",
+        "id": "3V",
+        "name": "TNT AIRWAYS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "758",
+        "id": "R8",
+        "name": "KYRGHYZSTAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "759",
+        "id": "IH",
+        "name": "FALCON AIR AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "760",
+        "id": "UU",
+        "name": "AIR AUSTRAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "761",
+        "id": "WD",
+        "name": "DAIRO AIR SERVICE LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "765",
+        "id": "7U",
+        "name": "AVIAENERGO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "767",
+        "id": "RC",
+        "name": "ATLANTIC AIRWAYS FAROE ISLAND",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "768",
+        "id": "EL",
+        "name": "AIR NIPPON CO. LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "769",
+        "id": "H9",
+        "name": "HIMALAYAN AIRLINES",
+        "label": "",
+        "country": "NP",
+        "city": "KTM",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "771",
+        "id": "J2",
+        "name": "AZERBAIJAN HAVE YOLLARY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "774",
+        "id": "FM",
+        "name": "SHANGHAI AIRLINES CO.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "778",
+        "id": "CW",
+        "name": "AIR MARSHALL ISLAND INC.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "780",
+        "id": "Y9",
+        "name": "KISH AIR LINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "781",
+        "id": "MU",
+        "name": "CHINA EASTERN AIRLINES",
+        "label": "CHINA EASTERN AIRLINES (SHANG",
+        "country": "",
+        "city": "SHA",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "782",
+        "id": "CJ",
+        "name": "CHINA NORTHERN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "783",
+        "id": "WH",
+        "name": "CHINA NORTHEWEST AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "784",
+        "id": "CZ",
+        "name": "CHINA SOUTHERN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "787",
+        "id": "KB",
+        "name": "DRUK AIR CORPORATION LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "798",
+        "id": "KR",
+        "name": "KITTY HAWK AIR CARGO INC,",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "803",
+        "id": "AE",
+        "name": "MANDARIN AIRLINES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "805",
+        "id": "4X",
+        "name": "MERCURY AIR CARGO INC.D/B/A AIR MERCURY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "809",
+        "id": "RE",
+        "name": "AER ARANN EXPRESS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "810",
+        "id": "M6",
+        "name": "AMERIJET INTERNATIONAL INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "812",
+        "id": "JN",
+        "name": "EXCEL AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "815",
+        "id": "EP",
+        "name": "IRAN ASEMAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "817",
+        "id": "AD",
+        "name": "PT AIR PARDISE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "820",
+        "id": "5R",
+        "name": "CUSTOM AIR TRANSPORT INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "821",
+        "id": "6K",
+        "name": "INTER EXPRESS HAVE TASIMACILK AS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "823",
+        "id": "NN",
+        "name": "VIM AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "824",
+        "id": "XT",
+        "name": "AIR EXCL NETHERLANDS B.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "827",
+        "id": "ML",
+        "name": "AFRICAN TRANSPORT TRADING & INVESTMENT CO.[ATTICO]",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "828",
+        "id": "UF",
+        "name": "UKRANINIAN MEDITERRANWAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "829",
+        "id": "PG",
+        "name": "BANGKOK AIRWAYS CO. LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "831",
+        "id": "OU",
+        "name": "CROAITA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "832",
+        "id": "GB",
+        "name": "ABX AIR INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "838",
+        "id": "WS",
+        "name": "WESTJET",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "839",
+        "id": "T8",
+        "name": "STA-TRANS AFRICAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "841",
+        "id": "C5",
+        "name": "CHAMPLAIN ENTERPRISES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "842",
+        "id": "5M",
+        "name": "JOINT STOCK COMPANY SIAT SIBAVIATRANS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "843",
+        "id": "D7",
+        "name": "AIR ASIA",
+        "label": "KUALA LUMPUR, MALAYSIA",
+        "country": "MY",
+        "city": "KUL",
+        "airport": "Kuala lumpur,",
+        "address": ""
+    },
+    {
+        "prefix": "845",
+        "id": "P5",
+        "name": "AERO REPUBLICA S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "846",
+        "id": "ZK",
+        "name": "GREAT LAKES AVIATION LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "851",
+        "id": "N8",
+        "name": "CR AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "853",
+        "id": "QP",
+        "name": "AIRKENYA AVIATION LTD D/B/A/ REGIONAL AIR",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "854",
+        "id": "KG",
+        "name": "AEROGAVIOTA S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "856",
+        "id": "DJ",
+        "name": "VIRGIN BLUE AIRLINES PTY LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "857",
+        "id": "LM",
+        "name": "LIVINGSTON S.P A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "858",
+        "id": "FK",
+        "name": "AFRICA WEST",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "860",
+        "id": "2M",
+        "name": "MOLDAVIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "861",
+        "id": "HK",
+        "name": "FOUR STAR AVIATION",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "862",
+        "id": "EV",
+        "name": "ATLANTIC SOUTH EAST AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "864",
+        "id": "ZS",
+        "name": "AZZURRA AIR S.P.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "867",
+        "id": "AP",
+        "name": "AIR ONE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "869",
+        "id": "PT",
+        "name": "WEST AIR SWEDEN AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "870",
+        "id": "V V",
+        "name": "AEROSVIT",
+        "label": "AEROSVIT",
+        "country": "UA",
+        "city": "IEV",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "871",
+        "id": "Y8",
+        "name": "YANGTZE RIVER EXPRESS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "872",
+        "id": "CH",
+        "name": "BEMIDJI AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "873",
+        "id": "6R",
+        "name": "AEROTRANSPORT DE CARGO UNION S.A DE C",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "874",
+        "id": "TE",
+        "name": "LITHUANIAN AIRLINES",
+        "label": "LITHUANINAN AIR",
+        "country": "",
+        "city": null,
+        "airport": "Vilnius",
+        "address": ""
+    },
+    {
+        "prefix": "879",
+        "id": "RV",
+        "name": "CASPIAN AIRLINES SERVICE COMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "880",
+        "id": "HU",
+        "name": "HAINA AIRLINES COMP.LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "881",
+        "id": "BE",
+        "name": "CONDOR FLUGDIENST GMBH",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "882",
+        "id": "NY",
+        "name": "AIR ICELAND [FLUGFELAG ISLANDS]",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "884",
+        "id": "5G",
+        "name": "SKY SERVIES AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "886",
+        "id": "OH",
+        "name": "COMAIR INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "891",
+        "id": "6U",
+        "name": "AIR UKRAINE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "895",
+        "id": "S9",
+        "name": "EAST AFRICA SAFARI AIR LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "897",
+        "id": "7D",
+        "name": "AIRLINES COMPANY DONBASSAERO",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "899",
+        "id": "ZL",
+        "name": "HAZELTON AIRLINES D/B/A/ REGIONAL EXPRESS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "903",
+        "id": "4D",
+        "name": "AIR SINAI",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "904",
+        "id": "MV",
+        "name": "ARMENIAN INTERNATIONAL AIRWAYS",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "906",
+        "id": "E5",
+        "name": "SAMARA AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "907",
+        "id": "QN",
+        "name": "AIR ARMENIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "909",
+        "id": "9T",
+        "name": "TRANSWEST AIR LIMITED",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "910",
+        "id": "WY",
+        "name": "OMAN AIR",
+        "label": "OMAN AIR",
+        "country": "OM",
+        "city": "MCT",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "912",
+        "id": "AG",
+        "name": "AIR CONTRACTORS [UK] LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "913",
+        "id": "LF",
+        "name": "NORDIC EAST AIRLINK AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "918",
+        "id": "OE",
+        "name": "AISA OVERNIGHT EXPRESS CORP",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "921",
+        "id": "6Q",
+        "name": "SLOVAK AIRLINES INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "923",
+        "id": "SS",
+        "name": "CORSE AIR INTERNATIONAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "924",
+        "id": "GR",
+        "name": "AURIGNY AIR SERVICES LTD.",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "926",
+        "id": "BQ",
+        "name": "AEROMAR AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "927",
+        "id": "EJ",
+        "name": "LABRADOR AIRWAYS LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "928",
+        "id": "UZ",
+        "name": "BURAQ AIR TRANSPORT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "929",
+        "id": "N6",
+        "name": "AERO CONTINENTE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "932",
+        "id": "VS",
+        "name": "VIRGIN ATLANTIC AIRWAYS",
+        "label": "VIRGIN ATLANTIC AIRWAYS",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "933",
+        "id": "KZ",
+        "name": "NIPPON CARGO AIRLINES",
+        "label": "NIPPON CARGO AIRLINES",
+        "country": "JP",
+        "city": "TYO",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "935",
+        "id": "TL",
+        "name": "AIRNOTH REGIONAL",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "937",
+        "id": "QJ",
+        "name": "LATPASS AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "939",
+        "id": "ML",
+        "name": "AIR MICRONESIA INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "940",
+        "id": "V9",
+        "name": "BASHKIR AIRLINES [BAL]",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "942",
+        "id": "VW",
+        "name": "TRANSPORTES AEROMAR S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "943",
+        "id": "VU",
+        "name": "SOCIETE NOUVELLE AIR IVOIRE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "944",
+        "id": "DI",
+        "name": "DBA LUFTFAHRTGESELLSCHAFT MBH",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "946",
+        "id": "V4",
+        "name": "VENSECAR INTERNATONAL C,A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "947",
+        "id": "L3",
+        "name": "DHL DE GUATEMALE S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "948",
+        "id": "R4",
+        "name": "STATE TRNSPORT COMPANY OF RUSSIA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "951",
+        "id": "6B",
+        "name": "BRITANNIA AIRWAYS AB",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "955",
+        "id": "6Z",
+        "name": "PANAVIA S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "956",
+        "id": "R3",
+        "name": "ARMENIAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "957",
+        "id": "JJ",
+        "name": "TAM LINHAS AEREAS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "959",
+        "id": "LE",
+        "name": "LAPARKAN AIRWAYS INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "960",
+        "id": "OV",
+        "name": "ESTONIAN AIR",
+        "label": "ESTONIAN AIR",
+        "country": "EE",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "966",
+        "id": "U9",
+        "name": "TATARSTAN JSC AIRCOMPANY",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "967",
+        "id": "PB",
+        "name": "PROVINCIAL AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "970",
+        "id": "BX",
+        "name": "COAST AIR A.S",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "971",
+        "id": "WR",
+        "name": "ROYAL TONGAN AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "972",
+        "id": "LU",
+        "name": "TRANSPORT AEREO S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "974",
+        "id": "ZB",
+        "name": "MONARCH AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "975",
+        "id": "QZ",
+        "name": "AWAIR INTERNATIONAL ,PT",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "976",
+        "id": "QO",
+        "name": "AEROMEXPRESS S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "977",
+        "id": "YS",
+        "name": "REGIONAL COMPAGINE AERINNE EUROPE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "980",
+        "id": "KY",
+        "name": "LINHAS AEREAS DE SAO TOME E PRICIPE",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "981",
+        "id": "8L",
+        "name": "CARGO PLUS AVITION INC",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "983",
+        "id": "QK",
+        "name": "AIR CANADA JAZZ",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "986",
+        "id": "Q2",
+        "name": "ISLAND AVIATION SERVICES LTD",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "988",
+        "id": "OZ",
+        "name": "ASIANA AIRLINES",
+        "label": "ASIANA AIRLINES",
+        "country": "KR",
+        "city": "SEL",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "991",
+        "id": "D3",
+        "name": "DAALLO AIRLINES",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "992",
+        "id": "D5",
+        "name": "DHL AERO EXPRESS S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "994",
+        "id": "ZE",
+        "name": "LINEAS AEREAS AZTECA ,S.A DE C.V",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "995",
+        "id": "JA",
+        "name": "AIR BOSNA",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "996",
+        "id": "UX",
+        "name": "AIR EUROPA LINEAS AEREAS, S.A",
+        "label": "",
+        "country": "",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "997",
+        "id": "BG",
+        "name": "BIMAN BANGLADESH AIRLINES",
+        "label": "BIMAN BANGLADESH AIRLINES",
+        "country": "BD",
+        "city": null,
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "999",
+        "id": "CA",
+        "name": "AIR CHINA INTL (BEIJING)",
+        "label": "AIR CHINA INTL (BEIJING)",
+        "country": "",
+        "city": "PEK",
+        "airport": "",
+        "address": ""
+    },
+    {
+        "prefix": "312",
+        "id": "6E",
+        "name": "IndiGo",
+        "label": "IndiGo",
+        "country": "IN",
+        "city": null,
+        "airport": "",
+        "address": ""
+    }
+]

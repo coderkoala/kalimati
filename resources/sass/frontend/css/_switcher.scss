@@ -53,8 +53,8 @@
     left: -40px;
     top: 200px;
 }
-.styleswitcher-right .switch-btn { 
-	box-shadow:-3px 1px 5px rgba(0, 0, 0, 0.1); 
+.styleswitcher-right .switch-btn {
+	box-shadow:-3px 1px 5px rgba(0, 0, 0, 0.1);
 }
 /* styleswitcher-right End */
 .switch-btn {
@@ -117,10 +117,10 @@
     background: linear-gradient(135deg, #ff784b 51%,#ff784b 51%,#181820 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .color-skins li .skin-4 {
-    background-color: #1abc9c;
-    background: -moz-linear-gradient(-45deg, #1abc9c 51%, #1abc9c 51%, #131b13 51%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #1abc9c 51%,#1abc9c 51%,#131b13 51%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #1abc9c 51%,#1abc9c 51%,#131b13 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-color: maroon;
+    background: -moz-linear-gradient(-45deg, maroon 51%, maroon 51%, #2e3841 51%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, maroon 51%,maroon 51%,#2e3841 51%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, maroon 51%,maroon 51%,#2e3841 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .color-skins li .skin-5 {
@@ -130,13 +130,13 @@
     background: linear-gradient(135deg, #f4bc4f 51%,#f4bc4f 51%,#000000 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .color-skins li .skin-6 {
-    background-color: #10e4ce;   
+    background-color: #10e4ce;
     background: -moz-linear-gradient(-45deg, #10e4ce 51%, #10e4ce 51%, #000000 51%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #10e4ce 51%,#10e4ce 51%,#000000 51%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #10e4ce 51%,#10e4ce 51%,#000000 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .color-skins li .skin-7 {
-    background-color: #ff784b;   
+    background-color: #ff784b;
     background: -moz-linear-gradient(-45deg, #ff784b 51%, #ff784b 51%, #333333 51%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #ff784b 51%,#ff784b 51%, #333333 51%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #ff784b 51%,#ff784b 51%,#333333 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
